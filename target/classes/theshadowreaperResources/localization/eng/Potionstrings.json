@@ -1,0 +1,9 @@
+{
+    "theshadowreaper:DemoPotion": {
+        "NAME": "Awesome Demo Potion",
+        "DESCRIPTIONS": [
+            "Gain #b",
+            " #yStrength."
+        ]
+    }
+}

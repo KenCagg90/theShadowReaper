@@ -1,0 +1,25 @@
+{
+  "theshadowreaper:TheDarkinScythe": {
+    "NAME": "The Darkin Scythe",
+    "FLAVOR": "It'll do something eventually.",
+    "DESCRIPTIONS": [
+      "It's going to have an effect one day."
+    ]
+  },
+  "theshadowreaper:Rhaast": {
+    "NAME": "Rhaast Form",
+    "FLAVOR": "It'll do something eventually.",
+    "DESCRIPTIONS": [
+      "Kayn has become the Rhaast."
+    ]
+  },
+  "theshadowreaper:ShadowAssassin": {
+    "NAME": "Shadow Assassin Form",
+    "FLAVOR": "It'll do something eventually.",
+    "DESCRIPTIONS": [
+      "Kayn has become the Shadow Assassin."
+    ]
+  }
+
+
+}

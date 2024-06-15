@@ -1,0 +1,31 @@
+[
+  {
+    "PROPER_NAME": "TODO",
+    "NAMES": [
+      "todo",
+      "todos"
+    ],
+    "DESCRIPTION": "TODO: Make your own epic keywords"
+  },
+  {
+    "PROPER_NAME": "Reap",
+    "NAMES": [
+      "reap"
+    ],
+    "DESCRIPTION": "When you end your turn with unused [E] [REMOVE_SPACE], enemies with Reap lose HP."
+  },
+  {
+    "PROPER_NAME": "Reaper's\u00a0Touch",
+    "NAMES": [
+      "reaper's\u00a0touch"
+    ],
+    "DESCRIPTION": "Deal damage to ALL enemies equal to their current #yReap [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Form\u00a0Bonus",
+    "NAMES": [
+      "form\u00a0bonus"
+    ],
+    "DESCRIPTION": "The below effect changes based on Kayn's current Form."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "${ModID}:TheDarkinScythe": {
+    "NAME": "The Darkin Scythe",
+    "FLAVOR": "It'll do something eventually.",
+    "DESCRIPTIONS": [
+      "It's going to have an effect one day."
+    ]
+  },
+  "${ModID}:Rhaast": {
+    "NAME": "Rhaast Form",
+    "FLAVOR": "It'll do something eventually.",
+    "DESCRIPTIONS": [
+      "Kayn has become the Rhaast."
+    ]
+  },
+  "${ModID}:ShadowAssassin": {
+    "NAME": "Shadow Assassin Form",
+    "FLAVOR": "It'll do something eventually.",
+    "DESCRIPTIONS": [
+      "Kayn has become the Shadow Assassin."
+    ]
+  }
+
+
+}

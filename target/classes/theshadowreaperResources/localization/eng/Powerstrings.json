@@ -1,0 +1,52 @@
+{
+  "theshadowreaper:ExampleTwoAmountPower": {
+    "NAME": "Example 2",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yStrength and #b",
+      " #yDexterity."
+    ]
+  },
+  "theshadowreaper:ReapPower": {
+    "NAME": "Reap",
+    "DESCRIPTIONS": [
+      "When you end your turn with unused [E] enemies with #yReap take #b",
+      " damage."
+    ]
+  },
+  "theshadowreaper:DemonArmorPower": {
+    "NAME": "Demon Armor",
+    "DESCRIPTIONS": [
+      "When you end your turn with unused [E] gain #b",
+      " #yBlock per unused [E] ."
+    ]
+  },
+  "theshadowreaper:DarkinRagePower": {
+    "NAME": "Darkin Rage",
+    "DESCRIPTIONS": [
+      "When you play a card that costs #b2 or more [E] gain #b",
+      " Strength."
+    ]
+  },
+  "theshadowreaper:HeavyHitter": {
+    "NAME": "HeavyHitter",
+    "DESCRIPTIONS": [
+      "The First time you play a card that costs #b2 or more each turn [E] gain #b",
+      " Energy."
+    ]
+  },
+  "theshadowreaper:GoldAdvantagePower": {
+    "NAME": "Gold Advantage",
+    "DESCRIPTIONS": [
+      "Whenever you play a card that costs less than it's original cost gain #b",
+      " Block."
+    ]
+  },
+  "theshadowreaper:WhispersOfBloodPower": {
+    "NAME": "Whispers Of Blood",
+    "DESCRIPTIONS": [
+      "At the start of your turn, apply #b",
+      " #yReap to ALL enemies."
+    ]
+  }
+}

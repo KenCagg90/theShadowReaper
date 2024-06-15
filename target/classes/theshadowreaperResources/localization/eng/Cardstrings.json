@@ -1,0 +1,162 @@
+{
+  "theshadowreaper:Strike": {
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "theshadowreaper:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block."
+  },
+  "theshadowreaper:ReapingSlash": {
+    "NAME": "Reaping Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !D! theshadowreaper:Reap to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      " NL theshadowreaper:Form\u00a0Bonus:",
+      " NL [#9b111e]Gain !B! Block.[]",
+      " NL [#38d3f3]Enemy [#38d3f3]loses !theshadowreaper:sd! [#38d3f3]HP[]."
+      ]
+  },
+  "theshadowreaper:BladeSpin": {
+    "NAME": "Blade Spin",
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies."
+  },
+  "theshadowreaper:MarkForDeath": {
+    "NAME": "Mark For Death",
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap . NL Next turn, gain [E] ."
+  },
+  "theshadowreaper:DemonArmor": {
+    "NAME": "Demon Armor",
+    "DESCRIPTION": "When you end your turn with unused [E] , gain !M! Block per unused [E] ."
+  },
+  "theshadowreaper:PrepareTheKill": {
+    "NAME": "Prepare The Kill",
+    "DESCRIPTION": "Gain !M! Strength. NL At the end of your turn lose !M! Strength."
+  },
+  "theshadowreaper:Shadowstep": {
+    "NAME": "Shadow Step",
+    "DESCRIPTION": "Next turn, Draw !M! additional cards."
+  },
+  "theshadowreaper:Distract": {
+    "NAME": "Distract",
+    "DESCRIPTION": "Apply !M! Weak. NL Reduce the cost of a random card in your draw pile to 0 until played."
+  },
+  "theshadowreaper:Gank": {
+    "NAME": "Gank",
+    "DESCRIPTION": "Deal !D! damage. NL If you've played 5 or more cards this turn, deal !D! damage again."
+  },
+  "theshadowreaper:Preparation": {
+    "NAME": "Preparation",
+    "DESCRIPTION": "Draw a card. NL Choose a card in your draw pile and give it Retain. NL Exhaust."
+  },
+  "theshadowreaper:UmbralTrespass": {
+    "NAME": "Umbral Trespass",
+    "DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !theshadowreaper:m2! damage. Exhaust{!Upgrades!|>0=ive !stslib:ex!}.",
+    "EXTENDED_DESCRIPTION": [
+      " NL theshadowreaper:Form\u00a0Bonus:",
+      " NL [#9b111e]If Fatal, [#9b111e]Gain [#9b111e]4 [#9b111e]Max [#9b111e]HP[]",
+      " NL [#38d3f3][]If Fatal, [#38d3f3]Deal [#38d3f3]50%. [#38d3f3]of [#38d3f3]damage [#38d3f3]done [#38d3f3]to [#38d3f3]ALL [#38d3f3]enemies.[]"
+    ]
+  },
+  "theshadowreaper:StrategicManeuver": {
+    "NAME": "Strategic Maneuver",
+    "DESCRIPTION": "Select 5 cards from your draw pile and place them at the top of the draw pile. NL Exhaust."
+  },
+  "theshadowreaper:GoldAdvantage": {
+    "NAME": "Gold Advantage",
+    "DESCRIPTION": "Whenever you play a card that costs less than it's original price, gain !M! Block."
+  },
+  "theshadowreaper:MoltenBlood": {
+    "NAME": "Molten Blood",
+    "DESCRIPTION": "Lose 5 HP. Deal !D! damage. Target loses !M! HP."
+  },
+  "theshadowreaper:HeavyHitter": {
+    "NAME": "Heavy Hitter",
+    "DESCRIPTION": "The first time you play a card that costs 2 or more each turn gain [E] .",
+    "UPGRADE_DESCRIPTION": "The first time you play a card that costs 2 or more each turn gain [E] [E] ."
+  },
+  "theshadowreaper:UmbralEnergy": {
+    "NAME": "Umbral Energy",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] ."
+  },
+  "theshadowreaper:BladesReach": {
+    "NAME": "Blade's Reach",
+    "DESCRIPTION": "Deal !D! damage to the two frontmost enemies. NL [#38d3f3]Assassin:[] Apply !M! Vulnerable. NL [#9b111e]Rhaast:[] Gain !M! Block"
+  },
+  "theshadowreaper:FinishingTouches": {
+    "NAME": "Finishing Touches",
+    "DESCRIPTION": "Deal !D! damage twice. NL Gain [E]  for each attack you've played this turn up to a maximum of !M!  [E] ."
+  },
+  "theshadowreaper:SecondStrike": {
+    "NAME": "Second Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you played a card costing more than 1 this turn."
+  },
+  "theshadowreaper:DarkHarvest": {
+    "NAME": "Dark Harvest",
+    "DESCRIPTION": "Double the enemy's theshadowreaper:Reap .",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's theshadowreaper:Reap ."
+  },
+  "theshadowreaper:SlaughterTheWeak": {
+    "NAME": "Slaughter The Weak",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the enemy has less than 50% HP, deal double damage to that enemy."
+  },
+  "theshadowreaper:BloodGambit": {
+    "NAME": "Blood Gambit",
+    "DESCRIPTION": "Lose !M! HP. NL Gain [E] and draw a card."
+  },
+  "theshadowreaper:Cull": {
+    "NAME": "Cull",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL theshadowreaper:Reaper's\u00a0Touch."
+  },
+  "theshadowreaper:EdgeOfDeath": {
+    "NAME": "Edge Of Death",
+    "DESCRIPTION": "Apply !M! Reap. NL Deal damage equal to half the target's reap."
+  },
+  "theshadowreaper:ShadowClone": {
+    "NAME": "Shadow Clone",
+    "DESCRIPTION": "Choose a card in your hand, Add a copy that costs 0 into your hand. Exhaust."
+  },
+  "theshadowreaper:Exploit": {
+    "NAME": "Exploit",
+    "DESCRIPTION": "Deal !D! damage. NL If this dealt at least !M! damage, gain !B! Block."
+  },
+  "theshadowreaper:ShadowSight": {
+    "NAME": "Shadow Sight",
+    "DESCRIPTION": "Retain. NL Gain [E] . NL You can only play 1 Shadow Sight per turn."
+  },
+  "theshadowreaper:Overpower": {
+    "NAME": "Overpower",
+    "DESCRIPTION": "Deal 8 damage. NL If you played a card costing 2 or more this turn, gain 8 Block."
+  },
+  "theshadowreaper:CalculatedSteps": {
+    "NAME": "Calculated Steps",
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL When Retained, lower its cost by 1."
+  },
+  "theshadowreaper:CalculatedStrikes": {
+    "NAME": "Calculated Strikes",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When Retained, lower its cost by 1."
+  },
+  "theshadowreaper:Brutalize": {
+    "NAME": "Brutalize",
+    "DESCRIPTION": "Deal !D! damage. NL If the target does not have Vulnerable, apply !M! Vulnerable."
+  },
+  "theshadowreaper:ShadowAmbush": {
+    "NAME": "Shadow Ambush",
+    "DESCRIPTION": "Deal !D! damage. NL If the target has a debuff, deal an additional !M! damage."
+  },
+  "theshadowreaper:DarkinRage": {
+    "NAME": "Darkin Rage",
+    "DESCRIPTION": "Whenever you play a card that costs 2 or more, gain !M! Strength."
+  },
+  "theshadowreaper:WhispersOfBlood": {
+    "NAME": "Whispers Of Blood",
+    "DESCRIPTION": "At the start of your turn, apply !M! theshadowreaper:Reap to ALL enemies."
+  },
+  "theshadowreaper:Stalk": {
+    "NAME": "Stalk",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! additional cards."
+  },
+  "theshadowreaper:Transfusion": {
+    "NAME": "Transfusion",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! Block."
+  }
+}
