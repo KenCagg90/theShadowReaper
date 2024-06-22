@@ -50,7 +50,7 @@ public abstract class AbstractEasyCard extends CustomCard {
     private boolean needsArtRefresh = false;
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
-        this(cardID, cost, type, rarity, target, CharacterFile.Enums.TODO_COLOR);
+        this(cardID, cost, type, rarity, target, CharacterFile.Enums.SHADOWREAPER_COLOR);
     }
 
     public AbstractEasyCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
@@ -69,6 +69,8 @@ public abstract class AbstractEasyCard extends CustomCard {
                 needsArtRefresh = true;
         }
     }
+
+
 
     @Override
     protected Texture getPortraitImage() {
@@ -99,6 +101,8 @@ public abstract class AbstractEasyCard extends CustomCard {
         }
         return textureString;
     }
+
+
 
     @Override
     public void applyPowers() {

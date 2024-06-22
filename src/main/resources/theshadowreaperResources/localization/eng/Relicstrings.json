@@ -3,23 +3,55 @@
     "NAME": "The Darkin Scythe",
     "FLAVOR": "It'll do something eventually.",
     "DESCRIPTIONS": [
-      "It's going to have an effect one day."
-    ]
+      "Some encounters will glow either Red or Blue. After completing 8 glowing rooms (Elites count as 2) of either color, Kayn can assume the form of #bThe #bShadow #bAssassin or #rThe #rDarkin #rSlayer at a Rest Site."
+      ]
   },
   "${ModID}:Rhaast": {
     "NAME": "Rhaast Form",
-    "FLAVOR": "It'll do something eventually.",
+    "FLAVOR": "Reaping will commence NOW.",
     "DESCRIPTIONS": [
-      "Kayn has become the Rhaast."
+      "The Rhaast has taken control. NL ",
+      "Each time you damage an enemy with an attack, gain #b15% of damage dealt as Temporary HP."
+    ]
+  },
+  "${ModID}:BaseForm": {
+    "NAME": "Base Form",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Kayn is in his base form. NL ",
+      "For the first #b2 turns of combat draw #b1 additional card.",
+      ""
+    ]
+  },
+  "${ModID}:FirstStrike": {
+    "NAME": "First Strike",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "On the first 3 turns of combat, gain gold equal to 10% of damage dealt at combat end."
+    ]
+  },
+  "${ModID}:Electrocute": {
+    "NAME": "Electrocute",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Once per turn, when you play 3 attacks in one turn, Deal ",
+      " damage to an enemy."
+    ]
+  },
+  "${ModID}:Manamune": {
+    "NAME": "Manamune",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Once per turn, When you play 3 attacks, gain [E]."
     ]
   },
   "${ModID}:ShadowAssassin": {
     "NAME": "Shadow Assassin Form",
-    "FLAVOR": "It'll do something eventually.",
+    "FLAVOR": "The Darkin is gone. Our enemies are next.",
     "DESCRIPTIONS": [
-      "Kayn has become the Shadow Assassin."
+      "The Shadow Assassin has won. NL For every 25 damage dealt, draw a card."
     ]
   }
-
-
 }
+
+

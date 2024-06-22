@@ -44,11 +44,23 @@ public class ModFile implements
         return modID + ":" + idText;
     }
 
-    public static Color characterColor = new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1); // This should be changed eventually
+    public static Color characterColor = new Color (0, 0, 0, 1); // This should be changed eventually
 
-    public static final String SHOULDER1 = makeCharacterPath("mainChar/shoulder.png");
-    public static final String SHOULDER2 = makeCharacterPath("mainChar/shoulder2.png");
-    public static final String CORPSE = makeCharacterPath("mainChar/corpse.png");
+    public static final String SHOULDERKAYN = makeCharacterPath("mainChar/shoulderkayn.png");
+    public static final String SHOULDERKAYN2 = makeCharacterPath("mainChar/shoulderkayn2.png");
+    public static final String CORPSEKAYN = makeCharacterPath("mainChar/corpse.png");
+    public static final String SHOULDERRHAAST = makeCharacterPath("mainChar/shoulderrhaast.png");
+    public static final String SHOULDERRHAAST2 = makeCharacterPath("mainChar/shoulderrhaast2.png");
+    public static final String CORPSERHAAST = makeCharacterPath("mainChar/corpseRhaast.png");
+    public static final String SHOULDERASSASSIN = makeCharacterPath("mainChar/shoulderassassin.png");
+    public static final String SHOULDERASSASSIN2 = makeCharacterPath("mainChar/shoulderassassin2.png");
+    public static final String CORPSEASSASSIN = makeCharacterPath("mainChar/corpseAssassin.png");
+    public static final String KAYN_ATLAS_PATH = makeCharacterPath("mainChar/Kayn_spine.atlas");
+    public static final String KAYN_JSON_PATH = makeCharacterPath("mainChar/Kayn_spine.json");
+    public static final String RHAAST_ATLAS_PATH = makeCharacterPath("mainChar/Rhaast_spine.atlas");
+    public static final String RHAAST_JSON_PATH = makeCharacterPath("mainChar/Rhaast_spine.json");
+    public static final String ASSASSIN_ATLAS_PATH = makeCharacterPath("mainChar/Assassin_spine.atlas");
+    public static final String ASSASSIN_JSON_PATH = makeCharacterPath("mainChar/Assassin_spine.json");
     private static final String ATTACK_S_ART = makeImagePath("512/attack.png");
     private static final String SKILL_S_ART = makeImagePath("512/skill.png");
     private static final String POWER_S_ART = makeImagePath("512/power.png");
@@ -60,6 +72,7 @@ public class ModFile implements
     private static final String CARD_ENERGY_L = makeImagePath("1024/energy.png");
     private static final String CHARSELECT_BUTTON = makeImagePath("charSelect/charButton.png");
     private static final String CHARSELECT_PORTRAIT = makeImagePath("charSelect/charBG.png");
+
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
@@ -77,7 +90,7 @@ public class ModFile implements
     public ModFile() {
         BaseMod.subscribe(this);
 
-        BaseMod.addColor(CharacterFile.Enums.TODO_COLOR, characterColor, characterColor, characterColor,
+        BaseMod.addColor(CharacterFile.Enums.SHADOWREAPER_COLOR, characterColor, characterColor, characterColor,
                 characterColor, characterColor, characterColor, characterColor,
                 ATTACK_S_ART, SKILL_S_ART, POWER_S_ART, CARD_ENERGY_S,
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
@@ -115,8 +128,8 @@ public class ModFile implements
 
     @Override
     public void receiveEditCharacters() {
-        BaseMod.addCharacter(new CharacterFile(CharacterFile.characterStrings.NAMES[1], CharacterFile.Enums.THE_TODO),
-            CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CharacterFile.Enums.THE_TODO);
+        BaseMod.addCharacter(new CharacterFile(CharacterFile.characterStrings.NAMES[1], CharacterFile.Enums.THE_SHADOWREAPER),
+            CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, CharacterFile.Enums.THE_SHADOWREAPER);
         
         new AutoAdd(modID)
             .packageFilter(AbstractEasyPotion.class)
@@ -175,9 +188,15 @@ public class ModFile implements
         BaseMod.addAudio("UMBRAL_ASSASSIN", "theshadowreaperResources/audio/UmbralAssassin.wav");
         BaseMod.addAudio("UMBRAL_SLAYER", "theshadowreaperResources/audio/UmbralSlayer.wav");
         BaseMod.addAudio("REAP", "theshadowreaperResources/audio/Reap.wav");
+        BaseMod.addAudio("RHAAST_TRANSFORM", "theshadowreaperResources/audio/DarkinTransformation.wav");
+        BaseMod.addAudio("ASSASSIN_TRANSFORM", "theshadowreaperResources/audio/AssassinTransformation.wav");
+        BaseMod.addAudio("RED_TRANSFORM_READY", "theshadowreaperResources/audio/RedTransformReady.wav");
+        BaseMod.addAudio("BLUE_TRANSFORM_READY", "theshadowreaperResources/audio/BlueTransformReady.wav");
+        BaseMod.addAudio("ELECTROCUTE_PROC", "theshadowreaperResources/audio/ElectrocuteRelic.wav");
         for (ProAudio a : ProAudio.values())
             BaseMod.addAudio(makeID(a.name()), makePath("audio/" + a.name().toLowerCase() + ".ogg"));
     }
+
 
     @Override
     public void receiveEditKeywords() {

@@ -17,8 +17,8 @@ public class Brutalize extends AbstractEasyCard {
 
     public Brutalize() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 18;
-        this.baseMagicNumber = this.magicNumber = 3;
+        baseDamage = 14;
+        this.baseMagicNumber = this.magicNumber = 2;
 
     }
 
@@ -31,7 +31,7 @@ public class Brutalize extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(4);
         upgradeMagicNumber(1);
     }
 }

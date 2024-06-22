@@ -1,3 +1,14 @@
 {
-    
+  "TransformRedOption": {
+    "TEXT": [
+      "Invoke Rhaast",
+      "(Free Action) Let Rhaast take over and embrace the dark power within."
+    ]
+  },
+  "TransformBlueOption": {
+    "TEXT": [
+      "Conquer Rhaast",
+      "(Free Action) Conquer Rhaast and harness his power for yourself."
+    ]
+  }
 }

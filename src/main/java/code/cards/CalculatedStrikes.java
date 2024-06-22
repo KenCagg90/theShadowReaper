@@ -19,6 +19,7 @@ public class CalculatedStrikes extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        this.modifyCostForCombat(1);
     }
 
     @Override

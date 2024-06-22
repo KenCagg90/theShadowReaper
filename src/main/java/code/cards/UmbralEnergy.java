@@ -12,14 +12,15 @@ public class UmbralEnergy extends AbstractEasyCard {
     public final static String ID = makeID(UmbralEnergy.class.getSimpleName());
 
     public UmbralEnergy() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 2;
         baseBlock = 5;
-
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, this.magicNumber), this.magicNumber));
+        blck();
     }
 
     @Override

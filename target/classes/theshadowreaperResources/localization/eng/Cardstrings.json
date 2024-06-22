@@ -9,10 +9,10 @@
   },
   "theshadowreaper:ReapingSlash": {
     "NAME": "Reaping Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !D! theshadowreaper:Reap to ALL enemies.",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theshadowreaper:Reap to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       " NL theshadowreaper:Form\u00a0Bonus:",
-      " NL [#9b111e]Gain !B! Block.[]",
+      " NL [#9b111e]Gain[] !B! Block.",
       " NL [#38d3f3]Enemy [#38d3f3]loses !theshadowreaper:sd! [#38d3f3]HP[]."
       ]
   },
@@ -20,25 +20,63 @@
     "NAME": "Blade Spin",
     "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies."
   },
+  "theshadowreaper:ShowersOfBlood": {
+    "NAME": "Showers Of Blood",
+    "DESCRIPTION": "Lose !M! HP X times. NL Deal !D! to ALL enemies X times."
+  },
   "theshadowreaper:MarkForDeath": {
     "NAME": "Mark For Death",
     "DESCRIPTION": "Apply !M! theshadowreaper:Reap . NL Next turn, gain [E] ."
   },
+  "theshadowreaper:BloodReaper": {
+    "NAME": "Blood Reaper",
+    "DESCRIPTION": "Lose 4 HP. NL Apply !M! Reap to ALL enemies."
+  },
+  "theshadowreaper:Bloodrage": {
+    "NAME": "Bloodrage",
+    "DESCRIPTION": "Whenever you lose HP from a card, draw a card."
+  },
+  "theshadowreaper:Meditation": {
+    "NAME": "Meditation",
+    "DESCRIPTION": "Gain [E] . NL Unspent [E] is conserved this turn. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain [E] . NL Unspent [E] is conserved this turn."
+  },
   "theshadowreaper:DemonArmor": {
     "NAME": "Demon Armor",
-    "DESCRIPTION": "When you end your turn with unused [E] , gain !M! Block per unused [E] ."
+    "DESCRIPTION": "When you end your turn with unused [E] , gain !M! Block for each unspent [E] ."
+  },
+  "theshadowreaper:ReaperSigil": {
+    "NAME": "Reaper's Sigil",
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap ."
   },
   "theshadowreaper:PrepareTheKill": {
     "NAME": "Prepare The Kill",
-    "DESCRIPTION": "Gain !M! Strength. NL At the end of your turn lose !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL At the end of your turn lose !M! Strength. NL Exhaust."
   },
   "theshadowreaper:Shadowstep": {
     "NAME": "Shadow Step",
-    "DESCRIPTION": "Next turn, Draw !M! additional cards."
+    "DESCRIPTION": "Next turn, Draw !M! additional cards.",
+    "EXTENDED_DESCRIPTION": [
+      " NL theshadowreaper:Form\u00a0Bonus:",
+      " NL [#9b111e]Gain !M! []Block.",
+      " NL [#38d3f3]Gain 1[] [E] ."
+    ]
   },
   "theshadowreaper:Distract": {
     "NAME": "Distract",
     "DESCRIPTION": "Apply !M! Weak. NL Reduce the cost of a random card in your draw pile to 0 until played."
+  },
+  "theshadowreaper:Bloodfury": {
+    "NAME": "Bloodfury",
+    "DESCRIPTION": "Lose !M! HP. NL Gain [E] [E] [E] ."
+  },
+  "theshadowreaper:AssassinsTraining": {
+    "NAME": "Assassin's Training",
+    "DESCRIPTION": "If you have unspent [E] at the end of your turn, Next turn, gain Strength equal to your remaining [E] ."
+  },
+  "theshadowreaper:SiphoningStrikes": {
+    "NAME": "Siphoning Strikes",
+    "DESCRIPTION": "When you apply theshadowreaper:Reap to an enemy gain !M! Block."
   },
   "theshadowreaper:Gank": {
     "NAME": "Gank",
@@ -50,10 +88,11 @@
   },
   "theshadowreaper:UmbralTrespass": {
     "NAME": "Umbral Trespass",
-    "DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !theshadowreaper:m2! damage. Exhaust{!Upgrades!|>0=ive !stslib:ex!}.",
+    "DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. Exhaustive 2.",
     "EXTENDED_DESCRIPTION": [
       " NL theshadowreaper:Form\u00a0Bonus:",
-      " NL [#9b111e]If Fatal, [#9b111e]Gain [#9b111e]4 [#9b111e]Max [#9b111e]HP[]",
+      " NL [#9b111e]If Fatal, [#9b111e]Gain [#9b111e]3 [#9b111e]Max [#9b111e]HP[]",
       " NL [#38d3f3][]If Fatal, [#38d3f3]Deal [#38d3f3]50%. [#38d3f3]of [#38d3f3]damage [#38d3f3]done [#38d3f3]to [#38d3f3]ALL [#38d3f3]enemies.[]"
     ]
   },
@@ -69,6 +108,46 @@
     "NAME": "Molten Blood",
     "DESCRIPTION": "Lose 5 HP. Deal !D! damage. Target loses !M! HP."
   },
+  "theshadowreaper:ReapersToll": {
+    "NAME": "Reaper's Toll",
+    "DESCRIPTION": "Deal damage equal to double the current theshadowreaper:Reap . NL Remove theshadowreaper:Reap ."
+  },
+  "theshadowreaper:StackTheDeck": {
+    "NAME": "Stack The Deck",
+    "DESCRIPTION": "Select 2 cards from the Exhaust pile and place them on top of your draw pile."
+  },
+  "theshadowreaper:FlurryOfBlades": {
+    "NAME": "Flurry Of Blades",
+    "DESCRIPTION": "Deal X damage to a random monster X times."
+  },
+  "theshadowreaper:PerfectForm": {
+    "NAME": "Perfect Form",
+    "DESCRIPTION": "Lose !M! HP. NL Gain 1 Dexterity for every 3 attack cards played. Gain 1 Strength for every 4 skill cards played."
+  },
+  "theshadowreaper:Annihilate": {
+    "NAME": "Annihilate",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "theshadowreaper:ShadowWaltz": {
+    "NAME": "Shadow Waltz",
+    "DESCRIPTION": "Draw 1 card. NL If you have played 3 or more cards this turn, draw !M! more cards."
+  },
+  "theshadowreaper:SoulHarvest": {
+    "NAME": "Soul Harvest",
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to all enemies. NL Gain Block equal to half of the theshadowreaper:Reap on all enemies. NL Exhaust."
+  },
+  "theshadowreaper:AllOrNothing": {
+    "NAME": "All Or Nothing",
+    "DESCRIPTION": "Gain !M! Strength. NL Lose 3 HP per turn."
+  },
+  "theshadowreaper:TemporalStrike": {
+    "NAME": "Temporal Strike",
+    "DESCRIPTION": "Deal !D! Damage. NL Next turn, draw 2 cards and gain 1 Strength."
+  },
+  "theshadowreaper:ComboMastery": {
+    "NAME": "Combo Mastery",
+    "DESCRIPTION": "Draw !M! cards. NL Reduce the cost of all cards in your hand by 1 this turn. NL Exhaust."
+  },
   "theshadowreaper:HeavyHitter": {
     "NAME": "Heavy Hitter",
     "DESCRIPTION": "The first time you play a card that costs 2 or more each turn gain [E] .",
@@ -76,15 +155,41 @@
   },
   "theshadowreaper:UmbralEnergy": {
     "NAME": "Umbral Energy",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] ."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] [E] . Exhaust."
   },
   "theshadowreaper:BladesReach": {
     "NAME": "Blade's Reach",
-    "DESCRIPTION": "Deal !D! damage to the two frontmost enemies. NL [#38d3f3]Assassin:[] Apply !M! Vulnerable. NL [#9b111e]Rhaast:[] Gain !M! Block"
+    "DESCRIPTION": "Deal !D! damage to the two frontmost enemies.",
+    "EXTENDED_DESCRIPTION": [
+      " NL theshadowreaper:Form\u00a0Bonus:",
+      " NL [#9b111e]Apply !M! Weak.",
+      " NL [#38d3f3]Hit [#38d3f3]all [#38d3f3]enemies [#38d3f3]and [#38d3f3]apply !M! []Vulnerable."
+    ]
+  },
+  "theshadowreaper:BladesReachAssassin": {
+    "NAME": "Blade's Reach",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable.",
+    "EXTENDED_DESCRIPTION": [
+      " NL theshadowreaper:Form\u00a0Bonus:",
+      " NL [#9b111e]Apply !M! Weak.",
+      " NL [#38d3f3]Hit [#38d3f3]all [#38d3f3]enemies [#38d3f3]and [#38d3f3]apply !M! []Vulnerable."
+    ]
+  },
+  "theshadowreaper:BladesReachRhaast": {
+    "NAME": "Blade's Reach",
+    "DESCRIPTION": "Deal !D! damage to the two frontmost enemies. NL Apply !M! Weak."
   },
   "theshadowreaper:FinishingTouches": {
     "NAME": "Finishing Touches",
     "DESCRIPTION": "Deal !D! damage twice. NL Gain [E]  for each attack you've played this turn up to a maximum of !M!  [E] ."
+  },
+  "theshadowreaper:TendToWounds": {
+    "NAME": "Tend To Wounds",
+    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Weak. NL Exhaust."
+  },
+  "theshadowreaper:Outburst": {
+    "NAME": "Outburst",
+    "DESCRIPTION": "Deal !D! to ALL enemies. NL Gain [E] [E] . NL Shuffle a Void your discard pile."
   },
   "theshadowreaper:SecondStrike": {
     "NAME": "Second Strike",
@@ -92,8 +197,8 @@
   },
   "theshadowreaper:DarkHarvest": {
     "NAME": "Dark Harvest",
-    "DESCRIPTION": "Double the enemy's theshadowreaper:Reap .",
-    "UPGRADE_DESCRIPTION": "Triple the enemy's theshadowreaper:Reap ."
+    "DESCRIPTION": "Double the enemy's theshadowreaper:Reap . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Triple the enemy's theshadowreaper:Reap . NL Exhaust."
   },
   "theshadowreaper:SlaughterTheWeak": {
     "NAME": "Slaughter The Weak",
@@ -105,15 +210,15 @@
   },
   "theshadowreaper:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL theshadowreaper:Reaper's\u00a0Touch."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Trigger theshadowreaper:Reap on target enemy."
   },
   "theshadowreaper:EdgeOfDeath": {
     "NAME": "Edge Of Death",
-    "DESCRIPTION": "Apply !M! Reap. NL Deal damage equal to half the target's reap."
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap . NL Deal damage equal to half the target's theshadowreaper:Reap ."
   },
   "theshadowreaper:ShadowClone": {
     "NAME": "Shadow Clone",
-    "DESCRIPTION": "Choose a card in your hand, Add a copy that costs 0 into your hand. Exhaust."
+    "DESCRIPTION": "Choose a card in your hand, Add a copy that costs 0 into your hand. NL Exhaust."
   },
   "theshadowreaper:Exploit": {
     "NAME": "Exploit",
@@ -121,11 +226,12 @@
   },
   "theshadowreaper:ShadowSight": {
     "NAME": "Shadow Sight",
-    "DESCRIPTION": "Retain. NL Gain [E] . NL You can only play 1 Shadow Sight per turn."
+    "DESCRIPTION": "Retain. NL Gain [E] . NL You can only play two of this card per turn.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL You can only play two of this card per turn."
   },
   "theshadowreaper:Overpower": {
     "NAME": "Overpower",
-    "DESCRIPTION": "Deal 8 damage. NL If you played a card costing 2 or more this turn, gain 8 Block."
+    "DESCRIPTION": "Deal !D! damage. NL If you played a card costing 2 or more this turn, gain !B! Block."
   },
   "theshadowreaper:CalculatedSteps": {
     "NAME": "Calculated Steps",

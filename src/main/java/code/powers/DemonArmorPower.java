@@ -22,7 +22,7 @@ public class DemonArmorPower extends AbstractEasyPower {
             int remainingEnergy = EnergyPanel.totalCount;
             if (remainingEnergy > 0) {
                 this.flash();
-                this.addToBot(new GainBlockAction(this.owner, this.owner, remainingEnergy * this.amount));
+                this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount * EnergyPanel.totalCount));
             }
         }
     }

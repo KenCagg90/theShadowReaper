@@ -3,11 +3,12 @@ package code;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
-import basemod.animations.SpriterAnimation;
 import code.cards.*;
+import code.relics.BaseForm;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.esotericsoftware.spine.AnimationState;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
@@ -24,28 +26,45 @@ import code.relics.TheDarkinScythe;
 
 import java.util.ArrayList;
 
-import static code.CharacterFile.Enums.TODO_COLOR;
+import static code.CharacterFile.Enums.SHADOWREAPER_COLOR;
 import static code.ModFile.*;
 
 public class CharacterFile extends CustomPlayer {
 
-    private static final Float SIZE_SCALE = 0.8F;
     static final String ID = makeID("ModdedCharacter");
     static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
     static final String[] NAMES = characterStrings.NAMES;
     static final String[] TEXT = characterStrings.TEXT;
 
-    // Path to your Spine animation files
-    private static final String SKELETON_ATLAS_PATH = makeCharacterPath("mainChar/Kayn_spine.atlas");
-    private static final String SKELETON_JSON_PATH = makeCharacterPath("mainChar/Kayn_ske.json");
+    private static final String DEFAULT_ATLAS_PATH = KAYN_ATLAS_PATH;
+    private static final String DEFAULT_JSON_PATH = KAYN_JSON_PATH;
+    private static final String DEFAULT_ANIMATION_NAME = "KaynIdle";
+    private static final String DEFAULT_SHOULDER_1 = SHOULDERKAYN;
+    private static final String DEFAULT_SHOULDER_2 = SHOULDERKAYN2;
+    private static final String DEFAULT_CORPSE = CORPSEKAYN;
+
+    private static final String[] orbTextures = {
+            makeCharacterPath("mainChar/orb/layer1.png"),
+            makeCharacterPath("mainChar/orb/layer2.png"),
+            makeCharacterPath("mainChar/orb/layer3.png"),
+            makeCharacterPath("mainChar/orb/layer4.png"),
+            makeCharacterPath("mainChar/orb/layer4.png"),
+            makeCharacterPath("mainChar/orb/layer6.png"),
+            makeCharacterPath("mainChar/orb/layer1d.png"),
+            makeCharacterPath("mainChar/orb/layer2d.png"),
+            makeCharacterPath("mainChar/orb/layer3d.png"),
+            makeCharacterPath("mainChar/orb/layer4d.png"),
+            makeCharacterPath("mainChar/orb/layer5d.png"),
+    };
 
     public CharacterFile(String name, PlayerClass setClass) {
         super(name, setClass, new CustomEnergyOrb(orbTextures, makeCharacterPath("mainChar/orb/vfx.png"), null),
-                new SpineAnimation(SKELETON_JSON_PATH, SKELETON_ATLAS_PATH, SIZE_SCALE));
+                new SpineAnimation(KAYN_ATLAS_PATH, KAYN_JSON_PATH, 0.8F));
+        AnimationState.TrackEntry e = state.setAnimation(0, "KaynIdle", true);
         initializeClass(null,
-                SHOULDER1,
-                SHOULDER2,
-                CORPSE,
+                SHOULDERKAYN,
+                SHOULDERKAYN2,
+                CORPSEKAYN,
                 getLoadout(), 20.0F, -10.0F, 200.0F, 250.0F, new EnergyManager(3));
 
         dialogX = (drawX + 0.0F * Settings.scale);
@@ -79,6 +98,7 @@ public class CharacterFile extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(BaseForm.ID);
         retVal.add(TheDarkinScythe.ID);
         return retVal;
     }
@@ -90,19 +110,50 @@ public class CharacterFile extends CustomPlayer {
                 false);
     }
 
-    private static final String[] orbTextures = {
-            makeCharacterPath("mainChar/orb/layer1.png"),
-            makeCharacterPath("mainChar/orb/layer2.png"),
-            makeCharacterPath("mainChar/orb/layer3.png"),
-            makeCharacterPath("mainChar/orb/layer4.png"),
-            makeCharacterPath("mainChar/orb/layer4.png"),
-            makeCharacterPath("mainChar/orb/layer6.png"),
-            makeCharacterPath("mainChar/orb/layer1d.png"),
-            makeCharacterPath("mainChar/orb/layer2d.png"),
-            makeCharacterPath("mainChar/orb/layer3d.png"),
-            makeCharacterPath("mainChar/orb/layer4d.png"),
-            makeCharacterPath("mainChar/orb/layer5d.png"),
-    };
+    private boolean transformedToRhaast = false;
+    private boolean transformedToAssassin = false;
+
+    public void transformToAssassin() {
+        setVisuals(ASSASSIN_ATLAS_PATH, ASSASSIN_JSON_PATH, 0.7F, "AssassinIdle",
+                SHOULDERASSASSIN, SHOULDERASSASSIN2, CORPSEASSASSIN);
+        this.transformedToAssassin = true;
+        this.transformedToRhaast = false;
+    }
+
+    public void transformToRhaast() {
+        setVisuals(RHAAST_ATLAS_PATH, RHAAST_JSON_PATH, 0.7F, "RhaastIdle",
+                SHOULDERRHAAST, SHOULDERRHAAST2, CORPSERHAAST);
+        this.transformedToRhaast = true;
+        this.transformedToAssassin = false;
+    }
+
+
+    private void setVisuals(String atlasPath, String jsonPath, float scale, String animationName,
+                            String shoulder1Path, String shoulder2Path, String corpsePath) {
+        // Update animation
+        this.loadAnimation(atlasPath, jsonPath, scale);
+        state.setAnimation(0, animationName, true);
+
+        // Update shoulder and corpse images
+        this.shoulderImg = ImageMaster.loadImage(shoulder1Path);
+        this.shoulder2Img = ImageMaster.loadImage(shoulder2Path);
+        this.corpseImg = ImageMaster.loadImage(corpsePath);
+    }
+
+    public void resetToDefaultAppearance() {
+        setVisuals(DEFAULT_ATLAS_PATH, DEFAULT_JSON_PATH, 0.8F, DEFAULT_ANIMATION_NAME,
+                DEFAULT_SHOULDER_1, DEFAULT_SHOULDER_2, DEFAULT_CORPSE);
+        this.transformedToRhaast = false;
+        this.transformedToAssassin = false;
+    }
+
+    public boolean isTransformedToRhaast() {
+        return transformedToRhaast;
+    }
+
+    public boolean isTransformedToAssassin() {
+        return transformedToAssassin;
+    }
 
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
@@ -116,7 +167,7 @@ public class CharacterFile extends CustomPlayer {
 
     @Override
     public AbstractCard.CardColor getCardColor() {
-        return TODO_COLOR;
+        return SHADOWREAPER_COLOR;
     }
 
     @Override
@@ -136,8 +187,7 @@ public class CharacterFile extends CustomPlayer {
 
     @Override
     public AbstractCard getStartCardForEvent() {
-        System.out.println("YOU NEED TO SET getStartCardForEvent() in your " + getClass().getSimpleName() + " file!");
-        return null;
+        return new SlaughterTheWeak();
     }
 
     @Override
@@ -179,12 +229,11 @@ public class CharacterFile extends CustomPlayer {
     }
 
     public static class Enums {
-        //TODO: Change these.
         @SpireEnum
-        public static AbstractPlayer.PlayerClass THE_TODO;
-        @SpireEnum(name = "TODO_COLOR")
-        public static AbstractCard.CardColor TODO_COLOR;
-        @SpireEnum(name = "TODO_COLOR")
+        public static AbstractPlayer.PlayerClass THE_SHADOWREAPER;
+        @SpireEnum(name = "SHADOWREAPER_COLOR")
+        public static AbstractCard.CardColor SHADOWREAPER_COLOR;
+        @SpireEnum(name = "SHADOWREAPER_COLOR")
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }

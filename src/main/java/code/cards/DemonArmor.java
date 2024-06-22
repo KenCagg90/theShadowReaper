@@ -11,8 +11,8 @@ public class DemonArmor extends AbstractEasyCard {
     public final static String ID = makeID(DemonArmor.class.getSimpleName());
 
     public DemonArmor() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 8;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = this.magicNumber = 5;
 
     }
 

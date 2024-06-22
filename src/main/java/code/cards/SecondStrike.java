@@ -28,13 +28,12 @@ public class SecondStrike extends AbstractEasyCard {
         super.applyPowers();
         // Check if a card costing more than 1 energy has been played this turn
         boolean costReductionConditionMet = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
-                .anyMatch(card -> card.costForTurn > 0);
+                .anyMatch(card -> card.costForTurn > 1);
         // Adjust the cost of the card based on the condition
         if (costReductionConditionMet) {
             this.setCostForTurn(0);
-        } else {
-            this.setCostForTurn(1);
         }
+
     }
 
     @Override

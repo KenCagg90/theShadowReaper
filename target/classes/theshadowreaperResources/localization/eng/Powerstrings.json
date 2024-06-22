@@ -18,7 +18,13 @@
     "NAME": "Demon Armor",
     "DESCRIPTIONS": [
       "When you end your turn with unused [E] gain #b",
-      " #yBlock per unused [E] ."
+      " #yBlock for each unspent [E] ."
+    ]
+  },
+  "theshadowreaper:UTPower": {
+    "NAME": "Umbral Trespass",
+    "DESCRIPTIONS": [
+      ""
     ]
   },
   "theshadowreaper:DarkinRagePower": {
@@ -28,7 +34,7 @@
       " Strength."
     ]
   },
-  "theshadowreaper:HeavyHitter": {
+  "theshadowreaper:HeavyHitterPower": {
     "NAME": "HeavyHitter",
     "DESCRIPTIONS": [
       "The First time you play a card that costs #b2 or more each turn [E] gain #b",
@@ -40,6 +46,39 @@
     "DESCRIPTIONS": [
       "Whenever you play a card that costs less than it's original cost gain #b",
       " Block."
+    ]
+  },
+  "theshadowreaper:BloodragePower": {
+    "NAME": "Bloodrage",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP from a card draw #b",
+      " card."
+    ]
+  },
+  "theshadowreaper:AssassinsTrainingPower": {
+    "NAME": "Assassin's Training",
+    "DESCRIPTIONS": [
+      "If you have unspent [E] at the end of your turn, Next turn, gain Strength equal to your remaining [E] ."
+    ]
+  },
+  "theshadowreaper:SiphoningStrikesPower": {
+    "NAME": "Siphoning Strikes",
+    "DESCRIPTIONS": [
+      "When you apply #yReap to an enemy, Gain #b",
+      " Block."
+    ]
+  },
+  "theshadowreaper:PerfectFormPower": {
+    "NAME": "Perfect Form",
+    "DESCRIPTIONS": [
+      "Whenever you play 3 Attacks, Gain #b1 Dexterity. Whenever you play 4 Skills, Gain #b1 Strength."
+    ]
+  },
+  "theshadowreaper:AllOrNothingPower": {
+    "NAME": "All Or Nothing",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Strength, Lose 3 HP per turn."
     ]
   },
   "theshadowreaper:WhispersOfBloodPower": {

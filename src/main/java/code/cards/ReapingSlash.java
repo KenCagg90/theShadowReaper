@@ -26,7 +26,7 @@ public class ReapingSlash extends AbstractEasyCard {
     public ReapingSlash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        this.baseMagicNumber = this.magicNumber = 8;
+        this.baseMagicNumber = this.magicNumber = 4;
         baseBlock = 6;
         baseSecondDamage = 3;
 
@@ -61,8 +61,8 @@ public class ReapingSlash extends AbstractEasyCard {
         } else if (hasRelicB) {
             this.rawDescription = cardStrings.DESCRIPTION + cardStrings.EXTENDED_DESCRIPTION[0] + cardStrings.EXTENDED_DESCRIPTION[2];
         } else {
-            this.name = cardStrings.NAME;
-            this.rawDescription = cardStrings.DESCRIPTION;
+             this.name = cardStrings.NAME;
+             this.rawDescription = cardStrings.DESCRIPTION;
         }
 
         initializeTitle();

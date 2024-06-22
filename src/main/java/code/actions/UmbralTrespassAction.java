@@ -26,7 +26,7 @@ public class UmbralTrespassAction extends AbstractGameAction {
             target.damage(new DamageInfo(AbstractDungeon.player, amount, DamageInfo.DamageType.THORNS));
             if ((target.isDying || target.currentHealth <= 0) && !target.halfDead && !target.hasPower("Minion")) {
                 if (isRhaast) {
-                    AbstractDungeon.player.increaseMaxHp(4, false);
+                    AbstractDungeon.player.increaseMaxHp(3, false);
                 } else if (isShadow) {
                     int damageToAll = (int) (amount * 0.5);
                     addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(damageToAll, true), DamageInfo.DamageType.THORNS, AttackEffect.SLASH_VERTICAL));

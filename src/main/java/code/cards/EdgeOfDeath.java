@@ -13,8 +13,8 @@ public class EdgeOfDeath extends AbstractEasyCard {
     public final static String ID = makeID(EdgeOfDeath.class.getSimpleName());
 
     public EdgeOfDeath() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseMagicNumber = this.magicNumber = 6;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.baseMagicNumber = this.magicNumber = 5;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class EdgeOfDeath extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2); // Upgrade to apply 8 Reap instead of 6
+        upgradeMagicNumber(2); // Upgrade to apply 8 Reap instead of 5
     }
     }
 

@@ -15,6 +15,7 @@ public class DarkHarvest extends AbstractEasyCard {
 
     public DarkHarvest() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        this.exhaust = true;
     }
 
 

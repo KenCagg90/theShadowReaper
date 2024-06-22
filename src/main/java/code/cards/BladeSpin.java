@@ -12,7 +12,7 @@ public class BladeSpin extends AbstractEasyCard {
 
     public BladeSpin() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 7;
+        baseDamage = 5;
         isMultiDamage = true;
         selfRetain = true;
 

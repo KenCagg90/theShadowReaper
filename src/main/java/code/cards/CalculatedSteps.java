@@ -19,6 +19,7 @@ public class CalculatedSteps extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, this.block));
+        this.modifyCostForCombat(1);
     }
 
     @Override

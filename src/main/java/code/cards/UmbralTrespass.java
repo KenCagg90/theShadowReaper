@@ -12,6 +12,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static code.ModFile.makeID;
 
@@ -22,7 +25,7 @@ public class UmbralTrespass extends AbstractEasyCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public UmbralTrespass() {
-        super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 20;
         this.magicNumber = this.baseMagicNumber = 1; // Used for Intangible
         this.secondMagic = this.baseSecondMagic = 20; // Used for card text
@@ -34,10 +37,24 @@ public class UmbralTrespass extends AbstractEasyCard {
         // Gain 1 Intangible
         this.addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, this.magicNumber), this.magicNumber));
 
+        // Calculate the damage accounting for Strength
+        int strength = p.hasPower(StrengthPower.POWER_ID) ? p.getPower(StrengthPower.POWER_ID).amount : 0;
+        int totalDamage = this.baseDamage + strength;
+        int totalSecondMagic = this.baseSecondMagic + strength;
+
+        if (p.hasPower(WeakPower.POWER_ID)) {
+            totalDamage *= 0.75;
+            totalSecondMagic *= 0.75;
+        }
+
+// You might need to cast the results back to int if necessary
+        int finalDamage = (int) Math.floor(totalDamage);
+        int finalSecondMagic = (int) Math.floor(totalSecondMagic);
+
         // Apply Umbral Trespass Power to the enemy
         boolean hasRhaast = p.hasRelic(RELIC_A_ID);
         boolean hasShadow = p.hasRelic(RELIC_B_ID);
-        this.addToBot(new ApplyPowerAction(m, p, new UTPower(m, this.baseDamage, hasRhaast, hasShadow), this.baseDamage));
+        this.addToBot(new ApplyPowerAction(m, p, new UTPower(m, totalDamage, hasRhaast, hasShadow), totalDamage));
 
         if (hasRhaast) {
             addToBot(new SFXAction("UMBRAL_SLAYER"));
