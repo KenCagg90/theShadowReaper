@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static code.ModFile.makeID;
+import static code.ModFile.makeImagePath;
 
 public class BladesReachRhaast extends AbstractEasyCard {
     public final static String ID = makeID(BladesReachRhaast.class.getSimpleName());
@@ -24,9 +25,10 @@ public class BladesReachRhaast extends AbstractEasyCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReachRhaast() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY, CardColor.RED);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Weak/Vulnerable
+        setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast"));
     }
 
     @Override

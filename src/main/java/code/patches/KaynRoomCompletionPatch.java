@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
 import code.relics.TheDarkinScythe;
 
 @SpirePatch(clz = AbstractRoom.class, method = "endBattle")
-public class RoomCompletionPatch {
+public class KaynRoomCompletionPatch {
 
     @SpirePostfixPatch
     public static void onRoomCompletion(AbstractRoom __instance) {

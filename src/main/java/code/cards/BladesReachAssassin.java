@@ -2,6 +2,8 @@ package code.cards;
 
 import code.relics.Rhaast;
 import code.relics.ShadowAssassin;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,6 +18,7 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static code.ModFile.makeID;
+import static code.ModFile.makeImagePath;
 
 public class BladesReachAssassin extends AbstractEasyCard {
     public final static String ID = makeID(BladesReachAssassin.class.getSimpleName());
@@ -24,7 +27,7 @@ public class BladesReachAssassin extends AbstractEasyCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReachAssassin() {
-        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.BLUE);
+        super(ID, 1, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY);
         this.baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Weak/Vulnerable
     }
@@ -45,6 +48,7 @@ public class BladesReachAssassin extends AbstractEasyCard {
     public void upp() {
         upgradeDamage(4); // Upgrade to deal 15 damage instead of 10
     }
+
 
     @Override
     public void applyPowers() {

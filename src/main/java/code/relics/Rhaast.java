@@ -3,7 +3,7 @@ package code.relics;
 import code.CharacterFile;
 import code.cards.BladesReach;
 import code.cards.BladesReachRhaast;
-import code.patches.TransformCardsPatch;
+import code.patches.KaynTransformCardsPatch;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -24,13 +24,12 @@ public class Rhaast extends AbstractEasyRelic {
     @Override
     public void onEquip() {
         CardCrawlGame.sound.play("RHAAST_TRANSFORM", 0.0F);
-        TransformCardsPatch.transformToRhaast();
-        CardLibrary.cards.remove(BladesReach.ID); CardLibrary.cards.put(BladesReachRhaast.ID, new BladesReachRhaast());
+        KaynTransformCardsPatch.transformToRhaast();
     }
 
     @Override
     public void onObtainCard(AbstractCard c) {
-       TransformCardsPatch.transformToRhaast();
+       KaynTransformCardsPatch.transformToRhaast();
     }
 
 

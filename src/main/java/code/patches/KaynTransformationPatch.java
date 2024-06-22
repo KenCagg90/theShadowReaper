@@ -8,7 +8,7 @@ import code.relics.Rhaast;
 import code.relics.ShadowAssassin;
 
 @SpirePatch(clz = AbstractDungeon.class, method = "nextRoomTransition", paramtypez = {})
-public class TransformationPatch {
+public class KaynTransformationPatch {
 
     @SpirePrefixPatch
     public static void applyTransformation() {

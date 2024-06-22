@@ -5,7 +5,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 @SpirePatch(clz = AbstractDungeon.class, method = "generateMap")
-public class MapGenerationPatch {
+public class KaynMapGenerationPatch {
 
     @SpirePrefixPatch
     public static void resetRoomsProcessed() {

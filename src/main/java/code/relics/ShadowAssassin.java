@@ -1,7 +1,7 @@
 package code.relics;
 
 import code.CharacterFile;
-import code.patches.TransformCardsPatch;
+import code.patches.KaynTransformCardsPatch;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -16,19 +16,21 @@ public class ShadowAssassin extends AbstractEasyRelic {
     private static final int DAMAGE_THRESHOLD = 25;
     private int damageCounter = 0;
 
+
     public ShadowAssassin() {
         super(ID, RelicTier.SPECIAL, LandingSound.CLINK, CharacterFile.Enums.SHADOWREAPER_COLOR);
+
     }
 
     @Override
     public void onEquip() {
         CardCrawlGame.sound.play("ASSASSIN_TRANSFORM", 0.0F);
-        TransformCardsPatch.transformToAssassin();
+        KaynTransformCardsPatch.transformToAssassin();
     }
 
 
     public void onObtainCard(AbstractCard c) {
-        TransformCardsPatch.transformToAssassin();
+        KaynTransformCardsPatch.transformToAssassin();
     }
 
 

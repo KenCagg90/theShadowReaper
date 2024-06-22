@@ -3,6 +3,7 @@ code\cards\Exploit.class
 code\cards\FinishingTouches.class
 code\cards\StrategicManeuver.class
 code\CharacterFile$Enums.class
+code\patches\KaynRoomCompletionPatch.class
 code\cards\ShadowWaltz.class
 code\powers\AbstractEasyPower.class
 code\cards\Defend.class
@@ -10,7 +11,6 @@ code\cards\ReaperSigil.class
 code\util\Wiz$1.class
 code\cards\cardvars\ThirdMagicNumber.class
 code\powers\WhispersOfBloodPower.class
-code\patches\CampfirePatch$Locator.class
 code\cards\UmbralEnergy.class
 code\cards\TendToWounds.class
 code\potions\DemoPotion.class
@@ -25,6 +25,7 @@ code\util\CardArtRoller$ReskinInfo.class
 code\cards\BladesReachRhaast.class
 code\ui\TransformRedOption.class
 code\ModFile.class
+code\patches\KaynTransformationPatch.class
 code\actions\EasyModalChoiceAction.class
 code\powers\GoldAdvantagePower.class
 code\util\ProAudio.class
@@ -42,17 +43,17 @@ code\relics\AbstractEasyRelic.class
 code\powers\ConservePower.class
 code\util\Wiz.class
 code\relics\ShadowAssassin.class
-code\patches\CampfirePatch$AddTransformOptions.class
-code\patches\RoomCompletionPatch.class
+code\patches\KaynCampfirePatch$Locator.class
 code\cards\MarkForDeath.class
 code\cards\BladesReach.class
 code\cards\AssassinsTraining.class
 code\relics\TheDarkinScythe.class
 code\cards\ShadowSight.class
-code\patches\MapGenerationPatch.class
 code\cards\FlurryOfBlades.class
+code\patches\KaynCampfirePatch.class
 code\powers\PerfectFormPower.class
 code\cards\ShowersOfBlood.class
+code\patches\KaynCampfirePatch$AddTransformOptions.class
 code\cards\EasyModalChoiceCard.class
 code\cards\cardvars\SecondDamage.class
 code\cards\EdgeOfDeath.class
@@ -76,7 +77,6 @@ code\util\WizArt.class
 code\relics\FirstStrike.class
 code\cards\Outburst.class
 code\cards\ReapersToll.class
-code\patches\TransformCardsPatch.class
 code\cards\UmbralTrespass.class
 code\cards\Shadowstep.class
 code\cards\CalculatedStrikes.class
@@ -88,7 +88,6 @@ code\cards\ComboMastery$1.class
 code\powers\SiphoningStrikesPower.class
 code\cards\BladeSpin.class
 code\actions\UmbralTrespassAction.class
-code\patches\TransformationPatch.class
 code\powers\DemonArmorPower.class
 code\cards\SoulHarvest.class
 code\actions\ShadowCloneAction.class
@@ -103,10 +102,10 @@ code\cards\TemporalStrike.class
 code\cards\ComboMastery.class
 code\cards\HeavyHitter.class
 code\powers\LambdaPower.class
+code\patches\KaynTransformCardsPatch.class
 code\relics\Manamune.class
 code\actions\TimedVFXAction.class
 code\cards\Overpower.class
-code\patches\CampfirePatch.class
 code\relics\Electrocute.class
 code\actions\EasyXCostAction.class
 code\cards\Preparation.class
@@ -117,6 +116,7 @@ code\util\WizArt$1.class
 code\util\ImageHelper.class
 code\actions\HalfReapDamageAction.class
 code\cards\BloodReaper.class
+code\patches\KaynMapGenerationPatch.class
 code\cards\StackTheDeck.class
 code\actions\TripleReapAction.class
 code\cards\DemonArmor.class

@@ -1,8 +1,6 @@
 package code.patches;
 
-import basemod.ReflectionHacks;
 import code.relics.BaseForm;
-import code.relics.TheDarkinScythe;
 import code.ui.TransformRedOption;
 import code.ui.TransformBlueOption;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -14,7 +12,7 @@ import javassist.CtBehavior;
 
 import java.util.ArrayList;
 
-public class CampfirePatch {
+public class KaynCampfirePatch {
 	@SpirePatch(clz = CampfireUI.class, method = "initializeButtons")
 	public static class AddTransformOptions {
 		@SpireInsertPatch(locator = Locator.class)
