@@ -11,7 +11,14 @@
     "FLAVOR": "Reaping will commence NOW.",
     "DESCRIPTIONS": [
       "The Rhaast has taken control. NL ",
-      "Each time you damage an enemy with an attack, gain #b15% of damage dealt as Temporary HP."
+      "Each time you damage an enemy with an attack, gain #b15% of damage dealt as #yTemporary #yHP ( [REMOVE_SPACE] #yReap only counts for #b10% [REMOVE_SPACE])."
+    ]
+  },
+  "${ModID}:DarkHarvest": {
+    "NAME": "Dark Harvest",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Killing an Elite or Boss grants 1 stack of Dark Harvest. During Boss and Elite combats, gain #yStrength equal to your Dark Harvest stacks."
     ]
   },
   "${ModID}:BaseForm": {
@@ -21,6 +28,41 @@
       "Kayn is in his base form. NL ",
       "For the first #b2 turns of combat draw #b1 additional card.",
       ""
+    ]
+  },
+  "${ModID}:TheCollector": {
+    "NAME": "The Collector",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "You execute enemies below 5% health. NL When you kill an enemy gain 5 gold."
+    ]
+  },
+  "${ModID}:SpearOfShojin": {
+    "NAME": "Spear Of Shojin",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Every 5 cards played, reduce the cost of a random card in your hand by 1."
+    ]
+  },
+  "${ModID}:InfinityEdge": {
+    "NAME": "InfinityEdge",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "When attacking an enemy with Vulnerable, gain 1 #yTemporary #yStrength."
+    ]
+  },
+  "${ModID}:Hubris": {
+    "NAME": "Hubris",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "When an enemy dies, gain 5 #yStrength. NL At the end of this turn, lose 5 #yStrength"
+    ]
+  },
+  "${ModID}:DeathsDance": {
+    "NAME": "Death's Dance",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Reduce damage taken by 33% and instead store it within this relic. NL At the end of every turn take 25% of the damage stored. NL Exiting a fight in any way removes all damage stored."
     ]
   },
   "${ModID}:FirstStrike": {

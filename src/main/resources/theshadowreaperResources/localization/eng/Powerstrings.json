@@ -21,6 +21,13 @@
       " #yBlock for each unspent [E] ."
     ]
   },
+  "${ModID}:MasterZedsTrainingPower": {
+    "NAME": "Master Zeds Training",
+    "DESCRIPTIONS": [
+      "When you end your turn with unused [E] draw #b",
+      " cards for each unspent [E] ."
+    ]
+  },
   "${ModID}:UTPower": {
     "NAME": "Umbral Trespass",
     "DESCRIPTIONS": [
@@ -35,7 +42,7 @@
     ]
   },
   "${ModID}:HeavyHitterPower": {
-    "NAME": "HeavyHitter",
+    "NAME": "Heavy Hitter",
     "DESCRIPTIONS": [
       "The First time you play a card that costs #b2 or more each turn [E] gain #b",
       " Energy."
@@ -77,8 +84,7 @@
   "${ModID}:AllOrNothingPower": {
     "NAME": "All Or Nothing",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " Strength, Lose 3 HP per turn."
+      "Strength no longer persists through turns."
     ]
   },
   "${ModID}:WhispersOfBloodPower": {

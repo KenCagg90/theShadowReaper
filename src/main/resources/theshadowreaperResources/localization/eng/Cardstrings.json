@@ -9,12 +9,15 @@
   },
   "${ModID}:ReapingSlash": {
     "NAME": "Reaping Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Reap to ALL enemies.",
-    "EXTENDED_DESCRIPTION": [
-      " NL ${ModID}:Form\u00a0Bonus:",
-      " NL [#9b111e]Gain[] !B! Block.",
-      " NL [#38d3f3]Enemy [#38d3f3]loses !${ModID}:sd! [#38d3f3]HP[]."
-      ]
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Reap to ALL enemies."
+  },
+  "${ModID}:ReapingSlashRhaast": {
+    "NAME": "Reaping Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Reap to ALL enemies. NL Gain !B! Block."
+  },
+  "${ModID}:ReapingSlashAssassin": {
+    "NAME": "Reaping Slash",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! ${ModID}:Reap to ALL enemies. NL Enemy loses 3 HP."
   },
   "${ModID}:BladeSpin": {
     "NAME": "Blade Spin",
@@ -24,26 +27,99 @@
     "NAME": "Showers Of Blood",
     "DESCRIPTION": "Lose !M! HP X times. NL Deal !D! to ALL enemies X times."
   },
+  "${ModID}:FrenziedStrike": {
+    "NAME": "Frenzied Strike",
+    "DESCRIPTION": "Deal !D! damage to a random enemy 3 times."
+  },
+  "${ModID}:FrenziedStrikeAssassin": {
+    "NAME": "Frenzied Strike",
+    "DESCRIPTION": "Deal !D! damage to a random enemy 4 times."
+  },
+  "${ModID}:FrenziedStrikeRhaast": {
+    "NAME": "Frenzied Strike",
+    "DESCRIPTION": "Deal !D! damage to a random enemy 2 times."
+  },
   "${ModID}:MarkForDeath": {
     "NAME": "Mark For Death",
     "DESCRIPTION": "Apply !M! ${ModID}:Reap . NL Next turn, gain [E] ."
+  },
+  "${ModID}:PiercingStrike": {
+    "NAME": "Piercing Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
+  },
+  "${ModID}:TacticalSelection": {
+    "NAME": "Tactical Selection",
+    "DESCRIPTION": "Choose a card from your draw pile and place it into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card from your draw pile and place it into your hand."
+  },
+  "${ModID}:PressTheAdvantage": {
+    "NAME": "Press The Advantage",
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card from your discard pile and place it into your hand."
+  },
+  "${ModID}:SwiftDodge": {
+    "NAME": "Swift Dodge",
+    "DESCRIPTION": "Gain !B! Block. If this is the first card you've played this turn gain an additional !M! Block."
   },
   "${ModID}:BloodReaper": {
     "NAME": "Blood Reaper",
     "DESCRIPTION": "Lose 4 HP. NL Apply !M! Reap to ALL enemies."
   },
+  "${ModID}:ReapAndTear": {
+    "NAME": "Reap And Tear",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! ${ModID}:Reap to ALL enemies."
+  },
+  "${ModID}:DarkPact": {
+    "NAME": "Dark Pact",
+    "DESCRIPTION": "Lose !M! HP. NL Add 2 random cards to your hand."
+  },
+  "${ModID}:FadeIntoShadows": {
+    "NAME": "Fade Into Shadows",
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !M! Block."
+  },
+  "${ModID}:AdaptiveStrategy": {
+    "NAME": "Adaptive Strategy",
+    "DESCRIPTION": "If you just played: NL An attack, Gain [E] . NL A skill, draw !M! card. NL A power, deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "If you just played: NL An attack, Gain [E] [E] . NL A skill, draw !M! cards. NL A power, deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "I must play a card first."
+    ]
+  },
   "${ModID}:Bloodrage": {
     "NAME": "Bloodrage",
     "DESCRIPTION": "Whenever you lose HP from a card, draw a card."
+  },
+  "${ModID}:ReapingWhirlwind": {
+    "NAME": "Reaping Whirlwind",
+    "DESCRIPTION": "Apply !M! ${ModID}:Reap to ALL enemies X times."
+  },
+  "${ModID}:DesperateMeasures": {
+    "NAME": "Desperate Measures",
+    "DESCRIPTION": "Gain !B! Block. If you have less that 50% health, gain an additional !M! Block."
+  },
+  "${ModID}:RecklessAttack": {
+    "NAME": "Reckless Attack",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable to yourself."
   },
   "${ModID}:Meditation": {
     "NAME": "Meditation",
     "DESCRIPTION": "Gain [E] . NL Unspent [E] is conserved this turn. Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain [E] . NL Unspent [E] is conserved this turn."
   },
-  "${ModID}:DemonArmor": {
-    "NAME": "Demon Armor",
-    "DESCRIPTION": "When you end your turn with unused [E] , gain !M! Block for each unspent [E] ."
+  "${ModID}:FuturePlanning": {
+  "NAME": "Future Planning",
+  "DESCRIPTION": "Your [E] is conserved this turn. NL Next turn, draw cards equal to the amount of cards remaining in your hand."
+},
+  "${ModID}:ProfaneBlow": {
+    "NAME": "Profane Blow",
+    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain 2 Strength."
+  },
+  "${ModID}:ShedWeakness": {
+    "NAME": "Shed Weakness",
+    "DESCRIPTION": "Lose !M! HP. Remove all debuffs from yourself. Gain 1 Strength for each debuff removed. NL Exhaust."
+  },
+  "${ModID}:SanguineStrike": {
+    "NAME": "Sanguine Strike",
+    "DESCRIPTION": "Lose 2 HP. Deal !D! Damage. Apply !M! Vulnerable to the enemy"
   },
   "${ModID}:ReaperSigil": {
     "NAME": "Reaper's Sigil",
@@ -51,16 +127,19 @@
   },
   "${ModID}:PrepareTheKill": {
     "NAME": "Prepare The Kill",
-    "DESCRIPTION": "Gain !M! Strength. NL At the end of your turn lose !M! Strength. NL Exhaust."
+    "DESCRIPTION": "Gain !M! Vigor."
   },
   "${ModID}:Shadowstep": {
     "NAME": "Shadow Step",
-    "DESCRIPTION": "Next turn, Draw !M! additional cards.",
-    "EXTENDED_DESCRIPTION": [
-      " NL ${ModID}:Form\u00a0Bonus:",
-      " NL [#9b111e]Gain !M! []Block.",
-      " NL [#38d3f3]Gain 1[] [E] ."
-    ]
+    "DESCRIPTION": "Next turn, Draw !M! additional cards."
+  },
+  "${ModID}:ShadowstepRhaast": {
+    "NAME": "Shadow Step",
+    "DESCRIPTION": "Next turn, Draw !M! additional cards. NL Gain !M! Block."
+  },
+  "${ModID}:ShadowstepAssassin": {
+    "NAME": "Shadow Step",
+    "DESCRIPTION": "Next turn, Draw !M! cards. NL Gain [E] ."
   },
   "${ModID}:Distract": {
     "NAME": "Distract",
@@ -72,7 +151,15 @@
   },
   "${ModID}:AssassinsTraining": {
     "NAME": "Assassin's Training",
-    "DESCRIPTION": "If you have unspent [E] at the end of your turn, Next turn, gain Strength equal to your remaining [E] ."
+    "DESCRIPTION": "If you have unspent [E] at the end of your turn, Next turn, gain !M! Strength."
+  },
+  "${ModID}:DemonArmor": {
+    "NAME": "Demon Armor",
+    "DESCRIPTION": "When you end your turn with unused [E] , gain !M! Block for each unspent [E] ."
+  },
+  "${ModID}:MasterZedsTraining": {
+    "NAME": "Master Zeds Training",
+    "DESCRIPTION": "Whenever you end your turn with unused [E] , draw 1 card for each unused [E] ."
   },
   "${ModID}:SiphoningStrikes": {
     "NAME": "Siphoning Strikes",
@@ -89,12 +176,17 @@
   "${ModID}:UmbralTrespass": {
     "NAME": "Umbral Trespass",
     "DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. Exhaustive 2.",
-    "EXTENDED_DESCRIPTION": [
-      " NL ${ModID}:Form\u00a0Bonus:",
-      " NL [#9b111e]If Fatal, [#9b111e]Gain [#9b111e]3 [#9b111e]Max [#9b111e]HP[]",
-      " NL [#38d3f3][]If Fatal, [#38d3f3]Deal [#38d3f3]50%. [#38d3f3]of [#38d3f3]damage [#38d3f3]done [#38d3f3]to [#38d3f3]ALL [#38d3f3]enemies.[]"
-    ]
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. Exhaustive 2."
+  },
+  "${ModID}:UmbralTrespassRhaast": {
+    "NAME": "Umbral Trespass",
+    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Gain 4 Max HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Gain 4 Max HP. NL  Exhaustive 2."
+  },
+  "${ModID}:UmbralTrespassAssassin": {
+    "NAME": "Umbral Trespass",
+    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Deal 50% of damage dont to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Deal 50% of damage dont to ALL enemies. NL Exhaustive 2."
   },
   "${ModID}:StrategicManeuver": {
     "NAME": "Strategic Maneuver",
@@ -120,6 +212,14 @@
     "NAME": "Flurry Of Blades",
     "DESCRIPTION": "Deal X damage to a random monster X times."
   },
+  "${ModID}:FlurryOfBladesRhaast": {
+    "NAME": "Flurry Of Blades",
+    "DESCRIPTION": "Deal X damage to a random monster X times. Increase damage by 15% of your Temp HP. "
+  },
+  "${ModID}:FlurryOfBladesAssassin": {
+    "NAME": "Flurry Of Blades",
+    "DESCRIPTION": "Deal X damage to a random monster X times. Damage increases by 5% per subsequent attack."
+  },
   "${ModID}:PerfectForm": {
     "NAME": "Perfect Form",
     "DESCRIPTION": "Lose !M! HP. NL Gain 1 Dexterity for every 3 attack cards played. Gain 1 Strength for every 4 skill cards played."
@@ -138,7 +238,8 @@
   },
   "${ModID}:AllOrNothing": {
     "NAME": "All Or Nothing",
-    "DESCRIPTION": "Gain !M! Strength. NL Lose 3 HP per turn."
+    "DESCRIPTION": "Gain 8 Strength. Strength no longer persists through turns.",
+    "UPGRADE_DESCRIPTION": "Gain 10 Strength. Strength no longer persists through turns."
   },
   "${ModID}:TemporalStrike": {
     "NAME": "Temporal Strike",
@@ -146,7 +247,7 @@
   },
   "${ModID}:ComboMastery": {
     "NAME": "Combo Mastery",
-    "DESCRIPTION": "Draw !M! cards. NL Reduce the cost of all cards in your hand by 1 this turn. NL Exhaust."
+    "DESCRIPTION": "Draw !M! cards. NL Reduce the cost of all 2+ cost cards in your hand by 1 this turn. NL Exhaust."
   },
   "${ModID}:HeavyHitter": {
     "NAME": "Heavy Hitter",
@@ -179,13 +280,14 @@
     "NAME": "Blade's Reach",
     "DESCRIPTION": "Deal !D! damage to the two frontmost enemies. NL Apply !M! Weak."
   },
-  "${ModID}:FinishingTouches": {
-    "NAME": "Finishing Touches",
-    "DESCRIPTION": "Deal !D! damage twice. NL Gain [E]  for each attack you've played this turn up to a maximum of !M!  [E] ."
+  "${ModID}:UnendingSlaughter": {
+    "NAME": "Unending Slaughter",
+    "DESCRIPTION": "Deal !D! damage twice. NL Gain [E]  for each attack played this turn up to a maximum of [E] [E] [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage twice. NL Gain [E]  for each attack played this turn up to a maximum of [E] [E] [E] . NL Exhaustive 2."
   },
   "${ModID}:TendToWounds": {
     "NAME": "Tend To Wounds",
-    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Weak. NL Exhaust."
+    "DESCRIPTION": "Heal !M! HP. NL Gain 1 Vulnerable. NL Exhaust."
   },
   "${ModID}:Outburst": {
     "NAME": "Outburst",
@@ -195,8 +297,8 @@
     "NAME": "Second Strike",
     "DESCRIPTION": "Deal !D! damage. NL Costs 0 if you played a card costing more than 1 this turn."
   },
-  "${ModID}:DarkHarvest": {
-    "NAME": "Dark Harvest",
+  "${ModID}:ReapersHarvest": {
+    "NAME": "Reaper's Harvest",
     "DESCRIPTION": "Double the enemy's ${ModID}:Reap . NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Triple the enemy's ${ModID}:Reap . NL Exhaust."
   },
@@ -225,6 +327,16 @@
     "DESCRIPTION": "Deal !D! damage. NL If this dealt at least !M! damage, gain !B! Block."
   },
   "${ModID}:ShadowSight": {
+    "NAME": "Shadow Sight",
+    "DESCRIPTION": "Retain. NL Gain [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL Exhaust."
+  },
+  "${ModID}:ShadowSightRhaast": {
+    "NAME": "Shadow Sight",
+    "DESCRIPTION": "Retain. NL Gain [E] . NL Exhaustive 2",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL Exhaustive 2"
+  },
+  "${ModID}:ShadowSightAssassin": {
     "NAME": "Shadow Sight",
     "DESCRIPTION": "Retain. NL Gain [E] . NL You can only play two of this card per turn.",
     "UPGRADE_DESCRIPTION": "Retain. NL Gain [E] [E] . NL You can only play two of this card per turn."
