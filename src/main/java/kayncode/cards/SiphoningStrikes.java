@@ -11,8 +11,8 @@ public class SiphoningStrikes extends AbstractEasyCard {
     public final static String ID = makeID(SiphoningStrikes.class.getSimpleName());
 
     public SiphoningStrikes() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.magicNumber = this.baseMagicNumber = 2;
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.magicNumber = this.baseMagicNumber = 3;
 
     }
 

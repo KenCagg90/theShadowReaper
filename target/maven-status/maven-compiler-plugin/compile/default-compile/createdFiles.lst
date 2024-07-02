@@ -24,9 +24,9 @@ kayncode\relics\AbstractEasyRelic.class
 kayncode\cards\RecklessAttack.class
 kayncode\cards\SlaughterTheWeak.class
 kayncode\potions\DemoPotion.class
-kayncode\cards\AdaptiveStrategy$1.class
 kayncode\cards\FrenziedStrike.class
 kayncode\util\CardArtRoller$ReskinInfo.class
+kayncode\KaynEnergyOrb.class
 kayncode\powers\MasterZedsTrainingPower.class
 kayncode\cards\CalculatedSteps.class
 kayncode\cards\Transfusion.class
@@ -60,6 +60,7 @@ kayncode\actions\TimedVFXAction.class
 kayncode\powers\DarkinRagePower.class
 kayncode\cards\AbstractEasyCard.class
 kayncode\cards\Defend.class
+kayncode\cards\FinishingTouch.class
 kayncode\cards\MoltenBlood.class
 kayncode\cards\ReapersToll.class
 kayncode\util\Wiz.class
@@ -67,8 +68,10 @@ kayncode\cards\Meditation.class
 kayncode\cards\FuturePlanning.class
 kayncode\cards\PiercingStrike.class
 kayncode\cards\BladesReach.class
+kayncode\cards\SiphonStrength.class
 kayncode\relics\InfinityEdge.class
 kayncode\cards\Overpower.class
+kayncode\actions\LoseEnergyNextTurnAction.class
 kayncode\actions\ReapDamageAction.class
 kayncode\cards\UmbralTrespassRhaast.class
 kayncode\cards\cardvars\SecondBlock.class
@@ -87,7 +90,6 @@ kayncode\relics\Manamune.class
 kayncode\cards\UmbralEnergy.class
 kayncode\powers\AssassinsTrainingPower.class
 kayncode\cards\PrepareTheKill.class
-kayncode\powers\AllOrNothingPower.class
 kayncode\cards\UmbralTrespassAssassin.class
 kayncode\cards\ShadowSight.class
 kayncode\util\ProAudio.class
@@ -99,6 +101,7 @@ kayncode\cards\ReapersHarvest.class
 kayncode\cards\Distract.class
 kayncode\cards\ShadowWaltz.class
 kayncode\relics\TheDarkinScythe.class
+kayncode\actions\LoseEnergyNextTurnAction$1.class
 kayncode\cards\Brutalize.class
 kayncode\actions\HalfReapDamageAction.class
 kayncode\vfx\TransformEffect.class
@@ -172,5 +175,5 @@ kayncode\actions\ReapersTollAction.class
 kayncode\cards\SanguineStrike.class
 kayncode\ui\TransformBlueOption.class
 kayncode\cards\ShadowSightAssassin.class
-kayncode\powers\GoldAdvantagePower.class
+kayncode\relics\WarmogsArmor.class
 kayncode\cards\PressTheAdvantage.class

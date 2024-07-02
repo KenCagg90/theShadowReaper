@@ -29,7 +29,7 @@ public class ReapingSlashAssassin extends AbstractEasyCard implements SpawnModif
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = 4;
-        baseSecondDamage = 3;
+        baseSecondDamage = 5;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
     }
 

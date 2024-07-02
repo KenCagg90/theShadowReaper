@@ -30,7 +30,7 @@ public class ReapPower extends AbstractEasyPower {
     }
 
     public void atStartOfTurn() {
-        if (AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && EnergyPanel.totalCount > 0) {
+        if (AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && EnergyPanel.totalCount > 0) {
             this.flash();
             addToBot(new SFXAction("REAP"));
             AbstractDungeon.effectList.add(new kayncode.vfx.ReapEffect(this.owner.hb.cX, this.owner.hb.cY, AttackEffect.NONE, false));

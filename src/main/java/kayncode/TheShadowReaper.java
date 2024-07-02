@@ -57,8 +57,10 @@ public class TheShadowReaper extends CustomPlayer {
             makeCharacterPath("mainChar/orb/layer5d.png"),
     };
 
+    private Color orbColor = Color.WHITE.cpy(); // Default orb color
+
     public TheShadowReaper(String name, PlayerClass setClass) {
-        super(name, setClass, new CustomEnergyOrb(orbTextures, makeCharacterPath("mainChar/orb/vfx.png"), null),
+        super(name, setClass, new KaynEnergyOrb(orbTextures, makeCharacterPath("mainChar/orb/vfx.png"), null),
                 new SpineAnimation(KAYN_ATLAS_PATH, KAYN_JSON_PATH, 0.8F));
         AnimationState.TrackEntry e = state.setAnimation(0, "KaynIdle", true);
         initializeClass(null,
@@ -98,6 +100,7 @@ public class TheShadowReaper extends CustomPlayer {
 
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
+        retVal.add(BaseForm.ID);
         retVal.add(TheDarkinScythe.ID);
         return retVal;
     }
@@ -236,4 +239,6 @@ public class TheShadowReaper extends CustomPlayer {
         @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
     }
+
+
 }

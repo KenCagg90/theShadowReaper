@@ -28,8 +28,9 @@ public class StackTheDeckAction extends AbstractGameAction {
         } else {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (AbstractCard card : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card.makeStatEquivalentCopy(), true, false));
                     AbstractDungeon.player.exhaustPile.removeCard(card); // Remove the card from the exhaust pile
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card.makeStatEquivalentCopy(), false, false));
+                    //AbstractDungeon.player.drawPile.addToTop(card); // Add the card to the top of the draw pile
                 }
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 isDone = true;

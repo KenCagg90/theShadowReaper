@@ -36,7 +36,6 @@ public class UmbralTrespassAssassin extends AbstractEasyCard implements SpawnMod
         this.magicNumber = this.baseMagicNumber = 1; // Used for Intangible
         this.secondMagic = this.baseSecondMagic = 20; // Used for card text
         this.exhaust = true; // Card exhausts after use
-        this.selfRetain = true;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
 
     }

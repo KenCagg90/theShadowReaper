@@ -14,16 +14,15 @@ public class FadeIntoShadows extends AbstractEasyCard {
     public FadeIntoShadows() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseBlock = 5;
-        this.baseMagicNumber = this.magicNumber = 5;
+
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, p, this.block));
-        this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
     }
 
     public void upp() {
         this.upgradeBlock(2);
-        this.upgradeMagicNumber(2);
     }
 }

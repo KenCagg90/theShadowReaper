@@ -27,6 +27,7 @@ public class PiercingStrike extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        this.upgradeDamage(2); // Upgrade to deal 7 damage instead of 5
+        this.upgradeDamage(2);
+        this.upgradeMagicNumber(1);// Upgrade to deal 7 damage instead of 5
     }
 }

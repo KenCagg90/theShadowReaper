@@ -28,7 +28,7 @@ public class SanguineStrike extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        this.upgradeDamage(-5); // Upgrade to deal 10 damage instead of 15
+        this.upgradeDamage(5); // Upgrade to deal 10 damage instead of 15
         this.upgradeMagicNumber(1); // Upgrade to apply 2 Vulnerable instead of 1
     }
 }

@@ -65,7 +65,8 @@
   "${ModID}:AssassinsTrainingPower": {
     "NAME": "Assassin's Training",
     "DESCRIPTIONS": [
-      "If you have unspent [E] at the end of your turn, Next turn, gain Strength equal to your remaining [E] ."
+      "If you have unspent [E] at the end of your turn, Next turn, gain #b.",
+      " #yStrength."
     ]
   },
   "${ModID}:SiphoningStrikesPower": {

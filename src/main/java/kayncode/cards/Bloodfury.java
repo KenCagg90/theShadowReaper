@@ -12,7 +12,7 @@ public class Bloodfury extends AbstractEasyCard {
 
     public Bloodfury() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 8;
+        this.baseMagicNumber = this.magicNumber = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -22,6 +22,6 @@ public class Bloodfury extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(-3); // Upgrades to lose 5 HP instead of 8
+        upgradeMagicNumber(-1); // Upgrades to lose 5 HP instead of 8
     }
 }

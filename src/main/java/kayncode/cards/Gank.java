@@ -1,10 +1,13 @@
 package kayncode.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
 
 import static kayncode.KaynMod.makeID;
 
@@ -13,24 +16,23 @@ public class Gank extends AbstractEasyCard {
 
     public Gank() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 8;
+        this.baseDamage = 7;
+        this.magicNumber = this.baseMagicNumber = 3;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal 8(11) damage
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        // Deal 7(10) damage
+        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
 
-        // If you've played 5 or more cards this turn, deal 8(11) damage again
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() >= 5) {
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
-        }
+        // Reduce enemy's strength by 3(4) for this turn
+        this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, this.magicNumber), this.magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeDamage(3); // Upgrade to deal 11 damage instead of 8
+        upgradeDamage(3); // Upgrade to deal 10 damage instead of 7
+        upgradeMagicNumber(1); // Upgrade to reduce strength by 4 instead of 3
     }
-
-
 }

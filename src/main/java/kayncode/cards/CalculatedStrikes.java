@@ -10,15 +10,14 @@ public class CalculatedStrikes extends AbstractEasyCard {
     public final static String ID = makeID(CalculatedStrikes.class.getSimpleName());
 
     public CalculatedStrikes() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 7;
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        this.baseDamage = 11;
         this.selfRetain = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
-        this.modifyCostForCombat(1);
     }
 
     @Override
@@ -28,11 +27,6 @@ public class CalculatedStrikes extends AbstractEasyCard {
         }
     }
 
-    @Override
-    public void resetAttributes() {
-        super.resetAttributes();
-        this.costForTurn = this.cost; // Ensure cost is properly reset for turn
-    }
 
     @Override
     public void upp() {

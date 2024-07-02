@@ -34,7 +34,7 @@ public class UnendingSlaughter extends AbstractEasyCard {
                 .count();
 
         // Gain 1 Energy for each Attack played this turn, up to a maximum of 2(3)
-        int energyToGain = (int) Math.min(attackCardsPlayedThisTurn, this.upgraded ? 3 : 2);
+        int energyToGain = (int) Math.min(attackCardsPlayedThisTurn, 3);
         for (int i = 0; i < energyToGain; i++) {
             this.addToBot(new GainEnergyAction(1));
         }

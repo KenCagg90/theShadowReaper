@@ -25,7 +25,7 @@ public class KaynRoomCompletionPatch {
 
         TheDarkinScythe scythe = (TheDarkinScythe) AbstractDungeon.player.getRelic(TheDarkinScythe.ID);
         if (scythe != null) {
-            if (isRedRoom) {
+            if (isRedRoom&& TheDarkinScythe.redOrbs < 8) {
                 System.out.println("RoomCompletionPatch: Red room detected. Adding RedOrbs.");
                 TheDarkinScythe.redOrbs += orbsToGive;
                 scythe.flashRed();
@@ -36,6 +36,7 @@ public class KaynRoomCompletionPatch {
             }
             scythe.updateDescription();
             scythe.checkOrbCounts();
+
         }
     }
 }

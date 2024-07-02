@@ -36,7 +36,6 @@ public class UmbralTrespassRhaast extends AbstractEasyCard implements SpawnModif
         this.magicNumber = this.baseMagicNumber = 1; // Used for Intangible
         this.secondMagic = this.baseSecondMagic = 20; // Used for card text
         this.exhaust = true; // Card exhausts after use
-        this.selfRetain = true;
         setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast.png"));
     }
 

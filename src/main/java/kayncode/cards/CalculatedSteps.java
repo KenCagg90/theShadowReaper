@@ -10,15 +10,14 @@ public class CalculatedSteps extends AbstractEasyCard {
     public final static String ID = makeID(CalculatedSteps.class.getSimpleName());
 
     public CalculatedSteps() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.baseBlock = 6;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        this.baseBlock = 11;
         this.selfRetain = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new GainBlockAction(p, this.block));
-        this.modifyCostForCombat(1);
     }
 
     @Override
@@ -26,12 +25,6 @@ public class CalculatedSteps extends AbstractEasyCard {
         if (this.cost > 0) {
             this.modifyCostForCombat(-1);
         }
-    }
-
-    @Override
-    public void resetAttributes() {
-        super.resetAttributes();
-        this.costForTurn = this.cost; // Ensure cost is properly reset for turn
     }
 
     @Override

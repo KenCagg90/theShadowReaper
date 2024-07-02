@@ -1,6 +1,7 @@
 package kayncode.patches;
 
 import kayncode.relics.BaseForm;
+import kayncode.relics.TheDarkinScythe;
 import kayncode.ui.TransformRedOption;
 import kayncode.ui.TransformBlueOption;
 import com.evacipated.cardcrawl.modthespire.lib.*;
@@ -17,7 +18,7 @@ public class KaynCampfirePatch {
 	public static class AddTransformOptions {
 		@SpireInsertPatch(locator = Locator.class)
 		public static void patch(CampfireUI __instance, ArrayList<AbstractCampfireOption> ___buttons) {
-			if (AbstractDungeon.player.hasRelic(BaseForm.ID)) {
+			if (AbstractDungeon.player.hasRelic(TheDarkinScythe.ID)) {
 					___buttons.add(new TransformRedOption());
 					___buttons.add(new TransformBlueOption());
 

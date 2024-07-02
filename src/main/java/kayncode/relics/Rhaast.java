@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static kayncode.KaynMod.makeID;
 
@@ -26,9 +27,8 @@ public class Rhaast extends AbstractEasyRelic {
 
     @Override
     public void onObtainCard(AbstractCard c) {
-       KaynTransformCardsPatch.transformToRhaast();
+        KaynTransformCardsPatch.transformToRhaast();
     }
-
 
     @Override
     public void onUnequip() {
@@ -39,20 +39,21 @@ public class Rhaast extends AbstractEasyRelic {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (info.owner == AbstractDungeon.player && info.type == DamageInfo.DamageType.NORMAL && damageAmount > 0) {
-            this.flash();
-            int tempHP = (int) Math.ceil(damageAmount * 0.15);
-            AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, tempHP));
-        }
-         if  (info.owner == AbstractDungeon.player && info.type == DamageInfo.DamageType.HP_LOSS && damageAmount > 0) {
-            this.flash();
-            int tempHP = (int) Math.ceil(damageAmount * 0.10);
-            AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, tempHP));
+        if (info.owner == AbstractDungeon.player && damageAmount > 0) {
+            if (info.type == DamageInfo.DamageType.NORMAL) {
+                this.flash();
+                int tempHP = (int) Math.ceil(damageAmount * 0.10);
+                AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, tempHP));
+            } else if (info.type == DamageInfo.DamageType.HP_LOSS && target instanceof AbstractMonster) {
+                this.flash();
+                int tempHP = (int) Math.ceil(damageAmount * 0.08);
+                AbstractDungeon.actionManager.addToBottom(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, tempHP));
+            }
         }
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0];
     }
 }

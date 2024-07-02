@@ -11,6 +11,7 @@ import com.evacipated.cardcrawl.mod.stslib.Keyword;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.localization.OrbStrings;
@@ -24,6 +25,8 @@ import kayncode.cards.AbstractEasyCard;
 import kayncode.cards.cardvars.AbstractEasyDynamicVariable;
 import kayncode.potions.AbstractEasyPotion;
 import kayncode.relics.AbstractEasyRelic;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import kayncode.util.ProAudio;
 import java.nio.charset.StandardCharsets;
 
@@ -35,9 +38,10 @@ public class KaynMod implements
         EditStringsSubscriber,
         EditKeywordsSubscriber,
         EditCharactersSubscriber,
-        AddAudioSubscriber {
+        AddAudioSubscriber,
+        StartGameSubscriber {
 
-    public static final String modID = "theshadowreaper"; //TODO: Change this.
+    public static final String modID = "theshadowreaper";
 
     public static String makeID(String idText) {
         return modID + ":" + idText;
@@ -96,6 +100,7 @@ public class KaynMod implements
                 CARD_ENERGY_L, TEXT_ENERGY);
     }
 
+
     public static String makePath(String resourcePath) {
         return modID + "Resources/" + resourcePath;
     }
@@ -128,16 +133,16 @@ public class KaynMod implements
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new TheShadowReaper(TheShadowReaper.characterStrings.NAMES[1], TheShadowReaper.Enums.THE_SHADOWREAPER),
-            CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheShadowReaper.Enums.THE_SHADOWREAPER);
-        
+                CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, TheShadowReaper.Enums.THE_SHADOWREAPER);
+
         new AutoAdd(modID)
-            .packageFilter(AbstractEasyPotion.class)
-            .any(AbstractEasyPotion.class, (info, potion) -> {
-                if (potion.pool == null)
-                    BaseMod.addPotion(potion.getClass(), potion.liquidColor, potion.hybridColor, potion.spotsColor, potion.ID);
-                else
-                    BaseMod.addPotion(potion.getClass(), potion.liquidColor, potion.hybridColor, potion.spotsColor, potion.ID, potion.pool);
-            });
+                .packageFilter(AbstractEasyPotion.class)
+                .any(AbstractEasyPotion.class, (info, potion) -> {
+                    if (potion.pool == null)
+                        BaseMod.addPotion(potion.getClass(), potion.liquidColor, potion.hybridColor, potion.spotsColor, potion.ID);
+                    else
+                        BaseMod.addPotion(potion.getClass(), potion.liquidColor, potion.hybridColor, potion.spotsColor, potion.ID, potion.pool);
+                });
     }
 
     @Override
@@ -159,9 +164,9 @@ public class KaynMod implements
     @Override
     public void receiveEditCards() {
         new AutoAdd(modID)
-            .packageFilter(AbstractEasyDynamicVariable.class)
-            .any(DynamicVariable.class, (info, var) -> 
-                BaseMod.addDynamicVariable(var));
+                .packageFilter(AbstractEasyDynamicVariable.class)
+                .any(DynamicVariable.class, (info, var) ->
+                        BaseMod.addDynamicVariable(var));
         new AutoAdd(modID)
                 .packageFilter(AbstractEasyCard.class)
                 .setDefaultSeen(true)
@@ -207,6 +212,23 @@ public class KaynMod implements
         if (keywords != null) {
             for (Keyword keyword : keywords) {
                 BaseMod.addKeyword(modID, keyword.PROPER_NAME, keyword.NAMES, keyword.DESCRIPTION);
+            }
+        }
+    }
+
+    @Override
+    public void receiveStartGame() {
+        applyTransformation();
+    }
+
+    private void applyTransformation() {
+        if (AbstractDungeon.player instanceof TheShadowReaper) {
+            TheShadowReaper player = (TheShadowReaper) AbstractDungeon.player;
+
+            if (player.hasRelic(Rhaast.ID) && !player.isTransformedToRhaast()) {
+                player.transformToRhaast();
+            } else if (player.hasRelic(ShadowAssassin.ID) && !player.isTransformedToAssassin()) {
+                player.transformToAssassin();
             }
         }
     }

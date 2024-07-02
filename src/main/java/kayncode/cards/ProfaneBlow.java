@@ -14,16 +14,18 @@ public class ProfaneBlow extends AbstractEasyCard {
     public ProfaneBlow() {
         super(ID, 3, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         this.baseDamage = 30;
+        this.magicNumber = this.baseMagicNumber = 2;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ProfaneBlowAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), 2));
+        this.addToBot(new ProfaneBlowAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.magicNumber));
     }
 
     @Override
     public void upp() {
         upgradeDamage(5);
+        upgradeMagicNumber(1);
     }
 
     @Override

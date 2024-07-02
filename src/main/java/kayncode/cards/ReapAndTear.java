@@ -13,9 +13,9 @@ public class ReapAndTear extends AbstractEasyCard {
     public final static String ID = makeID(ReapAndTear.class.getSimpleName());
 
     public ReapAndTear() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseDamage = 12;
-        this.baseMagicNumber = this.magicNumber = 4;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        this.baseDamage = 8;
+        this.baseMagicNumber = this.magicNumber = 3;
         this.isMultiDamage = true;
     }
 
@@ -28,6 +28,7 @@ public class ReapAndTear extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeDamage(3);
+        upgradeMagicNumber(1);
     }
 }

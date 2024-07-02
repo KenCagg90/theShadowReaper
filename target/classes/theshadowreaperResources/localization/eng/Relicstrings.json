@@ -3,15 +3,14 @@
     "NAME": "The Darkin Scythe",
     "FLAVOR": "It'll do something eventually.",
     "DESCRIPTIONS": [
-      "Some encounters will glow either Red or Blue. After completing 8 glowing rooms (Elites count as 2) of either color, Kayn can assume the form of #bThe #bShadow #bAssassin or #rThe #rDarkin #rSlayer at a Rest Site."
+      "Gather #rRed or #bBlue essence from combat encounters (Elites count as 2). Upon gathering #b8 Essence of either type, Kayn can assume the form of #rDarkin #rSlayer or #bShadow #bAssassin. NL #rDarkin #rSlayer [REMOVE_SPACE]: Gain #b10% of damage dealt as #yTemp #yHP [REMOVE_SPACE]. NL #bShadow #bAssassin [REMOVE_SPACE]: Draw a card for every #b25 damage you deal."
       ]
   },
   "theshadowreaper:Rhaast": {
     "NAME": "Rhaast Form",
     "FLAVOR": "Reaping will commence NOW.",
     "DESCRIPTIONS": [
-      "The Rhaast has taken control. NL ",
-      "Each time you damage an enemy with an attack, gain #b15% of damage dealt as #yTemporary #yHP ( [REMOVE_SPACE] #yReap only counts for #b10% [REMOVE_SPACE])."
+      "Each time you damage an enemy with an attack (or #yReap [REMOVE_SPACE]), gain #b10% ( [REMOVE_SPACE] #b8% [REMOVE_SPACE]) of damage dealt as #yTemp #yHP [REMOVE_SPACE]."
     ]
   },
   "theshadowreaper:DarkHarvest": {
@@ -25,7 +24,7 @@
     "NAME": "Base Form",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Kayn is in his base form. NL ",
+      "Gain #b5 #yTemporary #yHP at combat start. NL ",
       "For the first #b2 turns of combat draw #b1 additional card.",
       ""
     ]
@@ -35,6 +34,13 @@
     "FLAVOR": "",
     "DESCRIPTIONS": [
       "You execute enemies below 5% health. NL When you kill an enemy gain 5 gold."
+    ]
+  },
+  "theshadowreaper:WarmogsArmor": {
+    "NAME": "Warmog's Armor",
+    "FLAVOR": "Grants enormous regeneration.",
+    "DESCRIPTIONS": [
+      "If you don't take unblocked damage for #b{0} turns, heal for #b{1}% of your max HP at the start of each subsequent turn where you don't take unblocked damage."
     ]
   },
   "theshadowreaper:SpearOfShojin": {
@@ -69,7 +75,7 @@
     "NAME": "First Strike",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "On the first 3 turns of combat, gain gold equal to 10% of damage dealt at combat end."
+      "Each combat, gain gold equal to 20% of damage dealt with your first 3 attacks at combat end."
     ]
   },
   "theshadowreaper:Electrocute": {
@@ -84,14 +90,14 @@
     "NAME": "Manamune",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Once per turn, When you play 3 attacks, gain [E]."
+      "Once per turn, When you play 3 attacks, gain [E] ."
     ]
   },
   "theshadowreaper:ShadowAssassin": {
     "NAME": "Shadow Assassin Form",
     "FLAVOR": "The Darkin is gone. Our enemies are next.",
     "DESCRIPTIONS": [
-      "The Shadow Assassin has won. NL For every 25 damage dealt, draw a card."
+      "For every 25 damage dealt, draw a card."
     ]
   }
 }

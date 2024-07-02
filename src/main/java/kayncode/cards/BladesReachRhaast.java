@@ -30,7 +30,7 @@ public class BladesReachRhaast extends AbstractEasyCard implements SpawnModifica
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReachRhaast() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Weak/Vulnerable
 

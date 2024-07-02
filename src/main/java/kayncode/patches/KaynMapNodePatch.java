@@ -95,68 +95,29 @@ public class KaynMapNodePatch {
     }
 
     private static void processRooms() {
-        List<MapRoomNode> leftNodes = new ArrayList<>();
-        List<MapRoomNode> rightNodes = new ArrayList<>();
-        List<MapRoomNode> centerNodes = new ArrayList<>();
-        int mapMidpoint = AbstractDungeon.map.get(0).size() / 2; // Divide the map into left and right halves
-
+        List<MapRoomNode> eligibleNodes = new ArrayList<>();
         for (ArrayList<MapRoomNode> row : AbstractDungeon.map) {
             for (MapRoomNode node : row) {
                 if (node.room instanceof MonsterRoom || node.room instanceof MonsterRoomElite) {
-                    if (node.x < mapMidpoint) {
-                        leftNodes.add(node);
-                    } else if (node.x > mapMidpoint) {
-                        rightNodes.add(node);
-                    } else {
-                        centerNodes.add(node);
-                    }
+                    eligibleNodes.add(node);
                 }
             }
         }
 
-        // Determine the number of nodes to color
-        int totalNodes = leftNodes.size() + rightNodes.size() + centerNodes.size();
-        int nodesToColor = totalNodes;
+        int totalNodes = eligibleNodes.size();
+        int halfNodes = totalNodes / 2;
 
-        // Combine all nodes into a single list and shuffle
-        List<MapRoomNode> allNodes = new ArrayList<>();
-        allNodes.addAll(leftNodes);
-        allNodes.addAll(rightNodes);
-        allNodes.addAll(centerNodes);
-        Collections.shuffle(allNodes, AbstractDungeon.mapRng.random);
+        Collections.shuffle(eligibleNodes, AbstractDungeon.mapRng.random);
 
-        // Select nodes to be colored
-        List<MapRoomNode> coloredNodes = allNodes.subList(0, nodesToColor);
-
-        // Randomly assign left half to be red or blue
-        boolean leftIsRed = AbstractDungeon.mapRng.randomBoolean();
-
-        // Color left nodes
-        for (MapRoomNode node : leftNodes) {
-            if (coloredNodes.contains(node)) {
-                isColored.put(node, true);
-                nodeColors.put(node, leftIsRed);
-            }
-        }
-
-        // Color right nodes
-        for (MapRoomNode node : rightNodes) {
-            if (coloredNodes.contains(node)) {
-                isColored.put(node, true);
-                nodeColors.put(node, !leftIsRed);
-            }
-        }
-
-        // Color center nodes randomly
-        for (MapRoomNode node : centerNodes) {
-            if (coloredNodes.contains(node)) {
-                isColored.put(node, true);
-                nodeColors.put(node, AbstractDungeon.mapRng.randomBoolean());
-            }
+        // Ensure at least half are red and half are blue
+        for (int i = 0; i < totalNodes; i++) {
+            MapRoomNode node = eligibleNodes.get(i);
+            isColored.put(node, true);
+            nodeColors.put(node, i < halfNodes);
         }
 
         System.out.println("Processed rooms for coloring:");
-        for (MapRoomNode node : coloredNodes) {
+        for (MapRoomNode node : eligibleNodes) {
             System.out.println("Node at (" + node.x + ", " + node.y + ") - " + (nodeColors.get(node) ? "Red" : "Blue"));
         }
     }

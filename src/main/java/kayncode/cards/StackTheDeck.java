@@ -10,6 +10,7 @@ public class StackTheDeck extends AbstractEasyCard {
 
     public StackTheDeck() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

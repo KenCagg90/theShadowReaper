@@ -14,7 +14,8 @@ public class PressTheAdvantage extends AbstractEasyCard {
 
     public PressTheAdvantage() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 3;
+        this.baseDamage = 5;
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,6 +24,6 @@ public class PressTheAdvantage extends AbstractEasyCard {
     }
 
     public void upp() {
-        this.upgradeDamage(2); // Upgrade to deal 5 damage instead of 3
+        this.exhaust = false;
     }
 }

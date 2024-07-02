@@ -23,7 +23,7 @@ public class FrenziedStrikeAssassin extends AbstractEasyCard implements SpawnMod
     public FrenziedStrikeAssassin() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = 5;
-        this.magicNumber = this.baseMagicNumber = 3;
+        this.magicNumber = this.baseMagicNumber = 4;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
     }
 

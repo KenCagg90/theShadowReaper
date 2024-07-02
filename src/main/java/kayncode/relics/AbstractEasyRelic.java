@@ -33,17 +33,17 @@ public abstract class AbstractEasyRelic extends CustomRelic {
         if (redCounter > -1 || blueCounter > -1) {
             if (inTopPanel) {
                 if (redCounter > -1) {
-                    FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(redCounter), this.currentX - 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.RED);
+                    FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(redCounter), this.currentX - 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, new Color(0.98F, 0.40F, 0.39F, 1));
                 }
                 if (blueCounter > -1) {
-                    FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(blueCounter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.BLUE);
+                    FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(blueCounter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, new Color(0.53F, 0.81F, 0.92F, 1));
                 }
             } else {
                 if (redCounter > -1) {
-                    FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(redCounter), this.currentX - 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.RED);
+                    FontHelper.renderFontLeftTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(redCounter), this.currentX - 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, new Color(0.98F, 0.40F, 0.39F, 1));
                 }
                 if (blueCounter > -1) {
-                    FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(blueCounter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, Color.BLUE);
+                    FontHelper.renderFontRightTopAligned(sb, FontHelper.topPanelInfoFont, Integer.toString(blueCounter), this.currentX + 30.0F * Settings.scale, this.currentY - 7.0F * Settings.scale, new Color(0.53F, 0.81F, 0.92F, 1));
                 }
             }
         }

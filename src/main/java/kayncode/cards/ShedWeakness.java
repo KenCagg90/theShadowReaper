@@ -1,12 +1,16 @@
 package kayncode.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import static kayncode.KaynMod.makeID;
 
@@ -22,13 +26,20 @@ public class ShedWeakness extends AbstractEasyCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         p.damage(new DamageInfo(p, this.magicNumber, DamageInfo.DamageType.HP_LOSS)); // Player loses HP
-        int debuffCount = p.powers.stream()
+
+        // Use a set to count unique debuffs including LoseStrengthPower
+        Set<String> uniqueDebuffs = new HashSet<>();
+        p.powers.stream()
                 .filter(power -> power.type == AbstractPower.PowerType.DEBUFF)
-                .mapToInt(power -> power.amount)
-                .sum();
-        this.addToBot(new RemoveDebuffsAction(p)); // Remove all debuffs
-        if (debuffCount > 0) {
-            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, debuffCount), debuffCount)); // Gain strength for each debuff stack removed
+                .forEach(power -> uniqueDebuffs.add(power.ID));
+
+        // Remove all debuffs
+        p.powers.stream()
+                .filter(power -> power.type == AbstractPower.PowerType.DEBUFF)
+                .forEach(power -> addToBot(new RemoveSpecificPowerAction(p, p, power)));
+
+        if (!uniqueDebuffs.isEmpty()) {
+            this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, uniqueDebuffs.size()), uniqueDebuffs.size())); // Gain strength for each unique debuff removed
         }
     }
 

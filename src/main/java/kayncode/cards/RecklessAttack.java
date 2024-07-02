@@ -15,8 +15,8 @@ public class RecklessAttack extends AbstractEasyCard {
 
     public RecklessAttack() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 30;
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.baseDamage = 24;
+        this.magicNumber = this.baseMagicNumber = 1;
     }
 
     @Override
@@ -27,6 +27,6 @@ public class RecklessAttack extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(6);
     }
 }

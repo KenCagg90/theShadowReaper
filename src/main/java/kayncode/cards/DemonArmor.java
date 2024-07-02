@@ -32,7 +32,7 @@ public class DemonArmor extends AbstractEasyCard implements SpawnModificationCar
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
     @Override
     public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {

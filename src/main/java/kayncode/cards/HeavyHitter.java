@@ -11,7 +11,7 @@ public class HeavyHitter extends AbstractEasyCard {
     public final static String ID = makeID(HeavyHitter.class.getSimpleName());
 
     public HeavyHitter() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
     }
 

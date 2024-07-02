@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static kayncode.KaynMod.makeID;
 
@@ -18,26 +19,24 @@ public class SecondStrike extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal 11(15) damage
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
     }
 
     @Override
     public void applyPowers() {
         super.applyPowers();
-        // Check if a card costing more than 1 energy has been played this turn
         boolean costReductionConditionMet = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
-                .anyMatch(card -> card.costForTurn > 1);
-        // Adjust the cost of the card based on the condition
+                .anyMatch(card -> (card.costForTurn > 1) || (card.costForTurn == -1 && card.energyOnUse > 1));
+
         if (costReductionConditionMet) {
             this.setCostForTurn(0);
         }
-
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().anyMatch(card -> card.costForTurn > 1)
+        this.glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .anyMatch(card -> (card.costForTurn > 1) || (card.costForTurn == -1 && card.energyOnUse > 1))
                 ? AbstractCard.GOLD_BORDER_GLOW_COLOR
                 : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
@@ -46,5 +45,4 @@ public class SecondStrike extends AbstractEasyCard {
     public void upp() {
         upgradeDamage(4); // Upgrade to deal 15 damage instead of 11
     }
-
 }

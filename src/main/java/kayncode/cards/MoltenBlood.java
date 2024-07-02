@@ -15,7 +15,7 @@ public class MoltenBlood extends AbstractEasyCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public MoltenBlood() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 14;
         this.baseMagicNumber = this.magicNumber = 12;
         this.exhaust = true;

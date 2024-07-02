@@ -9,7 +9,7 @@
   },
   "theshadowreaper:ReapingSlash": {
     "NAME": "Reaping Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theshadowreaper:Reap to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theshadowreaper:Reap to ALL enemies. "
   },
   "theshadowreaper:ReapingSlashRhaast": {
     "NAME": "Reaping Slash",
@@ -17,7 +17,7 @@
   },
   "theshadowreaper:ReapingSlashAssassin": {
     "NAME": "Reaping Slash",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theshadowreaper:Reap to ALL enemies. NL Enemy loses 3 HP."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! theshadowreaper:Reap to ALL enemies. NL Enemy loses !theshadowreaper:sd! HP."
   },
   "theshadowreaper:BladeSpin": {
     "NAME": "Blade Spin",
@@ -54,7 +54,8 @@
   },
   "theshadowreaper:PressTheAdvantage": {
     "NAME": "Press The Advantage",
-    "DESCRIPTION": "Deal !D! damage. NL Choose a card from your discard pile and place it into your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card from your discard pile and place it into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose a card from your discard pile and place it into your hand."
   },
   "theshadowreaper:SwiftDodge": {
     "NAME": "Swift Dodge",
@@ -74,15 +75,11 @@
   },
   "theshadowreaper:FadeIntoShadows": {
     "NAME": "Fade Into Shadows",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !M! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block."
   },
   "theshadowreaper:AdaptiveStrategy": {
     "NAME": "Adaptive Strategy",
-    "DESCRIPTION": "If you just played: NL An attack, Gain [E] . NL A skill, draw !M! card. NL A power, deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "If you just played: NL An attack, Gain [E] [E] . NL A skill, draw !M! cards. NL A power, deal !D! damage.",
-    "EXTENDED_DESCRIPTION": [
-      "I must play a card first."
-    ]
+    "DESCRIPTION": "If you played no attacks this turn. Gain !B! Block and !M! Vigor."
   },
   "theshadowreaper:Bloodrage": {
     "NAME": "Bloodrage",
@@ -90,11 +87,11 @@
   },
   "theshadowreaper:ReapingWhirlwind": {
     "NAME": "Reaping Whirlwind",
-    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to ALL enemies X times."
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to ALL enemies X times then trigger theshadowreaper:Reap on ALL enemies. NL Exhaust."
   },
   "theshadowreaper:DesperateMeasures": {
     "NAME": "Desperate Measures",
-    "DESCRIPTION": "Gain !B! Block. If you have less that 50% health, gain an additional !M! Block."
+    "DESCRIPTION": "Gain !B! Block. If you have less than 50% health, gain an additional !B! Block."
   },
   "theshadowreaper:RecklessAttack": {
     "NAME": "Reckless Attack",
@@ -107,11 +104,11 @@
   },
   "theshadowreaper:FuturePlanning": {
   "NAME": "Future Planning",
-  "DESCRIPTION": "Your [E] is conserved this turn. NL Next turn, draw cards equal to the amount of cards remaining in your hand."
+  "DESCRIPTION": "Your [E] is conserved this turn. Next turn, draw cards equal to the amount of cards remaining in your hand. Exhaust."
 },
   "theshadowreaper:ProfaneBlow": {
     "NAME": "Profane Blow",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain 2 Strength."
+    "DESCRIPTION": "Deal !D! damage. NL If this attack kills the enemy, gain !M! Strength."
   },
   "theshadowreaper:ShedWeakness": {
     "NAME": "Shed Weakness",
@@ -120,6 +117,10 @@
   "theshadowreaper:SanguineStrike": {
     "NAME": "Sanguine Strike",
     "DESCRIPTION": "Lose 2 HP. Deal !D! Damage. Apply !M! Vulnerable to the enemy"
+  },
+  "theshadowreaper:SiphonStrength": {
+    "NAME": "Siphon Strength",
+    "DESCRIPTION": "Steal !M! Strength from ALL enemies. NL ALL enemies lose an additional !theshadowreaper:m2! Strength. NL Exhaust."
   },
   "theshadowreaper:ReaperSigil": {
     "NAME": "Reaper's Sigil",
@@ -135,7 +136,7 @@
   },
   "theshadowreaper:ShadowstepRhaast": {
     "NAME": "Shadow Step",
-    "DESCRIPTION": "Next turn, Draw !M! additional cards. NL Gain !M! Block."
+    "DESCRIPTION": "Next turn, Draw !M! additional cards. NL Gain !B! Block."
   },
   "theshadowreaper:ShadowstepAssassin": {
     "NAME": "Shadow Step",
@@ -159,7 +160,7 @@
   },
   "theshadowreaper:MasterZedsTraining": {
     "NAME": "Master Zeds Training",
-    "DESCRIPTION": "Whenever you end your turn with unused [E] , draw 1 card for each unused [E] ."
+    "DESCRIPTION": "Whenever you end your turn with unused [E] , draw !M! card(s)."
   },
   "theshadowreaper:SiphoningStrikes": {
     "NAME": "Siphoning Strikes",
@@ -167,7 +168,7 @@
   },
   "theshadowreaper:Gank": {
     "NAME": "Gank",
-    "DESCRIPTION": "Deal !D! damage. NL If you've played 5 or more cards this turn, deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the enemy's Strength by !M! this turn."
   },
   "theshadowreaper:Preparation": {
     "NAME": "Preparation",
@@ -180,25 +181,25 @@
   },
   "theshadowreaper:UmbralTrespassRhaast": {
     "NAME": "Umbral Trespass",
-    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Gain 4 Max HP. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Gain 4 Max HP. NL  Exhaustive 2."
+    "DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Gain 4 Max HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Gain 4 Max HP. NL  Exhaustive 2."
   },
   "theshadowreaper:UmbralTrespassAssassin": {
     "NAME": "Umbral Trespass",
-    "DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Deal 50% of damage dont to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Deal 50% of damage dont to ALL enemies. NL Exhaustive 2."
+    "DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Deal 50% of damage done to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL Next turn, deal !D! damage. NL If Fatal, Deal 50% of damage done to ALL enemies. NL Exhaustive 2."
   },
   "theshadowreaper:StrategicManeuver": {
     "NAME": "Strategic Maneuver",
-    "DESCRIPTION": "Select 5 cards from your draw pile and place them at the top of the draw pile. NL Exhaust."
+    "DESCRIPTION": "Select !M! cards from your draw pile and place them at the top of the draw pile. NL Exhaust."
   },
   "theshadowreaper:GoldAdvantage": {
     "NAME": "Gold Advantage",
-    "DESCRIPTION": "Whenever you play a card that costs less than it's original price, gain !M! Block."
+    "DESCRIPTION": "Gain Vigor based on current Gold. Exhaust. NL 1-100: 8 Vigor. NL 101-200: 12 Vigor. NL 201-300: 16 Vigor. NL 301+: 20 Vigor."
   },
   "theshadowreaper:MoltenBlood": {
     "NAME": "Molten Blood",
-    "DESCRIPTION": "Lose 5 HP. Deal !D! damage. Target loses !M! HP."
+    "DESCRIPTION": "Lose 5 HP. Deal !D! damage. Target loses !M! HP. NL Exhaust."
   },
   "theshadowreaper:ReapersToll": {
     "NAME": "Reaper's Toll",
@@ -206,19 +207,19 @@
   },
   "theshadowreaper:StackTheDeck": {
     "NAME": "Stack The Deck",
-    "DESCRIPTION": "Select 2 cards from the Exhaust pile and place them on top of your draw pile."
+    "DESCRIPTION": "Select 2 cards from the Exhaust pile and place them on top of your draw pile. NL Exhaust."
   },
   "theshadowreaper:FlurryOfBlades": {
     "NAME": "Flurry Of Blades",
-    "DESCRIPTION": "Deal X damage to a random monster X times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times."
   },
   "theshadowreaper:FlurryOfBladesRhaast": {
     "NAME": "Flurry Of Blades",
-    "DESCRIPTION": "Deal X damage to a random monster X times. Increase damage by 15% of your Temp HP. "
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. NL (Damage is increased by 25% of your Temporary HP.)"
   },
   "theshadowreaper:FlurryOfBladesAssassin": {
     "NAME": "Flurry Of Blades",
-    "DESCRIPTION": "Deal X damage to a random monster X times. Damage increases by 5% per subsequent attack."
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times. NL (Damage is increased by 2 per [E] used.)"
   },
   "theshadowreaper:PerfectForm": {
     "NAME": "Perfect Form",
@@ -230,16 +231,20 @@
   },
   "theshadowreaper:ShadowWaltz": {
     "NAME": "Shadow Waltz",
-    "DESCRIPTION": "Draw 1 card. NL If you have played 3 or more cards this turn, draw !M! more cards."
+    "DESCRIPTION": "Draw !M! card(s). NL If you have played 3 or more cards this turn, draw !theshadowreaper:m2! more cards."
   },
   "theshadowreaper:SoulHarvest": {
     "NAME": "Soul Harvest",
     "DESCRIPTION": "Apply !M! theshadowreaper:Reap to all enemies. NL Gain Block equal to half of the theshadowreaper:Reap on all enemies. NL Exhaust."
   },
+  "theshadowreaper:FinishingTouch": {
+    "NAME": "Finishing Touch",
+    "DESCRIPTION": "Deal !D! damage. NL Vigor and Strength bonuses are doubled on this card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Vigor and Strength bonuses are tripled on this card."
+  },
   "theshadowreaper:AllOrNothing": {
     "NAME": "All Or Nothing",
-    "DESCRIPTION": "Gain 8 Strength. Strength no longer persists through turns.",
-    "UPGRADE_DESCRIPTION": "Gain 10 Strength. Strength no longer persists through turns."
+    "DESCRIPTION": "Gain !M! Temporary Strength. NL Next turn, lose 2 energy."
   },
   "theshadowreaper:TemporalStrike": {
     "NAME": "Temporal Strike",
@@ -251,8 +256,8 @@
   },
   "theshadowreaper:HeavyHitter": {
     "NAME": "Heavy Hitter",
-    "DESCRIPTION": "The first time you play a card that costs 2 or more each turn gain [E] .",
-    "UPGRADE_DESCRIPTION": "The first time you play a card that costs 2 or more each turn gain [E] [E] ."
+    "DESCRIPTION": "The first time you play a card that costs 2+ each turn gain [E] .",
+    "UPGRADE_DESCRIPTION": "The first time you play a card that costs 2+ each turn gain [E] [E] ."
   },
   "theshadowreaper:UmbralEnergy": {
     "NAME": "Umbral Energy",
@@ -304,7 +309,7 @@
   },
   "theshadowreaper:SlaughterTheWeak": {
     "NAME": "Slaughter The Weak",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the enemy has less than 50% HP, deal double damage to that enemy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If the enemy has less than 50% HP, deal an additional !D! damage to that enemy."
   },
   "theshadowreaper:BloodGambit": {
     "NAME": "Blood Gambit",
@@ -371,7 +376,7 @@
   },
   "theshadowreaper:Stalk": {
     "NAME": "Stalk",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, draw !M! additional cards."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Next turn, draw !M! card."
   },
   "theshadowreaper:Transfusion": {
     "NAME": "Transfusion",

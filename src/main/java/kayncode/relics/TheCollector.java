@@ -21,10 +21,12 @@ public class TheCollector extends AbstractEasyRelic {
 
     @Override
     public void onMonsterDeath(AbstractMonster m) {
-        AbstractDungeon.player.gainGold(5);
-        this.flash();
-        for (int i = 0; i < 5; i++) {
-            AbstractDungeon.effectList.add(new GainPennyEffect(AbstractDungeon.player, m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
+        if (!m.hasPower("Minion")) {
+            AbstractDungeon.player.gainGold(5);
+            this.flash();
+            for (int i = 0; i < 5; i++) {
+                AbstractDungeon.effectList.add(new GainPennyEffect(AbstractDungeon.player, m.hb.cX, m.hb.cY, AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true));
+            }
         }
     }
 
@@ -32,7 +34,7 @@ public class TheCollector extends AbstractEasyRelic {
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         if (damageAmount == 999) return;
 
-        if (!target.isPlayer) {
+        if (!target.isPlayer && target instanceof AbstractMonster && !target.hasPower("Minion")) {
             float healthThreshold = target.maxHealth * 0.05f;
             if ((target.currentHealth - damageAmount) <= healthThreshold || target.currentHealth <= healthThreshold) {
                 this.addToBot(new SFXAction("COLLECTOR"));

@@ -26,7 +26,7 @@ public class MasterZedsTrainingPower extends AbstractEasyPower {
             int remainingEnergy = EnergyPanel.totalCount;
             if (remainingEnergy > 0) {
                 this.flash();
-                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DrawCardNextTurnPower(this.owner, this.amount * remainingEnergy),  this.amount * remainingEnergy));
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DrawCardNextTurnPower(this.owner, this.amount),  this.amount));
             }
         }
     }

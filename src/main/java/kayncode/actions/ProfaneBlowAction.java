@@ -26,7 +26,7 @@ public class ProfaneBlowAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect));
             this.target.damage(this.info);
 
-            if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead && !this.target.hasPower("Minion")) {
+            if ((this.target.isDying || this.target.currentHealth <= 0) && !this.target.halfDead) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, this.strengthGain), this.strengthGain));
             }
 

@@ -30,7 +30,7 @@ public class ShadowstepRhaast extends AbstractEasyCard implements SpawnModificat
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new GainBlockAction(p, p, this.baseBlock));
+        blck();
 
 
     }

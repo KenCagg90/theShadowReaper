@@ -11,20 +11,22 @@ public class ShadowWaltz extends AbstractEasyCard {
     public final static String ID = makeID(ShadowWaltz.class.getSimpleName());
 
     public ShadowWaltz() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
+        this.baseSecondMagic = this.secondMagic = 2;
 
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DrawCardAction(p, 1));
+        this.addToBot(new DrawCardAction(p, this.magicNumber));
         if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() >= 3) {
-            this.addToBot(new DrawCardAction(p, this.magicNumber));
+            this.addToBot(new DrawCardAction(p, this.secondMagic));
         }
     }
 
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

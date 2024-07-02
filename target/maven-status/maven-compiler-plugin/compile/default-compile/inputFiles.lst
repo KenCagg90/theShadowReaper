@@ -11,6 +11,7 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\Infi
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\util\CardArtRoller.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\AbstractEasyCard.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\SwiftDodge.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\LoseEnergyNextTurnAction.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Exploit.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\FuturePlanning.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\RecklessAttack.java
@@ -22,7 +23,6 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Calcu
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\UnendingSlaughter.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\Rhaast.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\SiphoningStrikesPower.java
-C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\GoldAdvantagePower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\cardvars\SecondDamage.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\AllOrNothing.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Bloodrage.java
@@ -69,10 +69,12 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Demon
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\BladesReach.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ShadowAmbush.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\patches\KaynTransformationPatch.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\WarmogsArmor.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\DarkHarvest.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\util\ProAudio.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Preparation.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ShadowWaltz.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\KaynEnergyOrb.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ShadowSight.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\GoldAdvantage.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ReaperSigil.java
@@ -102,12 +104,14 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\Umb
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ComboMastery.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ReapingWhirlwind.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Outburst.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\SiphonStrength.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\util\WizArt.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\util\TexLoader.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\AbstractEasyPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\AbstractEasyRelic.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\vfx\ReapEffect.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\CalculatedSteps.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\FinishingTouch.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\UmbralTrespass.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\WhispersOfBlood.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\potions\AbstractEasyPotion.java
@@ -148,7 +152,6 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Assas
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\LambdaPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ReapersToll.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ShedWeakness.java
-C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\AllOrNothingPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Brutalize.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\WhispersOfBloodPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\HeavyHitter.java
