@@ -23,7 +23,7 @@ public class ReapDamageAllEnemiesAction extends AbstractGameAction {
             if (monster.hasPower(ReapPower.ID)) {
                 int reapAmount = monster.getPower(ReapPower.ID).amount;
                 addToBot(new SFXAction("REAP"));
-                this.addToBot(new DamageAction(monster, new DamageInfo(player, reapAmount, DamageInfo.DamageType.NORMAL), AttackEffect.NONE));
+                this.addToBot(new DamageAction(monster, new DamageInfo(player, reapAmount, DamageInfo.DamageType.HP_LOSS), AttackEffect.NONE));
             }
         }
         this.isDone = true;

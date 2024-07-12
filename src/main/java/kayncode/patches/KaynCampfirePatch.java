@@ -1,7 +1,6 @@
 package kayncode.patches;
 
-import kayncode.relics.BaseForm;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.TheDarkinScythe;
 import kayncode.ui.TransformRedOption;
 import kayncode.ui.TransformBlueOption;
 import com.evacipated.cardcrawl.modthespire.lib.*;

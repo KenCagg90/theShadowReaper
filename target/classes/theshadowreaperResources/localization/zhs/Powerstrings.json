@@ -1,0 +1,120 @@
+{
+  "theshadowreaper:ExampleTwoAmountPower": {
+    "NAME": "Example 2",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yStrength and #b",
+      " #yDexterity."
+    ]
+  },
+  "theshadowreaper:ReapPower": {
+    "NAME": "收割",
+    "DESCRIPTIONS": [
+      "回合结束时，敌人会失去等同于 #y收割 层数的生命。",
+      ""
+    ]
+  },
+  "theshadowreaper:DemonArmorPower": {
+    "NAME": "恶魔铠甲",
+    "DESCRIPTIONS": [
+      "回合结束时仍有 [E] 未使用， 每有一个未使用的 [E] 获得 #b",
+      " 点 #y格挡 。"
+    ]
+  },
+  "theshadowreaper:ExhaustionPower": {
+    "NAME": "疲惫",
+    "DESCRIPTIONS": [
+      "在下一个回合开始时，失去 #b ",
+      " 点能量。"
+    ]
+  },
+  "theshadowreaper:MasterZedsTrainingPower": {
+    "NAME": "劫大师的教诲",
+    "DESCRIPTIONS": [
+      "当你结束回合时仍有 [E] 未使用，每有一个未使用的 [E] 抽 #b",
+      " 张牌 。"
+    ]
+  },
+  "theshadowreaper:UTPower": {
+    "NAME": "裂舍影",
+    "DESCRIPTIONS": [
+      "下一个回合，对目标造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "theshadowreaper:UTPowerAssassin": {
+    "NAME": "裂舍影",
+    "DESCRIPTIONS": [
+      "下一个回合，对目标造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "theshadowreaper:UTPowerRhaast": {
+    "NAME": "裂舍影",
+    "DESCRIPTIONS": [
+      "下一个回合，对目标造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "theshadowreaper:DarkinRagePower": {
+    "NAME": "暗裔之怒",
+    "DESCRIPTIONS": [
+      "当你打出耗能 [E] [E] 或更多的牌时获得 #b",
+      " 点 力量 。"
+    ]
+  },
+  "theshadowreaper:HeavyHitterPower": {
+    "NAME": "沉重打击",
+    "DESCRIPTIONS": [
+      "下一次打出耗能为 [E]  [E]  或更多的牌时获得 #b",
+      " 点能量."
+    ]
+  },
+  "theshadowreaper:GoldAdvantagePower": {
+    "NAME": "金钱制胜",
+    "DESCRIPTIONS": [
+      "当你打出耗能被降低过的牌时获得 #b",
+      " 点 格挡 。"
+    ]
+  },
+  "theshadowreaper:BloodragePower": {
+    "NAME": "愤怒合剂",
+    "DESCRIPTIONS": [
+      "当你从牌中失去血量时抽 #b ",
+      " 张牌。"
+    ]
+  },
+  "theshadowreaper:AssassinsTrainingPower": {
+    "NAME": "刺客之道",
+    "DESCRIPTIONS": [
+      "当回合结束时仍有 [E] 未使用， 下一回合， 获得 #b.",
+      " 点 #y力量 "
+    ]
+  },
+  "theshadowreaper:SiphoningStrikesPower": {
+    "NAME": "虹吸收割",
+    "DESCRIPTIONS": [
+       "当你对敌人施加 #y收割 时,获得 #b",
+      " 点格挡."
+    ]
+  },
+  "theshadowreaper:PerfectFormPower": {
+    "NAME": "完美连招",
+    "DESCRIPTIONS": [
+      "每使用3次攻击牌, 获得 #b1 点敏捷. 每使用4次技能牌, 获得 #b1 点力量."
+    ]
+  },
+  "theshadowreaper:AllOrNothingPower": {
+    "NAME": "孤注一掷",
+    "DESCRIPTIONS": [
+      " 力量 将不再保存至下一回合（这个效果好像没有再使用了）." 
+    ]
+  },
+  "theshadowreaper:WhispersOfBloodPower": {
+    "NAME": "血语",
+    "DESCRIPTIONS": [
+       "在开始回合时, 对所有敌人施加 #b",
+      " 层 #y收割 ."
+    ]
+  }
+}

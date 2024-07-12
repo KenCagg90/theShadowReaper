@@ -7,9 +7,9 @@ import kayncode.powers.AssassinsTrainingPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import kayncode.relics.BaseForm;
-import kayncode.relics.Rhaast;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 
@@ -23,6 +23,7 @@ public class AssassinsTraining extends AbstractEasyCard implements SpawnModifica
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.magicNumber = this.baseMagicNumber = 1;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
+        setOrbTexture(makeImagePath("512/energyAssassin.png"), makeImagePath("1024/energyAssassin.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -14,8 +14,9 @@ public class TemporalStrike extends AbstractEasyCard {
     public final static String ID = makeID(TemporalStrike.class.getSimpleName());
 
     public TemporalStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseDamage = 15;
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        this.baseDamage = 12;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -26,6 +27,6 @@ public class TemporalStrike extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(5); // Upgrade to deal 20 damage instead of 15
+        upgradeDamage(3);
     }
 }

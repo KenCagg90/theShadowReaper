@@ -7,11 +7,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import kayncode.powers.DemonArmorPower;
 import kayncode.powers.MasterZedsTrainingPower;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 
 import java.util.ArrayList;
 
@@ -25,6 +23,7 @@ public class MasterZedsTraining extends AbstractEasyCard implements SpawnModific
         this.baseMagicNumber = this.magicNumber = 1;
 
         MultiCardPreview.add(this, new DemonArmor(), new AssassinsTraining());
+        MultiCardPreview.horizontalOnly(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,6 +33,9 @@ public class MasterZedsTraining extends AbstractEasyCard implements SpawnModific
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
     @Override

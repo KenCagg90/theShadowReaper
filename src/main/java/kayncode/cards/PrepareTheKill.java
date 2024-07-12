@@ -14,7 +14,7 @@ public class PrepareTheKill extends AbstractEasyCard {
 
     public PrepareTheKill() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 5;
+        this.baseMagicNumber = this.magicNumber = 4;
 
     }
 
@@ -24,6 +24,6 @@ public class PrepareTheKill extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(4);
+        upgradeMagicNumber(3);
     }
 }

@@ -17,8 +17,8 @@ public class UnendingSlaughter extends AbstractEasyCard {
 
     public UnendingSlaughter() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseDamage = 6;
-        this.baseMagicNumber = this.magicNumber = 2;
+        this.baseDamage = 10;
+        this.baseMagicNumber = this.magicNumber = 3;
         this.exhaust = true;
     }
 
@@ -26,7 +26,6 @@ public class UnendingSlaughter extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         // Deal 6(8) damage twice
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-        this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
         // Calculate the number of Attack cards played this turn before this card
         long attackCardsPlayedThisTurn = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
@@ -34,7 +33,7 @@ public class UnendingSlaughter extends AbstractEasyCard {
                 .count();
 
         // Gain 1 Energy for each Attack played this turn, up to a maximum of 2(3)
-        int energyToGain = (int) Math.min(attackCardsPlayedThisTurn, 3);
+        int energyToGain = (int) Math.min(attackCardsPlayedThisTurn, this.magicNumber);
         for (int i = 0; i < energyToGain; i++) {
             this.addToBot(new GainEnergyAction(1));
         }
@@ -42,15 +41,20 @@ public class UnendingSlaughter extends AbstractEasyCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        this.glowColor = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream().anyMatch(card -> card.type == CardType.ATTACK && card != this)
-                ? AbstractCard.GOLD_BORDER_GLOW_COLOR
-                : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        long attackCardsPlayedThisTurn = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .filter(card -> card.type == CardType.ATTACK && card != this)
+                .count();
+
+        this.glowColor = attackCardsPlayedThisTurn >= 3
+                ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
+                : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        this.rawDescription = cardStrings.DESCRIPTION + attackCardsPlayedThisTurn;
+        initializeDescription();
     }
 
     @Override
     public void upp() {
         upgradeDamage(2); // Upgrade to deal 8 damage instead of 6
-        upgradeMagicNumber(1);
         ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
         ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
         ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);

@@ -1,10 +1,10 @@
 package kayncode;
 
-import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpineAnimation;
+import com.megacrit.cardcrawl.cards.red.Cleave;
 import kayncode.cards.*;
-import kayncode.relics.BaseForm;
+import kayncode.relics.special.BaseForm;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 

@@ -1,5 +1,6 @@
 package kayncode.cards;
 
+import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import kayncode.actions.StrategicManeuverAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -12,7 +13,7 @@ public class StrategicManeuver extends AbstractEasyCard {
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public StrategicManeuver() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         this.magicNumber = this.baseMagicNumber = 5;
     }
@@ -24,7 +25,7 @@ public class StrategicManeuver extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeBaseCost(0);
 
 
         }

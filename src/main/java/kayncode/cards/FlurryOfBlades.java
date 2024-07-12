@@ -3,13 +3,11 @@ package kayncode.cards;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import kayncode.actions.EasyXCostAction;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -29,6 +27,7 @@ public class FlurryOfBlades extends AbstractEasyCard implements SpawnModificatio
         this.baseDamage = 10;
 
         MultiCardPreview.add(this, new FlurryOfBladesRhaast(), new FlurryOfBladesAssassin());
+        MultiCardPreview.horizontalOnly(this);
     }
 
     @Override
@@ -45,6 +44,9 @@ public class FlurryOfBlades extends AbstractEasyCard implements SpawnModificatio
     @Override
     public void upp() {
         upgradeDamage(2);
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
     @Override

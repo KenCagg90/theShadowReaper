@@ -13,7 +13,7 @@ public class MarkForDeath extends AbstractEasyCard {
 
     public MarkForDeath() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseMagicNumber = this.magicNumber = 5;
+        this.baseMagicNumber = this.magicNumber = 7;
 
     }
 
@@ -24,6 +24,6 @@ public class MarkForDeath extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(3);
     }
 }

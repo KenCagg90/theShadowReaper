@@ -24,7 +24,7 @@ public class DoubleReapDamageAction extends AbstractGameAction {
             int reapAmount = target.getPower(ReapPower.ID).amount;
             int damage = reapAmount * 2;
             addToBot(new SFXAction("REAP"));
-            this.addToBot(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.NONE));
+            this.addToBot(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.THORNS), AttackEffect.NONE));
         }
         this.isDone = true;
     }

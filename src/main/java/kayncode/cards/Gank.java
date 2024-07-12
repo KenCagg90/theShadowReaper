@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 
 import static kayncode.KaynMod.makeID;
 
@@ -27,8 +28,14 @@ public class Gank extends AbstractEasyCard {
 
         // Reduce enemy's strength by 3(4) for this turn
         this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
-        this.addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, this.magicNumber), this.magicNumber));
-    }
+
+        // Apply GainStrengthPower only if the monster doesn't have Artifact
+                if (!m.hasPower("Artifact")) {
+                    addToTop(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                }
+            }
+
+
 
     @Override
     public void upp() {

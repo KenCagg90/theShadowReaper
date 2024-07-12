@@ -18,7 +18,7 @@ public class ShadowAmbush extends AbstractEasyCard {
     public ShadowAmbush() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
-        this.baseMagicNumber = this.magicNumber = 5;
+        this.baseSecondDamage = this.secondDamage = 5;
 
     }
 
@@ -34,13 +34,13 @@ public class ShadowAmbush extends AbstractEasyCard {
         }
 
         if (hasDebuff) {
-            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.magicNumber, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+            AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.secondDamage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         }
     }
 
     @Override
     public void upp() {
         upgradeDamage(3);
-        upgradeMagicNumber(2);
+        upgradeSecondDamage(2);
     }
 }

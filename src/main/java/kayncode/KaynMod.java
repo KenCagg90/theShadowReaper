@@ -25,8 +25,8 @@ import kayncode.cards.AbstractEasyCard;
 import kayncode.cards.cardvars.AbstractEasyDynamicVariable;
 import kayncode.potions.AbstractEasyPotion;
 import kayncode.relics.AbstractEasyRelic;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import kayncode.util.ProAudio;
 import java.nio.charset.StandardCharsets;
 
@@ -79,6 +79,8 @@ public class KaynMod implements
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS,
+            Settings.GameLanguage.SPA
     };
 
     private String getLangString() {
@@ -198,9 +200,12 @@ public class KaynMod implements
         BaseMod.addAudio("BLUE_TRANSFORM_READY", "theshadowreaperResources/audio/BlueTransformReady.wav");
         BaseMod.addAudio("ELECTROCUTE_PROC", "theshadowreaperResources/audio/ElectrocuteRelic.wav");
         BaseMod.addAudio("COLLECTOR", "theshadowreaperResources/audio/Collector.wav");
+        BaseMod.addAudio("AFTERSHOCK", "theshadowreaperResources/audio/Aftershock.wav");
+        BaseMod.addAudio("REAPING_SLASH", "theshadowreaperResources/audio/ReapingSlash.wav");
         for (ProAudio a : ProAudio.values())
             BaseMod.addAudio(makeID(a.name()), makePath("audio/" + a.name().toLowerCase() + ".ogg"));
     }
+
 
 
     @Override

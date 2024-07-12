@@ -2,9 +2,9 @@ package kayncode.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import kayncode.relics.BaseForm;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -16,7 +16,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 
@@ -30,11 +30,12 @@ public class BladesReachRhaast extends AbstractEasyCard implements SpawnModifica
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReachRhaast() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseDamage = 8;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        this.baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Weak/Vulnerable
 
         setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast.png"));
+        setOrbTexture(makeImagePath("512/energyRhaast.png"), makeImagePath("1024/energyRhaast.png"));
     }
 
     @Override
@@ -53,7 +54,7 @@ public class BladesReachRhaast extends AbstractEasyCard implements SpawnModifica
 
     @Override
     public void upp() {
-        upgradeDamage(4); // Upgrade to deal 15 damage instead of 10
+        upgradeDamage(3); // Upgrade to deal 15 damage instead of 10
 
     }
 

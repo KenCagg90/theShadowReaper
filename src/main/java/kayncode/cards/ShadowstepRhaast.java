@@ -2,15 +2,14 @@ package kayncode.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import kayncode.relics.BaseForm;
-import kayncode.relics.ShadowAssassin;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 
@@ -23,9 +22,10 @@ public class ShadowstepRhaast extends AbstractEasyCard implements SpawnModificat
 
     public ShadowstepRhaast() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 3;
+        this.baseMagicNumber = this.magicNumber = 2;
         this.baseBlock = 6;
         setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast.png"));
+        setOrbTexture(makeImagePath("512/energyRhaast.png"), makeImagePath("1024/energyRhaast.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -14,7 +14,7 @@ public class SoulHarvest extends AbstractEasyCard {
 
     public SoulHarvest() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        this.baseMagicNumber = this.magicNumber = 14;
+        this.baseMagicNumber = this.magicNumber = 10;
         this.exhaust = true;
     }
 

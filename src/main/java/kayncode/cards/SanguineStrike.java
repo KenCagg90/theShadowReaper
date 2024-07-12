@@ -17,11 +17,12 @@ public class SanguineStrike extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 15;
         this.magicNumber = this.baseMagicNumber = 1;
+        secondMagic = baseSecondMagic = 2;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        p.damage(new DamageInfo(p, 2, DamageInfo.DamageType.HP_LOSS)); // Player loses 2 HP
+        p.damage(new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS)); // Player loses 2 HP
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
     }

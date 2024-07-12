@@ -1,6 +1,5 @@
 package kayncode.cards;
 
-
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +7,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import java.util.ArrayList;
+import java.util.stream.Collectors;
 
 import static kayncode.KaynMod.makeID;
 
@@ -24,10 +26,14 @@ public class Distract extends AbstractEasyCard {
         // Apply 2(3) Weak to an enemy
         this.addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
-        // Reduce the cost of a random card in your draw pile to 0 until played
+        // Reduce the cost of a random card in your draw pile to 0 until played, but only if its cost is more than 0
         if (!AbstractDungeon.player.drawPile.isEmpty()) {
-            AbstractCard card = AbstractDungeon.player.drawPile.getRandomCard(AbstractDungeon.cardRandomRng);
-            if (card != null) {
+            ArrayList<AbstractCard> moreThanZeroCost = new ArrayList<>(AbstractDungeon.player.drawPile.group.stream()
+                    .filter(card -> card.costForTurn > 0)
+                    .collect(Collectors.toList()));
+
+            if (!moreThanZeroCost.isEmpty()) {
+                AbstractCard card = moreThanZeroCost.get(AbstractDungeon.cardRandomRng.random(moreThanZeroCost.size() - 1));
                 card.freeToPlayOnce = true;
             }
         }

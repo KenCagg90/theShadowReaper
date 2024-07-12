@@ -1,6 +1,7 @@
 package kayncode.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,8 +20,16 @@ public class ShadowWaltz extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DrawCardAction(p, this.magicNumber));
-        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() >= 3) {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() > 3) {
             this.addToBot(new DrawCardAction(p, this.secondMagic));
+        }
+    }
+
+    public void triggerOnGlowCheck() {
+        if (AbstractDungeon.actionManager.cardsPlayedThisTurn.size() >= 3) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 

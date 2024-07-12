@@ -9,8 +9,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 
 import java.util.ArrayList;
 
@@ -20,11 +20,12 @@ public class FrenziedStrike extends AbstractEasyCard implements SpawnModificatio
     public final static String ID = makeID(FrenziedStrike.class.getSimpleName());
 
     public FrenziedStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = 5;
         this.magicNumber = this.baseMagicNumber = 3;
 
         MultiCardPreview.add(this, new FrenziedStrikeRhaast(), new FrenziedStrikeAssassin());
+        MultiCardPreview.horizontalOnly(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,7 +34,11 @@ public class FrenziedStrike extends AbstractEasyCard implements SpawnModificatio
         }
     }
 
-    public void upp() {upgradeBaseCost(1);
+    public void upp() {
+        upgradeBaseCost(1);
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
     @Override

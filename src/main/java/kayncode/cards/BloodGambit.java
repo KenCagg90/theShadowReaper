@@ -14,6 +14,7 @@ public class BloodGambit extends AbstractEasyCard {
     public BloodGambit() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 3;
+        this.exhaust = true;
     }
 
     @Override
@@ -28,7 +29,7 @@ public class BloodGambit extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(-1); // Upgrade to lose 2 HP instead of 3
+        this.exhaust = false; // Upgrade to lose 2 HP instead of 3
     }
 
 }

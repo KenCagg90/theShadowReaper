@@ -1,12 +1,11 @@
 package kayncode.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import kayncode.actions.LoseEnergyNextTurnAction;
+import kayncode.powers.ExhaustionPower;
 
 import static kayncode.KaynMod.makeID;
 
@@ -21,7 +20,7 @@ public class AllOrNothing extends AbstractEasyCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new LoseEnergyNextTurnAction(2));
+        this.addToBot(new ApplyPowerAction(p, p, new ExhaustionPower(p, 2)));
     }
 
     @Override

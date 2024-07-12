@@ -2,8 +2,8 @@ package kayncode.cards;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -21,8 +21,9 @@ public class Shadowstep extends AbstractEasyCard implements SpawnModificationCar
 
     public Shadowstep() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 3;
+        this.baseMagicNumber = this.magicNumber = 2;
         MultiCardPreview.add(this, new ShadowstepRhaast(), new ShadowstepAssassin());
+        MultiCardPreview.horizontalOnly(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -33,6 +34,9 @@ public class Shadowstep extends AbstractEasyCard implements SpawnModificationCar
     @Override
     public void upp() {
         upgradeMagicNumber(1);
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
     @Override

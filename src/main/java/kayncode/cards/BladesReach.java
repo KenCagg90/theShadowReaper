@@ -2,8 +2,8 @@ package kayncode.cards;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,11 +26,12 @@ public class BladesReach extends AbstractEasyCard implements SpawnModificationCa
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReach() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseDamage = 8;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        this.baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Weak/Vulnerable
 
         MultiCardPreview.add(this, new BladesReachRhaast(), new BladesReachAssassin());
+        MultiCardPreview.horizontalOnly(this);
     }
 
     @Override
@@ -49,7 +50,10 @@ public class BladesReach extends AbstractEasyCard implements SpawnModificationCa
 
     @Override
     public void upp() {
-        upgradeDamage(4); // Upgrade to deal 12 damage instead of 8
+        upgradeDamage(3); // Upgrade to deal 12 damage instead of 8
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
 

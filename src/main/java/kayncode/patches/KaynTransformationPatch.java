@@ -4,8 +4,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import kayncode.TheShadowReaper;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 
 @SpirePatch(clz = AbstractDungeon.class, method = "nextRoomTransition", paramtypez = {})
 public class KaynTransformationPatch {

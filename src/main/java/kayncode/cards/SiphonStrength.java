@@ -21,8 +21,14 @@ public class SiphonStrength extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int enemyCount = 0;
+        for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
+            if (!monster.isDead && !monster.isDying) {
+                enemyCount++;
+            }
+        }
         // Player gains strength
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber * enemyCount), this.magicNumber * enemyCount));
 
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
             // Monster loses strength equal to magicNumber
@@ -36,6 +42,5 @@ public class SiphonStrength extends AbstractEasyCard {
     @Override
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
     }
 }

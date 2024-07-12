@@ -4,18 +4,14 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCar
 import com.evacipated.cardcrawl.mod.stslib.patches.core.AbstractCreature.TempHPField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import kayncode.actions.EasyXCostAction;
-import kayncode.relics.BaseForm;
-import kayncode.relics.ShadowAssassin;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 
@@ -30,6 +26,7 @@ public class FlurryOfBladesRhaast extends AbstractEasyCard implements SpawnModif
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseDamage = 10;
         setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast.png"));
+        setOrbTexture(makeImagePath("512/energyRhaast.png"), makeImagePath("1024/energyRhaast.png"));
         this.originalBaseDamage = this.baseDamage;
     }
 

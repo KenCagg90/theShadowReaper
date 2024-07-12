@@ -13,6 +13,7 @@ public class CalculatedStrikes extends AbstractEasyCard {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 11;
         this.selfRetain = true;
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

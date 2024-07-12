@@ -1,0 +1,149 @@
+{
+  "theshadowreaper:TheDarkinScythe": {
+    "NAME": "暗裔魔镰",
+    "FLAVOR": "它最终会完成某些使命。",
+    "DESCRIPTIONS": [
+      "从战斗遭遇中获得 #r暗裔 或 #b暗影 精华(精英会获得2点). 在任何一种精华达到 #b8 个时,凯隐可以在篝火化身为 #rtheshadowreaper:暗裔杀手 或 #btheshadowreaper:影流刺客 。"
+      ]
+  },
+  "theshadowreaper:Rhaast": {
+    "NAME": "拉亚斯特形态",
+    "FLAVOR": "收割开始了！",
+    "DESCRIPTIONS": [
+      "每当你通过攻击牌(或 #y收割 )对敌人造成伤害， 获得等同于 #b10% 造成伤害的 #y临时 #y生命 。"
+    ]
+  },
+  "theshadowreaper:DarkHarvest": {
+    "NAME": "黑暗收割",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "击杀一名精英或首领时获得 #b1 层 #r黑暗收割 。在与精英或首领的战斗中，每回合开始时获得等同与 #r黑暗收割 层数的 #y活力 。"
+    ]
+  },
+  "theshadowreaper:BaseForm": {
+    "NAME": "基本形态",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在战斗开始时,获得 #b3 点 #y临时 #y生命 。 NL ",
+      "在每场战斗的前 #b2 个回合额外抽 #b1 张牌。",
+      ""
+    ]
+  },
+  "theshadowreaper:DoransBlade": {
+    "NAME": "多兰之刃",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在每场战斗的前3个回合获得 #b",
+      " 点 #y活力 。",
+      ""
+    ]
+  },
+  "theshadowreaper:DoransShield": {
+    "NAME": "多兰之盾",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在每场战斗的前3个回合获得 #b",
+      " 点 #y格挡 。",
+      ""
+    ]
+  },
+  "theshadowreaper:TheCollector": {
+    "NAME": "收集者",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "你将会处决生命值低于 5% 的敌人. NL 当你击杀敌人获得 5 金币 。"
+    ]
+  },
+  "theshadowreaper:SpearOfShojin": {
+    "NAME": "朔极之矛",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每打出 #b5 张牌, 随机使一张手牌耗能减少 #b1 点 。"
+    ]
+  },
+  "theshadowreaper:InfinityEdge": {
+    "NAME": "无尽之刃",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "对带有 #y易伤 的敌人造成未被格挡的伤害后，获得 #b1 点 #y临时 #y力量."
+    ]
+  },
+  "theshadowreaper:Hubris": {
+    "NAME": "狂妄",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "当敌人死亡, 获得 #b5 点 #y力量 NL 回合结束时,失去 #b5 点 #y力量"
+    ]
+  },
+  "theshadowreaper:DeathsDance": {
+    "NAME": "死亡之舞",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "缓和 #b33% 受到的伤害,将其储存在此遗物中. NL 在回合结束时，扣除等同于储存在遗物中 #b25% 伤害的生命. NL 以任何方式离开战斗都会清空所有缓和的伤害 。"
+    ]
+  },
+  "theshadowreaper:FirstStrike": {
+    "NAME": "先攻",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每场战斗的前 #b3 次攻击，获得相当于所造成伤害的 #b20% 的金币。"
+    ]
+  },
+  "theshadowreaper:Predator": {
+    "NAME": "掠食者",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每场战斗, 当你第一次打出耗能为 #b2 或以上的牌时, 抽 #b1 张牌。"
+    ]
+  },
+  "theshadowreaper:Electrocute": {
+    "NAME": "电刑",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每回合一次, 当你进行了 #b3 次攻击时，对敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "theshadowreaper:Manamune": {
+    "NAME": "魔宗",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每回合一次, 当你进行了 #b3 次攻击时, 获得 [E] 。"
+    ]
+  },
+  "theshadowreaper:Aftershock": {
+    "NAME": "余震",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "在第四回合开始时, 获得 #b",
+      " 点 #y格挡 并对所有敌人造成 #b",
+      " 点伤害。"
+    ]
+  },
+  "theshadowreaper:Eclipse": {
+    "NAME": "星蚀",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "每场战斗一次, 当你在一回合内进行 #b5 次攻击时, 获得 #b",
+      " 点临时生命."
+    ]
+  },
+  "theshadowreaper:MejaisSoulstealer": {
+    "NAME": "梅贾的窃魂卷",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "与精英或首领战斗时,战斗开始获得 #b",
+      " 点 #y力量 。 如果你在没有受到伤害的情况下获胜, 将此效果增加 #b1 点 (最大值为 #b",
+      " 点)"
+    ]
+  },
+  "theshadowreaper:ShadowAssassin": {
+    "NAME": "影流刺客形态",
+    "FLAVOR": "暗裔已经消亡,我们的敌人,也快了...",
+    "DESCRIPTIONS": [
+      "攻击后，每造成 #b25 点未被阻挡的伤害，抽一张牌。(每次攻击最多抽 #b2 张牌)。"
+    ]
+  }
+}
+
+

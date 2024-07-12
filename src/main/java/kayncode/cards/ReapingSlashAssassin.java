@@ -1,11 +1,14 @@
 package kayncode.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import kayncode.powers.ReapPower;
-import kayncode.relics.BaseForm;
-import kayncode.relics.Rhaast;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.TheDarkinScythe;
 import kayncode.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -28,15 +31,18 @@ public class ReapingSlashAssassin extends AbstractEasyCard implements SpawnModif
     public ReapingSlashAssassin() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        this.baseMagicNumber = this.magicNumber = 4;
-        baseSecondDamage = 5;
+        this.baseMagicNumber = this.magicNumber = 5;
+        baseSecondMagic = 5;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
+        setOrbTexture(makeImagePath("512/energyAssassin.png"), makeImagePath("1024/energyAssassin.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        this.addToBot(new SFXAction("REAPING_SLASH"));
+        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         Wiz.forAllMonstersLiving(monster -> Wiz.applyToEnemy(monster, new ReapPower(monster, this.magicNumber)));
-        this.addToBot(new LoseHPAction(m, AbstractDungeon.player, baseSecondDamage, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new LoseHPAction(m, AbstractDungeon.player, baseSecondMagic, AbstractGameAction.AttackEffect.NONE));
         }
 
 
@@ -46,7 +52,7 @@ public class ReapingSlashAssassin extends AbstractEasyCard implements SpawnModif
     public void upp() {
         upgradeDamage(2);
         upgradeMagicNumber(2);
-        upgradeSecondDamage(1);
+        upgradeSecondMagic(1);
     }
     @Override
     public boolean canSpawn(ArrayList<AbstractCard> currentRewardCards) {

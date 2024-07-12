@@ -6,9 +6,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import kayncode.relics.BaseForm;
-import kayncode.relics.Rhaast;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 
@@ -20,10 +20,11 @@ public class ShadowSightAssassin extends AbstractEasyCard implements SpawnModifi
     private static int totalPlaysThisTurn = 0;
 
     public ShadowSightAssassin() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         selfRetain = true;
         this.baseMagicNumber = this.magicNumber = 1;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
+        setOrbTexture(makeImagePath("512/energyAssassin.png"), makeImagePath("1024/energyAssassin.png"));
     }
 
     @Override

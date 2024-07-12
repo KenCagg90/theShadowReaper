@@ -1,0 +1,31 @@
+[
+  {
+    "PROPER_NAME": "TODO",
+    "NAMES": [
+      "todo",
+      "todos"
+    ],
+    "DESCRIPTION": "TODO: Make your own epic keywords"
+  },
+  {
+    "PROPER_NAME": "收割",
+    "NAMES": [
+      "收割"
+    ],
+    "DESCRIPTION": "当你结束回合时, 敌人会失去等同于 收割 层数的生命."
+  },
+  {
+    "PROPER_NAME": "暗裔杀手",
+    "NAMES": [
+      "暗裔杀手"
+    ],
+    "DESCRIPTION": "每当你通过攻击牌(或 #y收割 )对敌人造成伤害， 获得等同于 #b10% 造成伤害的 #y临时 #y生命 。"
+  },
+  {
+    "PROPER_NAME": "影流刺客",
+    "NAMES": [
+      "影流刺客"
+    ],
+    "DESCRIPTION": "攻击后，每造成25点未被阻挡的伤害，抽一张牌。(每次攻击最多抽2张牌)。"
+  }
+]

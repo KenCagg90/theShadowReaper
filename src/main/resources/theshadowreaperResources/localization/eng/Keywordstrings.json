@@ -12,20 +12,20 @@
     "NAMES": [
       "reap"
     ],
-    "DESCRIPTION": "When you end your turn with unused [E] [REMOVE_SPACE], enemies with Reap lose HP."
+    "DESCRIPTION": "When you end your turn, enemies with Reap lose HP equal to their Reap."
   },
   {
-    "PROPER_NAME": "Reaper's\u00a0Touch",
+    "PROPER_NAME": "Rhaast",
     "NAMES": [
-      "reaper's\u00a0touch"
+      "rhaast"
     ],
-    "DESCRIPTION": "Deal damage to ALL enemies equal to their current #yReap [REMOVE_SPACE]."
+    "DESCRIPTION": "Each time you damage an enemy with an attack(or #yReap [REMOVE_SPACE]), gain #b10% of damage dealt as #yTemp #yHP [REMOVE_SPACE]."
   },
   {
-    "PROPER_NAME": "Form\u00a0Bonus",
+    "PROPER_NAME": "Shadow\u00a0Assassin",
     "NAMES": [
-      "form\u00a0bonus"
+      "shadow\u00a0assassin"
     ],
-    "DESCRIPTION": "The below effect changes based on Kayn's current Form."
+    "DESCRIPTION": "After an attack, for every 25 unblocked damage dealt, draw a card. (Only 2 cards can be drawn per attack)."
   }
 ]

@@ -3,8 +3,8 @@ package kayncode.cards;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import kayncode.powers.UTPower;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -36,6 +36,7 @@ public class UmbralTrespass extends AbstractEasyCard implements SpawnModificatio
         this.secondMagic = this.baseSecondMagic = 20; // Used for card text
         this.exhaust = true; // Card exhausts after use
         MultiCardPreview.add(this, new UmbralTrespassRhaast(), new UmbralTrespassAssassin());
+        MultiCardPreview.horizontalOnly(this);
 
     }
 
@@ -63,7 +64,7 @@ public class UmbralTrespass extends AbstractEasyCard implements SpawnModificatio
         // Apply Umbral Trespass Power to the enemy
         boolean hasRhaast = p.hasRelic(RELIC_A_ID);
         boolean hasShadow = p.hasRelic(RELIC_B_ID);
-        this.addToBot(new ApplyPowerAction(m, p, new UTPower(m, totalDamage, hasRhaast, hasShadow), totalDamage));
+        this.addToBot(new ApplyPowerAction(m, p, new UTPower(m, totalDamage), totalDamage));
 
         if (hasRhaast) {
             addToBot(new SFXAction("UMBRAL_SLAYER"));
@@ -83,6 +84,9 @@ public class UmbralTrespass extends AbstractEasyCard implements SpawnModificatio
         ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
         ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
         ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
     @Override

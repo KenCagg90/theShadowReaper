@@ -1,12 +1,14 @@
 package kayncode.powers;
 
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
+import kayncode.cards.HeavyHitter;
 
 import static kayncode.KaynMod.makeID;
 
@@ -27,7 +29,11 @@ public class HeavyHitterPower extends AbstractEasyPower {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (card.cardID.equals(HeavyHitter.ID)) {
+            return; // Skip if it's the Heavy Hitter card
+        }
+
         int energySpent = card.costForTurn;
 
         if (card.costForTurn == -1) { // X-cost card
@@ -40,6 +46,8 @@ public class HeavyHitterPower extends AbstractEasyPower {
             hasTriggeredThisTurn = true;
         }
     }
+
+
 
     @Override
     public void updateDescription() {

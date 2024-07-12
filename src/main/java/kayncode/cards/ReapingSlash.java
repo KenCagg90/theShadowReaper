@@ -2,9 +2,12 @@ package kayncode.cards;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import kayncode.powers.ReapPower;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import kayncode.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -30,24 +33,18 @@ public class ReapingSlash extends AbstractEasyCard implements SpawnModificationC
     public ReapingSlash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        this.baseMagicNumber = this.magicNumber = 4;
+        this.baseMagicNumber = this.magicNumber = 5;
         baseBlock = 6;
         baseSecondDamage = 3;
         MultiCardPreview.add(this, new ReapingSlashRhaast(), new ReapingSlashAssassin());
+        MultiCardPreview.horizontalOnly(this);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        boolean hasRelicA = p.hasRelic(RELIC_A_ID);
-        boolean hasRelicB = p.hasRelic(RELIC_B_ID);
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        this.addToBot(new SFXAction("REAPING_SLASH"));
+        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
         Wiz.forAllMonstersLiving(monster -> Wiz.applyToEnemy(monster, new ReapPower(monster, this.magicNumber)));
-        if (hasRelicA) {
-        blck();
-        }
-        if (hasRelicB) {
-            this.addToBot(new LoseHPAction(m, AbstractDungeon.player, baseSecondDamage, AbstractGameAction.AttackEffect.NONE));
-        }
-
     }
 
 
@@ -57,6 +54,9 @@ public class ReapingSlash extends AbstractEasyCard implements SpawnModificationC
         upgradeMagicNumber(2);
         upgradeBlock(2);
         upgradeSecondDamage(1);
+        for (AbstractCard c : MultiCardPreview.multiCardPreview.get(this)) {
+            c.upgrade();
+        }
     }
 
     @Override

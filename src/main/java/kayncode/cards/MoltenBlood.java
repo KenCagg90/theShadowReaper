@@ -18,12 +18,13 @@ public class MoltenBlood extends AbstractEasyCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 14;
         this.baseMagicNumber = this.magicNumber = 12;
+        this.baseSecondMagic = this.secondMagic = 4;
         this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new LoseHPAction(p, p, 5));
+        this.addToBot(new LoseHPAction(p, p, secondMagic));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new LoseHPAction(m, p, this.magicNumber));
     }

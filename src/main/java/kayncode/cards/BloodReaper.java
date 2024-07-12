@@ -18,11 +18,12 @@ public class BloodReaper extends AbstractEasyCard {
 
     public BloodReaper() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        this.baseMagicNumber = this.magicNumber = 10;
+        baseMagicNumber = magicNumber = 10;
+        baseSecondMagic = secondMagic = 4;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new LoseHPAction(p, p, 4, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new LoseHPAction(p, p, secondMagic, AbstractGameAction.AttackEffect.FIRE));
         for (AbstractMonster mo : AbstractDungeon.getCurrRoom().monsters.monsters) {
             this.addToBot(new ApplyPowerAction(mo, p, new ReapPower(mo, this.magicNumber), this.magicNumber));
         }

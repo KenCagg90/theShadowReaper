@@ -4,9 +4,10 @@ import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCar
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import kayncode.powers.UTPower;
-import kayncode.relics.BaseForm;
-import kayncode.relics.Rhaast;
-import kayncode.relics.ShadowAssassin;
+import kayncode.powers.UTPowerRhaast;
+import kayncode.relics.special.BaseForm;
+import kayncode.relics.special.Rhaast;
+import kayncode.relics.special.ShadowAssassin;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -17,7 +18,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import kayncode.relics.TheDarkinScythe;
+import kayncode.relics.special.TheDarkinScythe;
 
 import java.util.ArrayList;
 
@@ -37,6 +38,7 @@ public class UmbralTrespassRhaast extends AbstractEasyCard implements SpawnModif
         this.secondMagic = this.baseSecondMagic = 20; // Used for card text
         this.exhaust = true; // Card exhausts after use
         setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast.png"));
+        setOrbTexture(makeImagePath("512/energyRhaast.png"), makeImagePath("1024/energyRhaast.png"));
     }
 
     @Override
@@ -61,7 +63,7 @@ public class UmbralTrespassRhaast extends AbstractEasyCard implements SpawnModif
         // Apply Umbral Trespass Power to the enemy
         boolean hasRhaast = p.hasRelic(RELIC_A_ID);
         boolean hasShadow = p.hasRelic(RELIC_B_ID);
-        this.addToBot(new ApplyPowerAction(m, p, new UTPower(m, totalDamage, hasRhaast, hasShadow), totalDamage));
+        this.addToBot(new ApplyPowerAction(m, p, new UTPowerRhaast(m, totalDamage), totalDamage));
 
         if (hasRhaast) {
             addToBot(new SFXAction("UMBRAL_SLAYER"));
