@@ -1,5 +1,7 @@
 package kayncode.powers;
 
+import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -13,7 +15,7 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static kayncode.KaynMod.makeID;
 
-public class ReapPower extends AbstractEasyPower {
+public class ReapPower extends AbstractEasyPower implements HealthBarRenderPower {
     public static final String POWER_ID = "Reap";
     public static String ID = makeID(ReapPower.class.getSimpleName());
 
@@ -30,7 +32,7 @@ public class ReapPower extends AbstractEasyPower {
     }
 
     public void atStartOfTurn() {
-        if (AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()){ //&& EnergyPanel.totalCount > 0 {
+        if (AbstractDungeon.getCurrRoom() != null && AbstractDungeon.getCurrRoom().phase == RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead() && EnergyPanel.totalCount > 0) {
             this.flash();
             addToBot(new SFXAction("REAP"));
             AbstractDungeon.effectList.add(new kayncode.vfx.ReapEffect(this.owner.hb.cX, this.owner.hb.cY, AttackEffect.NONE, false));
@@ -41,5 +43,15 @@ public class ReapPower extends AbstractEasyPower {
     @Override
     public void updateDescription() {
         description = powerStrings.DESCRIPTIONS[0];
+    }
+
+    @Override
+    public int getHealthBarAmount() {
+        return amount;
+    }
+
+    @Override
+    public Color getColor() {
+        return new Color(0.094F, 0.0F, 0.047F, 1.0F);
     }
 }

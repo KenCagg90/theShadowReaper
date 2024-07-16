@@ -47,13 +47,9 @@ public class ShadowAssassin extends AbstractEasyRelic implements OnAfterUseCardR
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
 
-        if (info.owner == AbstractDungeon.player && damageAmount > 0 && info.type != DamageInfo.DamageType.HP_LOSS) {
+        if (info.owner == AbstractDungeon.player && damageAmount > 0 && info.type == DamageInfo.DamageType.NORMAL) {
             damageCounter += damageAmount;
             this.counter = damageCounter; // Update the counter to reflect accumulated damage
-            if (info.owner == AbstractDungeon.player && damageAmount > 0 && info.type == DamageInfo.DamageType.HP_LOSS)
-            {
-                damageCounter += damageAmount / 2;
-            }
 
             }
         }
@@ -62,7 +58,7 @@ public class ShadowAssassin extends AbstractEasyRelic implements OnAfterUseCardR
     public void onAfterUseCard(AbstractCard abstractCard, UseCardAction useCardAction) {
         if (damageCounter >= DAMAGE_THRESHOLD) {
             int cardsToDraw = damageCounter / DAMAGE_THRESHOLD;
-            if (cardsToDraw > 2) cardsToDraw = 2;
+            //if (cardsToDraw > 2) cardsToDraw = 2;
             damageCounter = damageCounter % DAMAGE_THRESHOLD;
             this.flash();
             this.addToBot(new DrawCardAction(AbstractDungeon.player, cardsToDraw));

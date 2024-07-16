@@ -13,6 +13,7 @@ import kayncode.relics.special.ShadowAssassin;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class ShadowSight extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(ShadowSight.class.getSimpleName());
@@ -23,6 +24,7 @@ public class ShadowSight extends AbstractEasyCard implements SpawnModificationCa
         selfRetain = true;
         this.baseMagicNumber = this.magicNumber = 1;
         this.exhaust = true;
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new ShadowSightRhaast(), new ShadowSightAssassin());
         MultiCardPreview.horizontalOnly(this);
     }

@@ -1,11 +1,12 @@
 package kayncode.cards;
 
-import kayncode.actions.SoulHarvestAction;
-import kayncode.powers.ReapPower;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
+import kayncode.powers.ReapPower;
 
 import static kayncode.KaynMod.makeID;
 
@@ -19,14 +20,20 @@ public class SoulHarvest extends AbstractEasyCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int totalBlock = 0;
+
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if (!monster.isDeadOrEscaped()) {
                 this.addToBot(new ApplyPowerAction(monster, p, new ReapPower(monster, this.magicNumber), this.magicNumber));
+                if (!monster.hasPower(ArtifactPower.POWER_ID)) {
+                    totalBlock += 5;
+                }
             }
         }
 
-        // Add custom action to calculate the total Reap and apply block
-        this.addToBot(new SoulHarvestAction(p));
+        if (totalBlock > 0) {
+            this.addToBot(new GainBlockAction(p, totalBlock));
+        }
     }
 
     @Override

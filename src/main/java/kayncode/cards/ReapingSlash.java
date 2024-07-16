@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class ReapingSlash extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(ReapingSlash.class.getSimpleName());
@@ -36,6 +37,7 @@ public class ReapingSlash extends AbstractEasyCard implements SpawnModificationC
         this.baseMagicNumber = this.magicNumber = 5;
         baseBlock = 6;
         baseSecondDamage = 3;
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new ReapingSlashRhaast(), new ReapingSlashAssassin());
         MultiCardPreview.horizontalOnly(this);
     }

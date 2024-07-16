@@ -31,7 +31,7 @@ public class MoltenBlood extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        this.upgradeDamage(2);
-        this.upgradeMagicNumber(2);
+        this.upgradeDamage(8);
+        this.upgradeMagicNumber(4);
     }
 }

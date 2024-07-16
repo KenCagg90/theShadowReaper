@@ -71,7 +71,7 @@
   },
   "theshadowreaper:DarkPact": {
     "NAME": "Dark Pact",
-    "DESCRIPTION": "Lose !M! HP. NL Add !theshadowreaper:m2! random cards to your hand."
+    "DESCRIPTION": "Lose !M! HP. NL Add !theshadowreaper:m2! random 0 cost Ethereal cards to your hand."
   },
   "theshadowreaper:FadeIntoShadows": {
     "NAME": "Fade Into Shadows",
@@ -87,7 +87,7 @@
   },
   "theshadowreaper:ReapingWhirlwind": {
     "NAME": "Reaping Whirlwind",
-    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to ALL enemies X times. NL Exhaust."
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to ALL enemies X times. NL Trigger theshadowreaper:Reap on ALL enemies. NL Exhaust."
   },
   "theshadowreaper:DesperateMeasures": {
     "NAME": "Desperate Measures",
@@ -120,11 +120,11 @@
   },
   "theshadowreaper:SiphonStrength": {
     "NAME": "Siphon Strength",
-    "DESCRIPTION": "Steal !M! Strength from ALL enemies. NL ALL enemies lose an additional !theshadowreaper:m2! Strength. NL Exhaust."
+    "DESCRIPTION": "Steal !M! Strength from ALL enemies. NL ALL enemies lose !theshadowreaper:m2! Strength this turn. NL Exhaust."
   },
   "theshadowreaper:ReaperSigil": {
     "NAME": "Reaper's Sigil",
-    "DESCRIPTION": "Apply !M! theshadowreaper:Reap."
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap twice."
   },
   "theshadowreaper:PrepareTheKill": {
     "NAME": "Prepare The Kill",
@@ -168,7 +168,7 @@
   },
   "theshadowreaper:Gank": {
     "NAME": "Gank",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the enemy's Strength by !M! this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the enemy's Strength by !M! this turn. NL Exhaust."
   },
   "theshadowreaper:Preparation": {
     "NAME": "Preparation",
@@ -187,7 +187,7 @@
   "theshadowreaper:UmbralTrespassAssassin": {
     "NAME": "Umbral Trespass",
     "DESCRIPTION": "Gain 1 Intangible. NL At the start of your next turn, deal !D! damage. NL If Fatal, deal 50% of damage done to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL At the start of your next turn, deal !D! damage. NL If Fatal, deal 50% of damage done to ALL enemies. NL Exhaustive 2."
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL At the start of your next turn, deal !D! damage. NL If Fatal, deal !D! damage to ALL enemies. NL Exhaustive 2."
   },
   "theshadowreaper:StrategicManeuver": {
     "NAME": "Strategic Maneuver",
@@ -203,7 +203,7 @@
   },
   "theshadowreaper:ReapersToll": {
     "NAME": "Reaper's Toll",
-    "DESCRIPTION": "Deal damage equal to double the enemy's current theshadowreaper:Reap . NL Remove theshadowreaper:Reap ."
+    "DESCRIPTION": "Deal damage equal to double the enemy's current theshadowreaper:Reap. NL Remove theshadowreaper:Reap. NL Exhaust."
   },
   "theshadowreaper:StackTheDeck": {
     "NAME": "Stack The Deck",
@@ -232,7 +232,7 @@
   },
   "theshadowreaper:SoulHarvest": {
     "NAME": "Soul Harvest",
-    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to ALL enemies. NL Gain Block equal to half of the theshadowreaper:Reap on ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! theshadowreaper:Reap to ALL enemies. NL Gain Block equal to half of the theshadowreaper:Reap applied by this card. NL Exhaust."
   },
   "theshadowreaper:FinishingTouch": {
     "NAME": "Finishing Touch",
@@ -271,7 +271,7 @@
   },
   "theshadowreaper:BladesReachAssassin": {
     "NAME": "Blade's Reach",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       " NL theshadowreaper:Form\u00a0Bonus:",
       " NL [#9b111e]Apply !M! Weak.",
@@ -315,7 +315,7 @@
   },
   "theshadowreaper:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Trigger theshadowreaper:Reap on target enemy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal additional damage equal to half of the targets current theshadowreaper:Reap."
   },
   "theshadowreaper:EdgeOfDeath": {
     "NAME": "Edge Of Death",
@@ -323,7 +323,7 @@
   },
   "theshadowreaper:ShadowClone": {
     "NAME": "Shadow Clone",
-    "DESCRIPTION": "Choose a card in your hand. Add a copy that costs 0 into your hand. NL Exhaust."
+    "DESCRIPTION": "Choose a card in your hand. Add an Ethereal copy with 1 reduced cost into your hand. NL Exhaust."
   },
   "theshadowreaper:Exploit": {
     "NAME": "Exploit",

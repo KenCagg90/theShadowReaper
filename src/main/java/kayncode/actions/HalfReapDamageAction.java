@@ -1,12 +1,16 @@
 package kayncode.actions;
 
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import kayncode.powers.ReapPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+
+
 
 public class HalfReapDamageAction extends AbstractGameAction {
     private AbstractPlayer player;
@@ -24,7 +28,7 @@ public class HalfReapDamageAction extends AbstractGameAction {
             int reapAmount = target.getPower(ReapPower.ID).amount;
             int damage = reapAmount / 2;
             addToBot(new SFXAction("REAP"));
-            this.addToBot(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.NORMAL), AttackEffect.NONE));
+            this.addToBot(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.HP_LOSS), AttackEffect.NONE));
         }
         this.isDone = true;
     }

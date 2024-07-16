@@ -36,6 +36,7 @@ public class ShadowSightAssassin extends AbstractEasyCard implements SpawnModifi
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         if (totalPlaysThisTurn >= 2) {
+            this.cantUseMessage = "I can only play two of this card per turn";
             return false;
         }
         return super.canUse(p, m);

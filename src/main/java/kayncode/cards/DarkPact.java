@@ -1,5 +1,7 @@
 package kayncode.cards;
 
+import basemod.cardmods.EtherealMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,6 +24,8 @@ public class DarkPact extends AbstractEasyCard {
         this.addToBot(new LoseHPAction(p, p, this.magicNumber));
         for (int i = 0; i < secondMagic; i++) {
             AbstractCard card = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();
+            CardModifierManager.addModifier(card, new EtherealMod());
+            card.setCostForTurn(0);
             this.addToBot(new MakeTempCardInHandAction(card, 1));
         }
     }

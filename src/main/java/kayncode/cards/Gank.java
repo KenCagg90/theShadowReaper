@@ -19,6 +19,7 @@ public class Gank extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 7;
         this.magicNumber = this.baseMagicNumber = 3;
+        this.exhaust = true;
     }
 
     @Override

@@ -17,7 +17,7 @@ public class TheDarkinScythe extends AbstractEasyRelic implements CustomSavable<
     public static final String ID = makeID("TheDarkinScythe");
 
     public TheDarkinScythe() {
-        super(ID, RelicTier.SPECIAL, LandingSound.FLAT, TheShadowReaper.Enums.SHADOWREAPER_COLOR);
+        super(ID, RelicTier.STARTER, LandingSound.FLAT, TheShadowReaper.Enums.SHADOWREAPER_COLOR);
     }
 
     public static int redOrbs = 0;

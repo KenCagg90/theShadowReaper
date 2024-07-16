@@ -12,7 +12,7 @@ public class WhispersOfBlood extends AbstractEasyCard {
 
     public WhispersOfBlood() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = this.magicNumber = 3;
+        this.baseMagicNumber = this.magicNumber = 4;
 
     }
 

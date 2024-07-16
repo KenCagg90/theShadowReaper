@@ -10,7 +10,7 @@
   "${ModID}:ReapPower": {
     "NAME": "Reap",
     "DESCRIPTIONS": [
-      "At the end of your turn, ALL enemies lose HP equal to their #yReap [REMOVE_SPACE].",
+      "If you have unused [E] at the end of your turn, ALL enemies lose HP equal to their #yReap [REMOVE_SPACE].",
       ""
     ]
   },

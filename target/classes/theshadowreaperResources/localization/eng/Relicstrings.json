@@ -3,7 +3,7 @@
     "NAME": "The Darkin Scythe",
     "FLAVOR": "It'll do something eventually.",
     "DESCRIPTIONS": [
-      "Gather #rRed or #bBlue essence from combat encounters (Elites count as 2). Upon gathering #b8 Essence of either type, Kayn can assume the form of #ytheshadowreaper:Rhaast or #ytheshadowreaper:Shadow\u00a0Assassin at a campsite."
+      "Gather #rRed or #bBlue essence from combat encounters (Elites count as 2). Upon gathering #b8 Essence of either type, Kayn can change from his base form into the form of #rtheshadowreaper:Rhaast or #btheshadowreaper:Shadow\u00a0Assassin at a campsite."
       ]
   },
   "theshadowreaper:Rhaast": {
@@ -141,7 +141,7 @@
     "NAME": "Shadow Assassin Form",
     "FLAVOR": "The Darkin is gone. Our enemies are next.",
     "DESCRIPTIONS": [
-      "After an attack, for every 25 unblocked damage dealt, draw a card. Only 2 cards can be drawn per attack."
+      "For every 25 unblocked damage dealt, draw a card."
     ]
   }
 }

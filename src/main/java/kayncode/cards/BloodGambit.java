@@ -12,7 +12,7 @@ public class BloodGambit extends AbstractEasyCard {
     public final static String ID = makeID(BloodGambit.class.getSimpleName());
 
     public BloodGambit() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 3;
         this.exhaust = true;
     }

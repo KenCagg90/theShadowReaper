@@ -11,7 +11,7 @@ public class ShadowClone extends AbstractEasyCard {
     public final static String ID = makeID(ShadowClone.class.getSimpleName());
 
     public ShadowClone() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.NONE);
         this.exhaust = true;
     }
 
@@ -22,7 +22,7 @@ public class ShadowClone extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        this.upgradeBaseCost(1); // Upgrades the card to cost 0 energy
+        this.upgradeBaseCost(0); // Upgrades the card to cost 0 energy
     }
 
     @Override

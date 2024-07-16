@@ -15,6 +15,7 @@ import kayncode.relics.special.ShadowAssassin;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class FrenziedStrike extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(FrenziedStrike.class.getSimpleName());
@@ -23,7 +24,7 @@ public class FrenziedStrike extends AbstractEasyCard implements SpawnModificatio
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = 5;
         this.magicNumber = this.baseMagicNumber = 3;
-
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new FrenziedStrikeRhaast(), new FrenziedStrikeAssassin());
         MultiCardPreview.horizontalOnly(this);
     }

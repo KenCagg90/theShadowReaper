@@ -4,7 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import kayncode.actions.ReapDamageAction;
+import kayncode.actions.HalfReapDamageAction;
 
 import static kayncode.KaynMod.makeID;
 
@@ -22,7 +22,7 @@ public class Cull extends AbstractEasyCard {
         // Deal 5 damage to all enemies
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         // Deal damage to the targeted enemy equal to their Reap amount
-        this.addToBot(new ReapDamageAction(p, m));
+        this.addToBot(new HalfReapDamageAction(p, m));
     }
 
     @Override

@@ -22,6 +22,6 @@ public class Bloodfury extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(-1); // Upgrades to lose 5 HP instead of 8
+        upgradeMagicNumber(-2); // Upgrades to lose 3 HP instead of 5
     }
 }

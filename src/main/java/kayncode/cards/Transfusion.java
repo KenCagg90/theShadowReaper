@@ -12,8 +12,8 @@ public class Transfusion extends AbstractEasyCard {
 
     public Transfusion() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.SELF_AND_ENEMY);
-        baseBlock = 10;
-        baseDamage = 18;
+        baseBlock = 15;
+        baseDamage = 22;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -24,7 +24,7 @@ public class Transfusion extends AbstractEasyCard {
     @Override
     public void upp() {
 
-        upgradeBlock(3);
+        upgradeBlock(4);
         upgradeDamage(6);
     }
 }

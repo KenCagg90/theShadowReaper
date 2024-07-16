@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class BladesReach extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(BladesReach.class.getSimpleName());
@@ -29,7 +30,7 @@ public class BladesReach extends AbstractEasyCard implements SpawnModificationCa
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         this.baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Weak/Vulnerable
-
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new BladesReachRhaast(), new BladesReachAssassin());
         MultiCardPreview.horizontalOnly(this);
     }

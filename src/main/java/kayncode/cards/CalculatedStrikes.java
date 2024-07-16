@@ -11,7 +11,7 @@ public class CalculatedStrikes extends AbstractEasyCard {
 
     public CalculatedStrikes() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        this.baseDamage = 11;
+        this.baseDamage = 13;
         this.selfRetain = true;
         tags.add(CardTags.STRIKE);
     }

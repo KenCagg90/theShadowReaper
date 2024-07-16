@@ -1,53 +1,67 @@
 package kayncode.actions;
 
+import basemod.cardmods.EtherealMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
+import kayncode.cards.ShadowClone;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 
 public class ShadowCloneAction extends AbstractGameAction {
-    private AbstractPlayer player;
+    private boolean pickCard = false;
     private boolean upgraded;
 
     public ShadowCloneAction(boolean upgraded) {
-        this.actionType = ActionType.CARD_MANIPULATION;
-        this.duration = Settings.ACTION_DUR_FAST;
-        this.player = AbstractDungeon.player;
         this.upgraded = upgraded;
+        this.duration = Settings.ACTION_DUR_FAST;
     }
 
     @Override
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {
-            if (this.player.hand.isEmpty()) {
-                this.isDone = true;
+        if (!pickCard) {
+            if (AbstractDungeon.player.hand.isEmpty()) {
+                isDone = true;
                 return;
             }
 
-            AbstractDungeon.handCardSelectScreen.open("Choose a card to clone.", 1, false, false, false, false, true);
-            this.tickDuration();
-        } else {
-            if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
-                Iterator<AbstractCard> iterator = AbstractDungeon.handCardSelectScreen.selectedCards.group.iterator();
-
-                while (iterator.hasNext()) {
-                    AbstractCard selectedCard = iterator.next();
-                    AbstractCard clonedCard = selectedCard.makeStatEquivalentCopy();
-                    clonedCard.setCostForTurn(0);
-                    player.hand.addToHand(selectedCard);
-
-                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(clonedCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
+            // Filter out ShadowSight cards
+            ArrayList<AbstractCard> tempGroup = new ArrayList<>();
+            for (AbstractCard card : AbstractDungeon.player.hand.group) {
+                if (!card.cardID.equals(ShadowClone.ID)) {
+                    tempGroup.add(card);
                 }
-
-                AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
-                AbstractDungeon.handCardSelectScreen.selectedCards.group.clear();
             }
 
-            this.tickDuration();
+            if (tempGroup.isEmpty()) {
+                isDone = true;
+                return;
+            }
+
+            // Convert ArrayList to CardGroup
+            CardGroup tempCardGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            tempCardGroup.group.addAll(tempGroup);
+
+            pickCard = true;
+            AbstractDungeon.gridSelectScreen.open(tempCardGroup, 1, "Choose a card to clone.", false, false, false, false);
+        } else {
+            if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                for (AbstractCard selectedCard : AbstractDungeon.gridSelectScreen.selectedCards) {
+                    AbstractCard clonedCard = selectedCard.makeStatEquivalentCopy();
+                    clonedCard.setCostForTurn(Math.max(0, selectedCard.cost - 1)); // Ensure cost doesn't go below 0
+                    CardModifierManager.addModifier(clonedCard, new EtherealMod());
+                    AbstractDungeon.player.hand.addToHand(clonedCard);
+                    AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(clonedCard, Settings.WIDTH, Settings.HEIGHT));
+                }
+
+                AbstractDungeon.gridSelectScreen.selectedCards.clear();
+                isDone = true;
+            }
+            tickDuration();
         }
     }
 }

@@ -24,7 +24,10 @@ public class SpearOfShojin extends AbstractEasyRelic {
     @Override
     public void onPlayCard(AbstractCard c, AbstractMonster m) {
         if (++this.counter == 5) {
-            ArrayList<AbstractCard> moreThanZeroCost = new ArrayList<>(AbstractDungeon.player.hand.group.stream().filter(abstractCard -> abstractCard.costForTurn > 0).collect(Collectors.toList()));
+            // Filter out the played card and cards with cost greater than 0
+            ArrayList<AbstractCard> moreThanZeroCost = new ArrayList<>(AbstractDungeon.player.hand.group.stream()
+                    .filter(card -> card != c && card.costForTurn > 0)
+                    .collect(Collectors.toList()));
             if (!moreThanZeroCost.isEmpty()) {
                 AbstractCard cardToModify = moreThanZeroCost.get(AbstractDungeon.cardRandomRng.random(moreThanZeroCost.size() - 1));
                 cardToModify.setCostForTurn(cardToModify.costForTurn - 1);

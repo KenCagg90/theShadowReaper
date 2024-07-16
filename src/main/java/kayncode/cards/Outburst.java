@@ -31,6 +31,6 @@ public class Outburst extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(5);
     }
 }

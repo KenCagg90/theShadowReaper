@@ -9,8 +9,10 @@ import static kayncode.KaynMod.makeID;
 public class ReapersToll extends AbstractEasyCard {
     public final static String ID = makeID(ReapersToll.class.getSimpleName());
 
+
     public ReapersToll() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -19,6 +21,6 @@ public class ReapersToll extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(0);
     }
 }

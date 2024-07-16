@@ -15,10 +15,11 @@ public class ReaperSigil extends AbstractEasyCard {
 
     public ReaperSigil() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseMagicNumber = this.magicNumber = 12;
+        this.baseMagicNumber = this.magicNumber = 6;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new ApplyPowerAction(m, p, new ReapPower(m, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, p, new ReapPower(m, this.magicNumber), this.magicNumber));
     }
 

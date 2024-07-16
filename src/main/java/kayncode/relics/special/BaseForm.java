@@ -15,7 +15,7 @@ public class BaseForm extends AbstractEasyRelic {
     private int turnsDrawn = 0;
 
     public BaseForm() {
-        super(ID, RelicTier.SPECIAL, LandingSound.CLINK, TheShadowReaper.Enums.SHADOWREAPER_COLOR);
+        super(ID, RelicTier.STARTER, LandingSound.CLINK, TheShadowReaper.Enums.SHADOWREAPER_COLOR);
     }
 
     @Override

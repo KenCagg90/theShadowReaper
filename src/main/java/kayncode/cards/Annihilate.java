@@ -26,6 +26,6 @@ public class Annihilate extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(8);
     }
 }

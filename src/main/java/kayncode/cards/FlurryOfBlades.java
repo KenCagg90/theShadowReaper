@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class FlurryOfBlades extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(FlurryOfBlades.class.getSimpleName());
@@ -25,7 +26,7 @@ public class FlurryOfBlades extends AbstractEasyCard implements SpawnModificatio
     public FlurryOfBlades() {
         super(ID, -1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         this.baseDamage = 10;
-
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new FlurryOfBladesRhaast(), new FlurryOfBladesAssassin());
         MultiCardPreview.horizontalOnly(this);
     }

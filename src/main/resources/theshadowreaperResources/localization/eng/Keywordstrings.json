@@ -12,7 +12,7 @@
     "NAMES": [
       "reap"
     ],
-    "DESCRIPTION": "When you end your turn, enemies with Reap lose HP equal to their Reap."
+    "DESCRIPTION": "If you have unused [E] at the end of your turn, enemies with Reap lose HP equal to their Reap."
   },
   {
     "PROPER_NAME": "Rhaast",
@@ -26,6 +26,6 @@
     "NAMES": [
       "shadow\u00a0assassin"
     ],
-    "DESCRIPTION": "After an attack, for every 25 unblocked damage dealt, draw a card. (Only 2 cards can be drawn per attack)."
+    "DESCRIPTION": "For every 25 unblocked damage dealt, draw a card."
   }
 ]

@@ -1,9 +1,11 @@
 package kayncode.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import kayncode.util.Wiz;
 
@@ -31,11 +33,18 @@ public class SiphonStrength extends AbstractEasyCard {
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber * enemyCount), this.magicNumber * enemyCount));
 
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            // Monster loses strength equal to magicNumber
-            this.addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, -this.magicNumber), -this.magicNumber));
+            if (!monster.isDead && !monster.isDying) {
+                // Monster loses strength equal to magicNumber
+                this.addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, -this.magicNumber), -this.magicNumber));
 
-            // Monster loses additional strength equal to secondMagic
-            this.addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, -this.secondMagic), -this.secondMagic));
+                // Reduce enemy's strength by 3(4) for this turn
+                this.addToBot(new ApplyPowerAction(monster, p, new StrengthPower(monster, -this.secondMagic), -this.secondMagic));
+
+                // Apply GainStrengthPower only if the monster doesn't have Artifact
+                if (!monster.hasPower("Artifact")) {
+                    this.addToBot(new ApplyPowerAction(monster, p, new GainStrengthPower(monster, this.secondMagic), this.secondMagic));
+                }
+            }
         }
     }
 

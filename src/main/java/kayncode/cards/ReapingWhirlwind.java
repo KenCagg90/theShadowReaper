@@ -28,6 +28,7 @@ public class ReapingWhirlwind extends AbstractEasyCard {
             }
             return true;
         }));
+        this.addToBot(new ReapDamageAllEnemiesAction(p));
     }
 
     @Override

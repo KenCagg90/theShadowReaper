@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class Shadowstep extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(Shadowstep.class.getSimpleName());
@@ -22,6 +23,7 @@ public class Shadowstep extends AbstractEasyCard implements SpawnModificationCar
     public Shadowstep() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 2;
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new ShadowstepRhaast(), new ShadowstepAssassin());
         MultiCardPreview.horizontalOnly(this);
     }

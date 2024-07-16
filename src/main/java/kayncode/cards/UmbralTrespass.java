@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class UmbralTrespass extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(UmbralTrespass.class.getSimpleName());
@@ -35,6 +36,7 @@ public class UmbralTrespass extends AbstractEasyCard implements SpawnModificatio
         this.magicNumber = this.baseMagicNumber = 1; // Used for Intangible
         this.secondMagic = this.baseSecondMagic = 20; // Used for card text
         this.exhaust = true; // Card exhausts after use
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new UmbralTrespassRhaast(), new UmbralTrespassAssassin());
         MultiCardPreview.horizontalOnly(this);
 

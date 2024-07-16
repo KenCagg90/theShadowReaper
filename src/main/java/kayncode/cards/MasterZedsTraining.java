@@ -14,6 +14,7 @@ import kayncode.relics.special.ShadowAssassin;
 import java.util.ArrayList;
 
 import static kayncode.KaynMod.makeID;
+import static kayncode.KaynMod.makeImagePath;
 
 public class MasterZedsTraining extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(MasterZedsTraining.class.getSimpleName());
@@ -21,7 +22,7 @@ public class MasterZedsTraining extends AbstractEasyCard implements SpawnModific
     public MasterZedsTraining() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = this.magicNumber = 1;
-
+        setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new DemonArmor(), new AssassinsTraining());
         MultiCardPreview.horizontalOnly(this);
     }

@@ -71,7 +71,7 @@
   },
   "${ModID}:DarkPact": {
     "NAME": "Dark Pact",
-    "DESCRIPTION": "Lose !M! HP. NL Add !${ModID}:m2! random cards to your hand."
+    "DESCRIPTION": "Lose !M! HP. NL Add !${ModID}:m2! random 0 cost Ethereal cards to your hand."
   },
   "${ModID}:FadeIntoShadows": {
     "NAME": "Fade Into Shadows",
@@ -87,7 +87,7 @@
   },
   "${ModID}:ReapingWhirlwind": {
     "NAME": "Reaping Whirlwind",
-    "DESCRIPTION": "Apply !M! ${ModID}:Reap to ALL enemies X times. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Reap to ALL enemies X times. NL Trigger ${ModID}:Reap on ALL enemies. NL Exhaust."
   },
   "${ModID}:DesperateMeasures": {
     "NAME": "Desperate Measures",
@@ -120,11 +120,11 @@
   },
   "${ModID}:SiphonStrength": {
     "NAME": "Siphon Strength",
-    "DESCRIPTION": "Steal !M! Strength from ALL enemies. NL ALL enemies lose an additional !${ModID}:m2! Strength. NL Exhaust."
+    "DESCRIPTION": "Steal !M! Strength from ALL enemies. NL ALL enemies lose !${ModID}:m2! Strength this turn. NL Exhaust."
   },
   "${ModID}:ReaperSigil": {
     "NAME": "Reaper's Sigil",
-    "DESCRIPTION": "Apply !M! ${ModID}:Reap."
+    "DESCRIPTION": "Apply !M! ${ModID}:Reap twice."
   },
   "${ModID}:PrepareTheKill": {
     "NAME": "Prepare The Kill",
@@ -168,7 +168,7 @@
   },
   "${ModID}:Gank": {
     "NAME": "Gank",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce the enemy's Strength by !M! this turn."
+    "DESCRIPTION": "Deal !D! damage. NL Reduce the enemy's Strength by !M! this turn. NL Exhaust."
   },
   "${ModID}:Preparation": {
     "NAME": "Preparation",
@@ -187,7 +187,7 @@
   "${ModID}:UmbralTrespassAssassin": {
     "NAME": "Umbral Trespass",
     "DESCRIPTION": "Gain 1 Intangible. NL At the start of your next turn, deal !D! damage. NL If Fatal, deal 50% of damage done to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL At the start of your next turn, deal !D! damage. NL If Fatal, deal 50% of damage done to ALL enemies. NL Exhaustive 2."
+    "UPGRADE_DESCRIPTION": "Gain 1 Intangible. NL At the start of your next turn, deal !D! damage. NL If Fatal, deal !D! damage to ALL enemies. NL Exhaustive 2."
   },
   "${ModID}:StrategicManeuver": {
     "NAME": "Strategic Maneuver",
@@ -203,7 +203,7 @@
   },
   "${ModID}:ReapersToll": {
     "NAME": "Reaper's Toll",
-    "DESCRIPTION": "Deal damage equal to double the enemy's current ${ModID}:Reap . NL Remove ${ModID}:Reap ."
+    "DESCRIPTION": "Deal damage equal to double the enemy's current ${ModID}:Reap. NL Remove ${ModID}:Reap. NL Exhaust."
   },
   "${ModID}:StackTheDeck": {
     "NAME": "Stack The Deck",
@@ -232,7 +232,7 @@
   },
   "${ModID}:SoulHarvest": {
     "NAME": "Soul Harvest",
-    "DESCRIPTION": "Apply !M! ${ModID}:Reap to ALL enemies. NL Gain Block equal to half of the ${ModID}:Reap on ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Apply !M! ${ModID}:Reap to ALL enemies. NL Gain Block equal to half of the ${ModID}:Reap applied by this card. NL Exhaust."
   },
   "${ModID}:FinishingTouch": {
     "NAME": "Finishing Touch",
@@ -271,7 +271,7 @@
   },
   "${ModID}:BladesReachAssassin": {
     "NAME": "Blade's Reach",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable.",
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Vulnerable to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       " NL ${ModID}:Form\u00a0Bonus:",
       " NL [#9b111e]Apply !M! Weak.",
@@ -315,7 +315,7 @@
   },
   "${ModID}:Cull": {
     "NAME": "Cull",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Trigger ${ModID}:Reap on target enemy."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deal additional damage equal to half of the targets current ${ModID}:Reap."
   },
   "${ModID}:EdgeOfDeath": {
     "NAME": "Edge Of Death",
@@ -323,7 +323,7 @@
   },
   "${ModID}:ShadowClone": {
     "NAME": "Shadow Clone",
-    "DESCRIPTION": "Choose a card in your hand. Add a copy that costs 0 into your hand. NL Exhaust."
+    "DESCRIPTION": "Choose a card in your hand. Add an Ethereal copy with 1 reduced cost into your hand. NL Exhaust."
   },
   "${ModID}:Exploit": {
     "NAME": "Exploit",
