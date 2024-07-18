@@ -15,6 +15,7 @@ public class SecondStrike extends AbstractEasyCard {
     public SecondStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseDamage = 11;
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

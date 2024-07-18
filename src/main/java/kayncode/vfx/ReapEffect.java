@@ -32,7 +32,7 @@ public class ReapEffect extends AbstractGameEffect {
             this.y = y - (float)this.img.packedHeight / 2.0F;
         }
 
-        this.color = Color.RED.cpy();
+        this.color = new Color(0.290F, 0.000F, 0.451F, 1.0F).cpy();
         this.scale = Settings.scale;
         CardCrawlGame.sound.play("REAP_EFFECT_SOUND");
     }

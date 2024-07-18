@@ -1,9 +1,9 @@
 package kayncode.cards;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import kayncode.actions.HalfReapDamageAction;
 import kayncode.powers.ReapPower;
 
 import static kayncode.KaynMod.makeID;
@@ -21,8 +21,16 @@ public class EdgeOfDeath extends AbstractEasyCard {
         // Apply Reap
         this.addToTop(new ApplyPowerAction(m, p, new ReapPower(m, this.magicNumber), this.magicNumber));
 
-        // Deal damage based on Reap amount
-        this.addToBot(new HalfReapDamageAction(p, m));
+        // Trigger Half Reap on the specified enemy
+        this.addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                if (m != null && m.hasPower(ReapPower.ID)) {
+                    ((ReapPower)m.getPower(ReapPower.ID)).triggerReap(0.5F);
+                }
+                this.isDone = true;
+            }
+        });
     }
 
     @Override

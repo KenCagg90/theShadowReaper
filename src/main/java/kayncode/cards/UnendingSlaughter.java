@@ -48,7 +48,19 @@ public class UnendingSlaughter extends AbstractEasyCard {
         this.glowColor = attackCardsPlayedThisTurn >= 3
                 ? AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy()
                 : AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        this.rawDescription = cardStrings.DESCRIPTION + attackCardsPlayedThisTurn;
+    }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+        this.rawDescription = cardStrings.DESCRIPTION;
+        if (count == 1) {
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];
+        }
+        if (count > 1){
+            this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[2];
+        }
         initializeDescription();
     }
 
@@ -57,6 +69,6 @@ public class UnendingSlaughter extends AbstractEasyCard {
         upgradeDamage(2); // Upgrade to deal 8 damage instead of 6
         ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
         ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
-        ExhaustiveField.ExhaustiveFields.isExhaustiveUpgraded.set(this, true);
+        this.exhaust = false;
     }
 }

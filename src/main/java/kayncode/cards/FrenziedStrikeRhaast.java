@@ -26,6 +26,7 @@ public class FrenziedStrikeRhaast extends AbstractEasyCard implements SpawnModif
         this.magicNumber = this.baseMagicNumber = 2;
         setBackgroundTexture(makeImagePath("512/attackRhaast.png"), makeImagePath("1024/attackRhaast.png"));
         setOrbTexture(makeImagePath("512/energyRhaast.png"), makeImagePath("1024/energyRhaast.png"));
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

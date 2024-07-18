@@ -1,8 +1,8 @@
 package kayncode.cards;
 
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
-import kayncode.actions.ReapDamageAllEnemiesAction;
 import kayncode.powers.ReapPower;
 import kayncode.util.Wiz;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,13 +22,26 @@ public class ReapingWhirlwind extends AbstractEasyCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new EasyXCostAction(this, (effect, params) -> {
+            // Apply Reap X times
             for (int i = 0; i < effect; i++) {
-                Wiz.forAllMonstersLiving(monster -> Wiz.applyToEnemy(monster, new ReapPower(monster, this.magicNumber)));
-                this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+                Wiz.forAllMonstersLiving(monster ->
+                        Wiz.applyToEnemy(monster, new ReapPower(monster, this.magicNumber)));
             }
+
+            // VFX
+            this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+
+            // Trigger Reap on all enemies
+            this.addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    ReapPower.triggerReapAll(1.0f);
+                    this.isDone = true;
+                }
+            });
+
             return true;
         }));
-        this.addToBot(new ReapDamageAllEnemiesAction(p));
     }
 
     @Override

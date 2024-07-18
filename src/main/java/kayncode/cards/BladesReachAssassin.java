@@ -2,6 +2,7 @@ package kayncode.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import kayncode.powers.ReapPower;
 import kayncode.relics.special.BaseForm;
 import kayncode.relics.special.Rhaast;
 import kayncode.relics.special.ShadowAssassin;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import kayncode.relics.special.TheDarkinScythe;
+import kayncode.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -25,8 +27,6 @@ import static kayncode.KaynMod.makeImagePath;
 
 public class BladesReachAssassin extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(BladesReachAssassin.class.getSimpleName());
-    private static final String RELIC_A_ID = Rhaast.ID; // Replace with the actual ID of relic A
-    private static final String RELIC_B_ID = ShadowAssassin.ID; // Replace with the actual ID of relic B
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReachAssassin() {
@@ -39,14 +39,12 @@ public class BladesReachAssassin extends AbstractEasyCard implements SpawnModifi
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        MonsterGroup monsters = AbstractDungeon.getMonsters();
-        int count = 0;
 
-        for (AbstractMonster monster : monsters.monsters) {
-            if (monster.isDeadOrEscaped()) continue;
-                this.addToBot(new DamageAction(monster, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                this.addToBot(new ApplyPowerAction(monster, p, new VulnerablePower(monster, this.magicNumber, false), this.magicNumber));
-        }
+
+
+                allDmg(AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+                 Wiz.forAllMonstersLiving(monster -> Wiz.applyToEnemy(monster, new VulnerablePower(p, this.magicNumber, false)));
+
     }
 
     @Override

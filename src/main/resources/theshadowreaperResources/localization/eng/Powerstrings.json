@@ -10,8 +10,9 @@
   "${ModID}:ReapPower": {
     "NAME": "Reap",
     "DESCRIPTIONS": [
-      "If you have unused [E] at the end of your turn, ALL enemies lose HP equal to their #yReap [REMOVE_SPACE].",
-      ""
+      "If you have at least #b1 unused [E] at the end of your turn, this enemy loses #b",
+      " #y(",
+      ") HP. (Increased by #y20% for each additional unused [E] [REMOVE_SPACE])."
     ]
   },
   "${ModID}:DemonArmorPower": {
@@ -40,6 +41,12 @@
     "DESCRIPTIONS": [
       "Next turn, Deal #b",
       " damage to the target."
+    ]
+  },
+  "${ModID}:FuturePlanningPower": {
+    "NAME": "Future Planning",
+    "DESCRIPTIONS": [
+      "Next turn, draw additional cards equal to the amount of cards in your hand at the end of this turn"
     ]
   },
   "${ModID}:UTPowerAssassin": {

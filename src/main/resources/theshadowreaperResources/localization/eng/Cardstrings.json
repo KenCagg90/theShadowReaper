@@ -284,8 +284,13 @@
   },
   "${ModID}:UnendingSlaughter": {
     "NAME": "Unending Slaughter",
-    "DESCRIPTION": "Deal !D! damage. NL Gain [E]  for each attack played this turn up to a maximum of [E] [E] [E] . NL Exhaust. NL Attacks played: ",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E]  for each attack played this turn up to a maximum of [E] [E] [E] . NL Exhaustive 2. NL Attacks played: "
+    "DESCRIPTION": "Deal !D! damage. NL Gain [E]  for each attack played this turn up to a maximum of [E] [E] [E] . NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain [E]  for each attack played this turn up to a maximum of [E] [E] [E] . NL Exhaustive !stslib:ex!.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (",
+      " card played.)",
+      " cards played.)"
+    ]
   },
   "${ModID}:TendToWounds": {
     "NAME": "Tend To Wounds",

@@ -26,6 +26,7 @@ public class FrenziedStrikeAssassin extends AbstractEasyCard implements SpawnMod
         this.magicNumber = this.baseMagicNumber = 4;
         setBackgroundTexture(makeImagePath("512/attackAssassin.png"), makeImagePath("1024/attackAssassin.png"));
         setOrbTexture(makeImagePath("512/energyAssassin.png"), makeImagePath("1024/energyAssassin.png"));
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,5 +1,6 @@
 package kayncode.relics.uncommon;
 
+import basemod.patches.com.megacrit.cardcrawl.relics.AbstractRelic.RelicOutlineColor;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,17 +20,17 @@ public class FirstStrike extends AbstractEasyRelic {
 
     @Override
     public void atBattleStart() {
-        this.counter = 0;
+        this.counter = 3;
         this.attacksCounter = 0;
         this.grayscale = false;
     }
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (info.owner == AbstractDungeon.player && damageAmount > 0 && attacksCounter <= 2) {
+        if (info.owner == AbstractDungeon.player && damageAmount > 0 && attacksCounter <= 2 && info.type == DamageInfo.DamageType.NORMAL) {
             int goldToGain = (int) Math.ceil(damageAmount * 0.2f);
             AbstractDungeon.player.gainGold(goldToGain);
-            this.counter += goldToGain;
+            this.counter--;
             attacksCounter++;
             this.flash();
 

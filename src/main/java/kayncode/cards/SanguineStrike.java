@@ -18,6 +18,7 @@ public class SanguineStrike extends AbstractEasyCard {
         this.baseDamage = 15;
         this.magicNumber = this.baseMagicNumber = 1;
         secondMagic = baseSecondMagic = 2;
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

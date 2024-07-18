@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import kayncode.actions.ConserveEnergyAction;
+import kayncode.powers.FuturePlanningPower;
 
 import static kayncode.KaynMod.makeID;
 
@@ -20,9 +21,8 @@ public class FuturePlanning extends AbstractEasyCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int cardsInHand = p.hand.size();
         this.addToBot(new ConserveEnergyAction(p, 1));
-        this.addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, cardsInHand), cardsInHand));
+        this.addToBot(new ApplyPowerAction(p, p, new FuturePlanningPower(p, 1), 1));
     }
 
     @Override

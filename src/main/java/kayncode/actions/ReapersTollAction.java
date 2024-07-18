@@ -2,9 +2,7 @@ package kayncode.actions;
 
 import kayncode.powers.ReapPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -22,9 +20,12 @@ public class ReapersTollAction extends AbstractGameAction {
     @Override
     public void update() {
         if (target.hasPower(ReapPower.ID)) {
-            int reapAmount = target.getPower(ReapPower.ID).amount;
-            int damage = reapAmount * 2;
-            addToBot(new DamageAction(target, new DamageInfo(player, damage, DamageInfo.DamageType.THORNS), AttackEffect.SLASH_DIAGONAL));
+            ReapPower reapPower = (ReapPower) target.getPower(ReapPower.ID);
+
+            // Trigger double Reap damage
+            reapPower.triggerReap(2.0f);
+
+            // Remove the Reap power
             addToBot(new RemoveSpecificPowerAction(target, player, ReapPower.ID));
         }
         this.isDone = true;

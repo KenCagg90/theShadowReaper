@@ -40,6 +40,7 @@ kayncode\cards\ComboMastery.class
 kayncode\cards\SiphoningStrikes.class
 kayncode\cards\BloodGambit.class
 kayncode\cards\HeavyHitter.class
+kayncode\cards\Cull$1.class
 kayncode\cards\BloodReaper.class
 kayncode\cards\cardvars\SecondDamage.class
 kayncode\patches\KaynMapGenerationPatch.class
@@ -48,8 +49,10 @@ kayncode\cards\BladeSpin.class
 kayncode\patches\KaynTransformCardsPatch.class
 kayncode\util\CardArtRoller.class
 kayncode\cards\UmbralTrespass.class
+kayncode\powers\FuturePlanningPower.class
 kayncode\relics\bossenergy\Manamune.class
 kayncode\cards\MarkForDeath.class
+kayncode\patches\ReapPatchadd.class
 kayncode\relics\boss\InfinityEdge.class
 kayncode\cards\cardvars\SecondMagicNumber.class
 kayncode\cards\DarkPact.class
@@ -78,7 +81,6 @@ kayncode\cards\PiercingStrike.class
 kayncode\cards\BladesReach.class
 kayncode\cards\SiphonStrength.class
 kayncode\cards\Overpower.class
-kayncode\actions\ReapDamageAction.class
 kayncode\cards\UmbralTrespassRhaast.class
 kayncode\cards\cardvars\SecondBlock.class
 kayncode\TheShadowReaper.class
@@ -104,8 +106,8 @@ kayncode\actions\DoubleReapDamageAction.class
 kayncode\cards\ReapersHarvest.class
 kayncode\cards\Distract.class
 kayncode\cards\ShadowWaltz.class
+kayncode\cards\ReapingWhirlwind$1.class
 kayncode\cards\Brutalize.class
-kayncode\actions\HalfReapDamageAction.class
 kayncode\vfx\TransformEffect.class
 kayncode\powers\DemonArmorPower.class
 kayncode\relics\uncommon\SpearOfShojin.class
@@ -142,6 +144,7 @@ kayncode\actions\ProfaneBlowAction.class
 kayncode\patches\KaynCampfirePatch$AddTransformOptions.class
 kayncode\powers\WhispersOfBloodPower.class
 kayncode\actions\ShadowCloneAction.class
+kayncode\patches\ReapPatchset.class
 kayncode\actions\ReapDamageAllEnemiesAction.class
 kayncode\cards\AbstractEasyCard$1.class
 kayncode\powers\UTPower.class
@@ -156,6 +159,7 @@ kayncode\actions\DoubleReapAction.class
 kayncode\relics\special\BaseForm.class
 kayncode\cards\ShadowClone.class
 kayncode\actions\ElectrocuteAction.class
+kayncode\cards\EdgeOfDeath$1.class
 kayncode\potions\AbstractEasyPotion.class
 kayncode\cards\FrenziedStrikeAssassin.class
 kayncode\actions\RepeatCardAction.class
@@ -168,6 +172,7 @@ kayncode\powers\HeavyHitterPower.class
 kayncode\cards\EdgeOfDeath.class
 kayncode\actions\TripleReapAction.class
 kayncode\patches\KaynCampfirePatch.class
+kayncode\patches\ReapPatchlose.class
 kayncode\powers\BloodragePower.class
 kayncode\cards\DemonArmor.class
 kayncode\KaynMod.class

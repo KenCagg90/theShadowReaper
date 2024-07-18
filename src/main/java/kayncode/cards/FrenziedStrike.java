@@ -27,6 +27,7 @@ public class FrenziedStrike extends AbstractEasyCard implements SpawnModificatio
         setOrbTexture(makeImagePath("512/energyMix.png"), makeImagePath("1024/energyMix.png"));
         MultiCardPreview.add(this, new FrenziedStrikeRhaast(), new FrenziedStrikeAssassin());
         MultiCardPreview.horizontalOnly(this);
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

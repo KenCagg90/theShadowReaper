@@ -17,6 +17,7 @@ public class PiercingStrike extends AbstractEasyCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 5;
         this.baseMagicNumber = this.magicNumber = 1; // Used for Vulnerable
+        tags.add(CardTags.STRIKE);
     }
 
     @Override

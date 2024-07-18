@@ -12,7 +12,7 @@
     "NAMES": [
       "reap"
     ],
-    "DESCRIPTION": "If you have unused [E] at the end of your turn, enemies with Reap lose HP equal to their Reap."
+    "DESCRIPTION": "If you have at least #b1 unused [E] at the end of your turn, enemies with Reap lose HP equal to their Reap + an additional #b20% for each additional [E]."
   },
   {
     "PROPER_NAME": "Rhaast",

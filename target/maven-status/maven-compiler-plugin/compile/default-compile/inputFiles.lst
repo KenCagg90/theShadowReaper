@@ -1,5 +1,4 @@
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\ProfaneBlowAction.java
-C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\HalfReapDamageAction.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\MasterZedsTrainingPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\rare\Eclipse.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ShadowstepRhaast.java
@@ -23,6 +22,7 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Calcu
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\UnendingSlaughter.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\SiphoningStrikesPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\special\BaseForm.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\patches\ReapPatchadd.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\cardvars\SecondDamage.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\AllOrNothing.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\special\TheDarkinScythe.java
@@ -67,7 +67,6 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Cull.
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\MasterZedsTraining.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\common\Electrocute.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\FrenziedStrikeAssassin.java
-C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\ReapDamageAction.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Defend.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\DemonArmor.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\BladesReach.java
@@ -93,12 +92,14 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\Despe
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ShadowSightRhaast.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\TheShadowReaper.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\EasyXCostAction.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\FuturePlanningPower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\cardvars\ThirdMagicNumber.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\SoulHarvestAction.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\StrategicManeuverAction.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\DarkPact.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\BladeSpin.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\PiercingStrike.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\patches\ReapPatchlose.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\powers\BloodragePower.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\FrenziedStrike.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\actions\UmbralTrespassAction.java
@@ -123,6 +124,7 @@ C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ReapA
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\ReapingSlashAssassin.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\uncommon\Hubris.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\relics\special\Rhaast.java
+C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\patches\ReapPatchset.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\SecondStrike.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\patches\KaynRoomCompletionPatch.java
 C:\Users\Ken\Documents\GitHub\theShadowReaper\src\main\java\kayncode\cards\UmbralTrespassAssassin.java
