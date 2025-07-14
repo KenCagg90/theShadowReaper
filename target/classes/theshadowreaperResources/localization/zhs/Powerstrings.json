@@ -10,8 +10,9 @@
   "theshadowreaper:ReapPower": {
     "NAME": "收割",
     "DESCRIPTIONS": [
-      "当回合结束时仍有 [E] 未使用 ，敌人会失去等同于 #y收割 层数的生命。",
-      ""
+      "当回合结束时仍有 [E] 未使用, 该敌人失去 #b",
+      " #y(",
+      " ) 点生命。（除此以外，每有1个额外的 [E] 未使用则额外造成20%的伤害）"
     ]
   },
   "theshadowreaper:DemonArmorPower": {
@@ -40,6 +41,12 @@
     "DESCRIPTIONS": [
       "下一个回合，对目标造成 #b",
       " 点伤害。"
+    ]
+  },
+  "theshadowreaper:FuturePlanningPower": {
+    "NAME": "展望未来",
+    "DESCRIPTIONS": [
+      "下一回合，抽取等同于你此回合手中剩余卡牌数量的牌"
     ]
   },
   "theshadowreaper:UTPowerAssassin": {
@@ -94,7 +101,7 @@
   "theshadowreaper:SiphoningStrikesPower": {
     "NAME": "虹吸收割",
     "DESCRIPTIONS": [
-       "当你对敌人施加 #y收割 时,获得 #b",
+      "当你对敌人施加 #y收割 时,获得 #b",
       " 点格挡."
     ]
   },
@@ -107,13 +114,13 @@
   "theshadowreaper:AllOrNothingPower": {
     "NAME": "孤注一掷",
     "DESCRIPTIONS": [
-      " 力量 将不再保存至下一回合（这个效果好像没有再使用了）." 
+      " 力量 将不再保存至下一回合（这个效果好像没有再使用了）."
     ]
   },
   "theshadowreaper:WhispersOfBloodPower": {
     "NAME": "血语",
     "DESCRIPTIONS": [
-       "在开始回合时, 对所有敌人施加 #b",
+      "在开始回合时, 对所有敌人施加 #b",
       " 层 #y收割 ."
     ]
   }

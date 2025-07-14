@@ -20,6 +20,11 @@ public class UTPowerRhaast extends AbstractEasyPower {
         super(POWER_ID, powerStrings.NAME, PowerType.BUFF, true, owner, amount);
     }
 
+    public void onInitialApplication()
+    {
+        type = PowerType.DEBUFF;
+    }
+
     public void atEndOfRound() {
         int finalDamage = amount;
 

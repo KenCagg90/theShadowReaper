@@ -103,9 +103,9 @@
     "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 本回合未使用的 [E] 可以保留到下回合。"
   },
   "theshadowreaper:FuturePlanning": {
-  "NAME": "展望未来",
-  "DESCRIPTION": "本回合未使用的 [E] 可以保留到下回合。 NL 下一回合，抽取等同于你手中剩余手牌数量的牌。 NL 消耗 。"
-},
+    "NAME": "展望未来",
+    "DESCRIPTION": "本回合未使用的 [E] 可以保留到下回合。 NL 下一回合，抽取等同于你此回合手中剩余手牌数量的牌。 NL 消耗 。"
+  },
   "theshadowreaper:ProfaneBlow": {
     "NAME": "亵渎",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 杀死敌人时，获得 !M! 点 力量 。"
@@ -266,16 +266,16 @@
     "EXTENDED_DESCRIPTION": [
       " NL theshadowreaper:形态加成:",
       " NL [#9b111e]给予 !M! 点 虚弱 。",
-      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 点 [] 易伤 。"
+      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 点 易伤 。"
     ]
   },
   "theshadowreaper:BladesReachAssassin": {
     "NAME": "交锋",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! 层易伤.",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
       " NL theshadowreaper:形态加成:",
       " NL [#9b111e]给予 !M! 层 虚弱 。",
-      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 层 [] 易伤 。"
+      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 层 易伤 。"
     ]
   },
   "theshadowreaper:BladesReachRhaast": {
@@ -285,7 +285,12 @@
   "theshadowreaper:UnendingSlaughter": {
     "NAME": "无休杀戮",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每次攻击获得 [E]  NL 每回合最多获得 [E] [E] [E] 。 NL 消耗 。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每次攻击获得 [E]  NL 每回合最多获得 [E] [E] [E] 。 NL 消耗性 2 。  "
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每次攻击获得 [E]  NL 每回合最多获得 [E] [E] [E] 。 NL 消耗性 2 。  ",
+    "EXTENDED_DESCRIPTION":[
+      " NL (",
+      " 张牌 已打出。)",
+      " 张牌 已打出。)"
+    ]
   },
   "theshadowreaper:TendToWounds": {
     "NAME": "伤口处理",
@@ -315,7 +320,8 @@
   },
   "theshadowreaper:Cull": {
     "NAME": "剔除",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 额外造成相当于目标 theshadowreaper:收割 层数一半的伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 额外造成相当于目标当前 theshadowreaper:收割 层数50%的伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 额外造成相当于目标当前 theshadowreaper:收割 层数75%的伤害。"
   },
   "theshadowreaper:EdgeOfDeath": {
     "NAME": "死亡之锋",

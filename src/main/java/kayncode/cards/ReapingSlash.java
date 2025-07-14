@@ -6,11 +6,10 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 import kayncode.powers.ReapPower;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import kayncode.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,8 +25,8 @@ import static kayncode.KaynMod.makeImagePath;
 
 public class ReapingSlash extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(ReapingSlash.class.getSimpleName());
-    private static final String RELIC_A_ID = Rhaast.ID; // Replace with the actual ID of relic A
-    private static final String RELIC_B_ID = ShadowAssassin.ID; // Replace with the actual ID of relic B
+    private static final String RELIC_A_ID = Rhaast.ID; // Replace with the actual POWER_ID of relic A
+    private static final String RELIC_B_ID = ShadowAssassin.ID; // Replace with the actual POWER_ID of relic B
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
 
@@ -84,9 +83,9 @@ public class ReapingSlash extends AbstractEasyCard implements SpawnModificationC
 //    @Override
 //    public AbstractCard makeCopy() {
 //        if (AbstractDungeon.player != null) {
-//            if (AbstractDungeon.player.hasRelic(Rhaast.ID)) {
+//            if (AbstractDungeon.player.hasRelic(Rhaast.POWER_ID)) {
 //                return new ReapingSlashRhaast();
-//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.ID)) {
+//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.POWER_ID)) {
 //                return new ReapingSlashAssassin();
 //            }
 //        }

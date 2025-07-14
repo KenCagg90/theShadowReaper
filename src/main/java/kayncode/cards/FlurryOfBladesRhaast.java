@@ -9,9 +9,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import kayncode.actions.EasyXCostAction;
-import kayncode.relics.special.BaseForm;
-import kayncode.relics.special.ShadowAssassin;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.BaseForm;
+import kayncode.relics.ShadowAssassin;
+import kayncode.relics.TheDarkinScythe;
 
 import java.util.ArrayList;
 

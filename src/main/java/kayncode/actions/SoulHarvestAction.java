@@ -19,8 +19,8 @@ public class SoulHarvestAction extends AbstractGameAction {
         int totalReap = 0;
 
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if (monster.hasPower(ReapPower.ID)) {
-                totalReap += monster.getPower(ReapPower.ID).amount;
+            if (monster.hasPower(ReapPower.POWER_ID)) {
+                totalReap += monster.getPower(ReapPower.POWER_ID).amount;
             }
         }
 

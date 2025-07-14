@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.rooms.MonsterRoomElite;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.TheDarkinScythe;
 
 @SpirePatch(clz = AbstractRoom.class, method = "endBattle")
 public class KaynRoomCompletionPatch {

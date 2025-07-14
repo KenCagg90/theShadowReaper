@@ -10,11 +10,15 @@ import static kayncode.KaynMod.makeID;
 
 public class Cull extends AbstractEasyCard {
     public final static String ID = makeID(Cull.class.getSimpleName());
+    private static final float BASE_REAP_MULTIPLIER = 0.5F;
+    private static final float UPGRADED_REAP_MULTIPLIER = 0.75F;
+    private float reapMultiplier;
 
     public Cull() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseDamage = 5;
         this.isMultiDamage = true;
+        this.reapMultiplier = BASE_REAP_MULTIPLIER;
     }
 
     @Override
@@ -26,8 +30,8 @@ public class Cull extends AbstractEasyCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (m != null && m.hasPower(ReapPower.ID)) {
-                    ((ReapPower)m.getPower(ReapPower.ID)).triggerReap(0.5F);
+                if (m != null && m.hasPower(ReapPower.POWER_ID)) {
+                    ((ReapPower)m.getPower(ReapPower.POWER_ID)).triggerReap(reapMultiplier);
                 }
                 this.isDone = true;
             }
@@ -36,6 +40,7 @@ public class Cull extends AbstractEasyCard {
 
     @Override
     public void upp() {
-        this.upgradeDamage(2); // Upgrade to increase the base damage
+        this.upgradeDamage(2);
+        this.reapMultiplier = UPGRADED_REAP_MULTIPLIER;// Upgrade to increase the base damage
     }
 }

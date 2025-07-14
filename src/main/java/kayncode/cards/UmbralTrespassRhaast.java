@@ -3,11 +3,10 @@ package kayncode.cards;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import kayncode.powers.UTPower;
 import kayncode.powers.UTPowerRhaast;
-import kayncode.relics.special.BaseForm;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.BaseForm;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -18,7 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.TheDarkinScythe;
 
 import java.util.ArrayList;
 

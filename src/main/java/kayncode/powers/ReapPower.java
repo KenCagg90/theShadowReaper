@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -18,13 +17,13 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import static kayncode.KaynMod.makeID;
 
 public class ReapPower extends AbstractEasyPower implements HealthBarRenderPower {
-    public static final String POWER_ID = "Reap";
-    public static String ID = makeID(ReapPower.class.getSimpleName());
+    public static String POWER_ID = makeID(ReapPower.class.getSimpleName());
 
-    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(ID);
+    private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
 
     public ReapPower(AbstractMonster target, int amount) {
-        super(ID, powerStrings.NAME, PowerType.DEBUFF, false, target, amount);
+        super(POWER_ID, powerStrings.NAME, PowerType.DEBUFF, false, target, amount);
+        this.isTwoAmount = true;
     }
 
     public void playApplyPowerSfx() {
@@ -49,15 +48,10 @@ public class ReapPower extends AbstractEasyPower implements HealthBarRenderPower
 
     public static void triggerReapAll(float multiplier) {
         for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (!m.isDead && !m.isDying && m.hasPower(ID)) {
-                ((ReapPower)m.getPower(ID)).triggerReap(multiplier);
+            if (!m.isDead && !m.isDying && m.hasPower(POWER_ID)) {
+                ((ReapPower)m.getPower(POWER_ID)).triggerReap(multiplier);
             }
         }
-    }
-
-    @Override
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-        updateDescription();
     }
 
     @Override
@@ -65,14 +59,20 @@ public class ReapPower extends AbstractEasyPower implements HealthBarRenderPower
         float extraEnergyMult = Math.max(0, (EnergyPanel.totalCount - 1) * 0.2F);
         float endOfTurnReapMult = 1.0F + extraEnergyMult;
         int potentialDamage = Math.round(this.amount * endOfTurnReapMult);
+        this.amount2 = potentialDamage;
         description = powerStrings.DESCRIPTIONS[0] + this.amount + powerStrings.DESCRIPTIONS[1] + potentialDamage + powerStrings.DESCRIPTIONS[2];
     }
 
     @Override
     public int getHealthBarAmount() {
+        if (EnergyPanel.totalCount > 0) {
         float extraEnergyMult = (EnergyPanel.totalCount - 1) * 0.2F;
         float endOfTurnReapMult = 1.0F + extraEnergyMult;
-        return (int) (amount * endOfTurnReapMult);
+        return (int) (amount * endOfTurnReapMult);}
+        else
+        {
+            return 0;
+        }
     }
 
     @Override

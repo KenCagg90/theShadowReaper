@@ -4,7 +4,7 @@ import basemod.abstracts.CustomEnergyOrb;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.Settings;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.TheDarkinScythe;
 
 public class KaynEnergyOrb extends CustomEnergyOrb {
     private static final Color RED_TINT = new Color(1.0F, 0.60F, 0.60F, 1F);

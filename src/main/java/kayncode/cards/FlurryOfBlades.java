@@ -4,8 +4,8 @@ import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPrevie
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import kayncode.actions.EasyXCostAction;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

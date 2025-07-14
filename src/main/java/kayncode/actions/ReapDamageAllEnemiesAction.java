@@ -20,8 +20,8 @@ public class ReapDamageAllEnemiesAction extends AbstractGameAction {
     @Override
     public void update() {
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
-            if (monster.hasPower(ReapPower.ID)) {
-                int reapAmount = monster.getPower(ReapPower.ID).amount;
+            if (monster.hasPower(ReapPower.POWER_ID)) {
+                int reapAmount = monster.getPower(ReapPower.POWER_ID).amount;
                 addToBot(new SFXAction("REAP"));
                 this.addToBot(new DamageAction(monster, new DamageInfo(player, reapAmount, DamageInfo.DamageType.HP_LOSS), AttackEffect.NONE));
             }

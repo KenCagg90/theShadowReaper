@@ -1,8 +1,8 @@
 package kayncode.ui;
 
-import kayncode.relics.special.BaseForm;
-import kayncode.relics.special.ShadowAssassin;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.BaseForm;
+import kayncode.relics.ShadowAssassin;
+import kayncode.relics.TheDarkinScythe;
 import kayncode.vfx.TransformEffect;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.core.CardCrawlGame;

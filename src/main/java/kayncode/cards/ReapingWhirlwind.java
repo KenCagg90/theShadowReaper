@@ -32,17 +32,19 @@ public class ReapingWhirlwind extends AbstractEasyCard {
             this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
 
             // Trigger Reap on all enemies
-            this.addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    ReapPower.triggerReapAll(1.0f);
-                    this.isDone = true;
-                }
-            });
-
+            if (effect > 0) {
+                this.addToBot(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        ReapPower.triggerReapAll(1.0f);
+                        this.isDone = true;
+                    }
+                });
+            }
             return true;
         }));
     }
+
 
     @Override
     public void upp() {

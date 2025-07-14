@@ -19,14 +19,14 @@ public class ReapersTollAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (target.hasPower(ReapPower.ID)) {
-            ReapPower reapPower = (ReapPower) target.getPower(ReapPower.ID);
+        if (target.hasPower(ReapPower.POWER_ID)) {
+            ReapPower reapPower = (ReapPower) target.getPower(ReapPower.POWER_ID);
 
             // Trigger double Reap damage
             reapPower.triggerReap(2.0f);
 
             // Remove the Reap power
-            addToBot(new RemoveSpecificPowerAction(target, player, ReapPower.ID));
+            addToBot(new RemoveSpecificPowerAction(target, player, ReapPower.POWER_ID));
         }
         this.isDone = true;
     }

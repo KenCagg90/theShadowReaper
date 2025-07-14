@@ -17,7 +17,7 @@ public class DoubleReapAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        AbstractPower reapPower = target.getPower(ReapPower.ID);
+        AbstractPower reapPower = target.getPower(ReapPower.POWER_ID);
         if (reapPower != null) {
             int newAmount = reapPower.amount ;
             AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(target, AbstractDungeon.player, new ReapPower((AbstractMonster) target, newAmount), newAmount));

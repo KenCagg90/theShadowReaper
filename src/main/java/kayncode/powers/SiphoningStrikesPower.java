@@ -19,7 +19,7 @@ public class SiphoningStrikesPower extends AbstractEasyPower {
 
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.ID.equals(ReapPower.ID) && target != this.owner && !target.hasPower("Artifact")) {
+        if (power.ID.equals(ReapPower.POWER_ID) && target != this.owner && !target.hasPower("Artifact")) {
             this.flash();
             this.addToBot(new GainBlockAction(this.owner, this.amount));
         }

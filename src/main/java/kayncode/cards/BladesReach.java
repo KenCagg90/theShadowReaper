@@ -2,8 +2,8 @@ package kayncode.cards;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -22,8 +22,8 @@ import static kayncode.KaynMod.makeImagePath;
 
 public class BladesReach extends AbstractEasyCard implements SpawnModificationCard {
     public final static String ID = makeID(BladesReach.class.getSimpleName());
-    private static final String RELIC_A_ID = Rhaast.ID; // Replace with the actual ID of relic A
-    private static final String RELIC_B_ID = ShadowAssassin.ID; // Replace with the actual ID of relic B
+    private static final String RELIC_A_ID = Rhaast.ID; // Replace with the actual POWER_ID of relic A
+    private static final String RELIC_B_ID = ShadowAssassin.ID; // Replace with the actual POWER_ID of relic B
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public BladesReach() {
@@ -82,9 +82,9 @@ public class BladesReach extends AbstractEasyCard implements SpawnModificationCa
 //    @Override
 //    public AbstractCard makeCopy() {
 //        if (AbstractDungeon.player != null) {
-//            if (AbstractDungeon.player.hasRelic(Rhaast.ID)) {
+//            if (AbstractDungeon.player.hasRelic(Rhaast.POWER_ID)) {
 //                return new BladesReachRhaast();
-//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.ID)) {
+//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.POWER_ID)) {
 //                return new BladesReachAssassin();
 //            }
 //        }

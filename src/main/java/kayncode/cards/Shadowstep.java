@@ -2,8 +2,8 @@ package kayncode.cards;
 
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -65,9 +65,9 @@ public class Shadowstep extends AbstractEasyCard implements SpawnModificationCar
 //    @Override
 //    public AbstractCard makeCopy() {
 //        if (AbstractDungeon.player != null) {
-//            if (AbstractDungeon.player.hasRelic(Rhaast.ID)) {
+//            if (AbstractDungeon.player.hasRelic(Rhaast.POWER_ID)) {
 //                return new ShadowstepRhaast();
-//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.ID)) {
+//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.POWER_ID)) {
 //                return new ShadowstepAssassin();
 //            }
 //        }

@@ -52,8 +52,12 @@ public class UnendingSlaughter extends AbstractEasyCard {
 
     @Override
     public void applyPowers() {
+        long attackCardsPlayedThisTurn = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
+                .filter(card -> card.type == CardType.ATTACK && card != this)
+                .count();
+
         super.applyPowers();
-        int count = AbstractDungeon.actionManager.cardsPlayedThisTurn.size();
+        long count = attackCardsPlayedThisTurn;
         this.rawDescription = cardStrings.DESCRIPTION;
         if (count == 1) {
             this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0] + count + cardStrings.EXTENDED_DESCRIPTION[1];

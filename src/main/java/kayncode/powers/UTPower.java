@@ -20,6 +20,11 @@ public class UTPower extends AbstractEasyPower {
 
     }
 
+    public void onInitialApplication()
+    {
+        type = PowerType.DEBUFF;
+    }
+
     public void atEndOfRound() {
         int finalDamage = amount;
 

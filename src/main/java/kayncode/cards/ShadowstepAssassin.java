@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import kayncode.relics.special.BaseForm;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.BaseForm;
+import kayncode.relics.Rhaast;
+import kayncode.relics.TheDarkinScythe;
 
 import java.util.ArrayList;
 

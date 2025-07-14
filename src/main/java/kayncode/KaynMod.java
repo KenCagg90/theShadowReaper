@@ -25,8 +25,8 @@ import kayncode.cards.AbstractEasyCard;
 import kayncode.cards.cardvars.AbstractEasyDynamicVariable;
 import kayncode.potions.AbstractEasyPotion;
 import kayncode.relics.AbstractEasyRelic;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import kayncode.util.ProAudio;
 import java.nio.charset.StandardCharsets;
 
@@ -75,7 +75,7 @@ public class KaynMod implements
     private static final String CARD_ENERGY_L = makeImagePath("1024/energy.png");
     private static final String CHARSELECT_BUTTON = makeImagePath("charSelect/charButton.png");
     private static final String CHARSELECT_PORTRAIT = makeImagePath("charSelect/charBG.png");
-
+    public static boolean kaynTutorialSeen = false;
 
     public static Settings.GameLanguage[] SupportedLanguages = {
             Settings.GameLanguage.ENG,
@@ -237,4 +237,5 @@ public class KaynMod implements
             }
         }
     }
+
 }

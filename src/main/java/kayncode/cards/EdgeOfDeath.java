@@ -25,8 +25,8 @@ public class EdgeOfDeath extends AbstractEasyCard {
         this.addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (m != null && m.hasPower(ReapPower.ID)) {
-                    ((ReapPower)m.getPower(ReapPower.ID)).triggerReap(0.5F);
+                if (m != null && m.hasPower(ReapPower.POWER_ID)) {
+                    ((ReapPower)m.getPower(ReapPower.POWER_ID)).triggerReap(0.5F);
                 }
                 this.isDone = true;
             }

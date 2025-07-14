@@ -1,382 +1,388 @@
 {
-  "${ModID}:Strike": {
+  "theshadowreaper:Strike": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。"
   },
-  "${ModID}:Defend": {
+  "theshadowreaper:Defend": {
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点 格挡 。"
   },
-  "${ModID}:ReapingSlash": {
+  "theshadowreaper:ReapingSlash": {
     "NAME": "巨镰横扫",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 给予所有敌人 !M! 层 ${ModID}:收割 。"
+    "DESCRIPTION": "造成 !D! 点伤害. NL 给予所有敌人 !M! 层 theshadowreaper:收割 。"
   },
-  "${ModID}:ReapingSlashRhaast": {
+  "theshadowreaper:ReapingSlashRhaast": {
     "NAME": "巨镰横扫",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 ${ModID}:收割 。 NL 获得 !B! 点 格挡 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 theshadowreaper:收割 。 NL 获得 !B! 点 格挡 。"
   },
-  "${ModID}:ReapingSlashAssassin": {
+  "theshadowreaper:ReapingSlashAssassin": {
     "NAME": "巨镰横扫",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 ${ModID}:收割 。 NL 敌人失去 !${ModID}:m2! 点生命。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 theshadowreaper:收割 。 NL 敌人失去 !theshadowreaper:m2! 点生命。"
   },
-  "${ModID}:BladeSpin": {
+  "theshadowreaper:BladeSpin": {
     "NAME": "横斩",
     "DESCRIPTION": " 保留 。 NL 对所有敌人造成 !D! 点伤害。"
   },
-  "${ModID}:ShowersOfBlood": {
+  "theshadowreaper:ShowersOfBlood": {
     "NAME": "血雨腥风",
     "DESCRIPTION": "失去 !M! 点生命 X 次。 NL 对所有敌人造成 !D! 点伤害 X 次。"
   },
-  "${ModID}:FrenziedStrike": {
+  "theshadowreaper:FrenziedStrike": {
     "NAME": "狂乱奔袭",
     "DESCRIPTION": "对一名随机敌人造成 !D! 点伤害 3 次。"
   },
-  "${ModID}:FrenziedStrikeAssassin": {
+  "theshadowreaper:FrenziedStrikeAssassin": {
     "NAME": "狂乱奔袭",
     "DESCRIPTION": "对一名随机敌人造成 !D! 点伤害 4 次。"
   },
-  "${ModID}:FrenziedStrikeRhaast": {
+  "theshadowreaper:FrenziedStrikeRhaast": {
     "NAME": "狂乱奔袭",
     "DESCRIPTION": "对一名随机敌人造成 !D! 点伤害 2 次。"
   },
-  "${ModID}:MarkForDeath": {
+  "theshadowreaper:MarkForDeath": {
     "NAME": "死亡印记",
-    "DESCRIPTION": "给予 !M! 层 ${ModID}:收割 。 NL 下一回合,获得 [E] 。"
+    "DESCRIPTION": "给予 !M! 层 theshadowreaper:收割 。 NL 下一回合,获得 [E] 。"
   },
-  "${ModID}:PiercingStrike": {
+  "theshadowreaper:PiercingStrike": {
     "NAME": "穿刺斩击",
     "DESCRIPTION": "造成 !D! 点伤害 NL 给予 !M! 层 易伤 。"
   },
-  "${ModID}:TacticalSelection": {
+  "theshadowreaper:TacticalSelection": {
     "NAME": "战术抉择",
     "DESCRIPTION": "从抽牌堆中选择一张牌放入你的手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "从抽牌堆中选择一张牌放入你的手牌。"
   },
-  "${ModID}:PressTheAdvantage": {
+  "theshadowreaper:PressTheAdvantage": {
     "NAME": "顺势压倒",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 从弃牌堆中选择一张牌放入你的手牌。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 从弃牌堆中选择一张牌放入你的手牌。 NL 消耗 。"
   },
-  "${ModID}:SwiftDodge": {
+  "theshadowreaper:SwiftDodge": {
     "NAME": "迅疾避闪",
-    "DESCRIPTION": "获得 !B! 点 格挡 。如果这是你在本回合打出的第一张牌，额外获得 !${ModID}:sb! 点 格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡 。如果这是你在本回合打出的第一张牌，额外获得 !theshadowreaper:sb! 点 格挡 。"
   },
-  "${ModID}:BloodReaper": {
+  "theshadowreaper:BloodReaper": {
     "NAME": "血腥收割",
-    "DESCRIPTION": "失去 !${ModID}:m2! 点生命. NL 给予所有敌人 !M! 层 ${ModID}:收割 。"
+    "DESCRIPTION": "失去 !theshadowreaper:m2! 点生命. NL 给予所有敌人 !M! 层 theshadowreaper:收割 。"
   },
-  "${ModID}:ReapAndTear": {
+  "theshadowreaper:ReapAndTear": {
     "NAME": "割毁",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 ${ModID}:收割 。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予所有敌人 !M! 层 theshadowreaper:收割 。"
   },
-  "${ModID}:DarkPact": {
+  "theshadowreaper:DarkPact": {
     "NAME": "暗裔契约",
-    "DESCRIPTION": "失去 !M! 点生命。 NL 增加 !${ModID}:m2! 张耗能为0的随机 虚无 牌到你的手牌。"
+    "DESCRIPTION": "失去 !M! 点生命。 NL 增加 !theshadowreaper:m2! 张耗能为0的随机 虚无 牌到你的手牌。"
   },
-  "${ModID}:FadeIntoShadows": {
+  "theshadowreaper:FadeIntoShadows": {
     "NAME": "遁入暗影",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下一回合，获得 !B! 点 格挡 。"
   },
-  "${ModID}:AdaptiveStrategy": {
+  "theshadowreaper:AdaptiveStrategy": {
     "NAME": "适应性策略",
     "DESCRIPTION": "如果这回合你没有打出过攻击牌，获得 !B! 点 格挡 和 !M! 点 活力 。"
   },
-  "${ModID}:Bloodrage": {
+  "theshadowreaper:Bloodrage": {
     "NAME": "愤怒合剂",
     "DESCRIPTION": "每当你从一张牌中失去生命时,抽一张牌."
   },
-  "${ModID}:ReapingWhirlwind": {
+  "theshadowreaper:ReapingWhirlwind": {
     "NAME": "刃卷狂镰",
-    "DESCRIPTION": "给予所有敌人 !M! 层 ${ModID}:收割 X 次。触发 ${ModID}:收割  NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 theshadowreaper:收割 X 次。触发 theshadowreaper:收割  NL 消耗 。"
   },
-  "${ModID}:DesperateMeasures": {
+  "theshadowreaper:DesperateMeasures": {
     "NAME": "亡命之计",
     "DESCRIPTION": "获得 !B! 点 格挡 。 如果你的生命低于50%， 额外获得 !B! 点 格挡 。"
   },
-  "${ModID}:RecklessAttack": {
+  "theshadowreaper:RecklessAttack": {
     "NAME": "莽袭",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予自身 !M! 层 易伤 。"
   },
-  "${ModID}:Meditation": {
+  "theshadowreaper:Meditation": {
     "NAME": "冥想",
     "DESCRIPTION": "获得 [E] 。 NL 本回合未使用的 [E] 可以保留到下回合。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 [E] 。 NL 本回合未使用的 [E] 可以保留到下回合。"
   },
-  "${ModID}:FuturePlanning": {
-  "NAME": "展望未来",
-  "DESCRIPTION": "本回合未使用的 [E] 可以保留到下回合。 NL 下一回合，抽取等同于你手中剩余手牌数量的牌。 NL 消耗 。"
-},
-  "${ModID}:ProfaneBlow": {
+  "theshadowreaper:FuturePlanning": {
+    "NAME": "展望未来",
+    "DESCRIPTION": "本回合未使用的 [E] 可以保留到下回合。 NL 下一回合，抽取等同于你此回合手中剩余手牌数量的牌。 NL 消耗 。"
+  },
+  "theshadowreaper:ProfaneBlow": {
     "NAME": "亵渎",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 杀死敌人时，获得 !M! 点 力量 。"
   },
-  "${ModID}:ShedWeakness": {
+  "theshadowreaper:ShedWeakness": {
     "NAME": "祛除劣势",
     "DESCRIPTION": "失去 !M! 点生命。 移除自身所有负面状态. 每移除一个负面状态获得 1 点 力量 。 NL 消耗 。"
   },
-  "${ModID}:SanguineStrike": {
+  "theshadowreaper:SanguineStrike": {
     "NAME": "血斩",
-    "DESCRIPTION": "失去 !${ModID}:m2! 点生命。 造成 !D! 点伤害。 给予 !M! 层 易伤 。"
+    "DESCRIPTION": "失去 !theshadowreaper:m2! 点生命。 造成 !D! 点伤害。 给予 !M! 层 易伤 。"
   },
-  "${ModID}:SiphonStrength": {
+  "theshadowreaper:SiphonStrength": {
     "NAME": "力量虹吸",
-    "DESCRIPTION": "偷取所有敌人 !M! 点 力量 。 NL 此回合额外移除所有敌人 !${ModID}:m2! 点 力量 。 NL 消耗 。"
+    "DESCRIPTION": "偷取所有敌人 !M! 点 力量 。 NL 此回合额外移除所有敌人 !theshadowreaper:m2! 点 力量 。 NL 消耗 。"
   },
-  "${ModID}:ReaperSigil": {
+  "theshadowreaper:ReaperSigil": {
     "NAME": "收割印记",
-    "DESCRIPTION": "给予 !M! 层 ${ModID}:收割 两次 。"
+    "DESCRIPTION": "给予 !M! 层 theshadowreaper:收割 两次 。"
   },
-  "${ModID}:PrepareTheKill": {
+  "theshadowreaper:PrepareTheKill": {
     "NAME": "杀戮准备",
     "DESCRIPTION": "获得 !M! 点 活力 。"
   },
-  "${ModID}:Shadowstep": {
+  "theshadowreaper:Shadowstep": {
     "NAME": "掠影步",
     "DESCRIPTION": "下一回合, 额外抽 !M! 张牌。"
   },
-  "${ModID}:ShadowstepRhaast": {
+  "theshadowreaper:ShadowstepRhaast": {
     "NAME": "掠影步",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下一回合, 额外抽 !M! 张牌。"
   },
-  "${ModID}:ShadowstepAssassin": {
+  "theshadowreaper:ShadowstepAssassin": {
     "NAME": "掠影步",
     "DESCRIPTION": "获得 [E] 。 NL 下一回合， 额外抽 !M! 张牌。"
   },
-  "${ModID}:Distract": {
+  "theshadowreaper:Distract": {
     "NAME": "迷惑",
     "DESCRIPTION": "给予 !M! 层 虚弱 。 NL 从抽牌堆中随机抽出一张牌，并将其耗能降低至0，直到被打出为止。"
   },
-  "${ModID}:Bloodfury": {
+  "theshadowreaper:Bloodfury": {
     "NAME": "血狂",
     "DESCRIPTION": "失去 !M! 点生命。 NL 获得 [E] [E] [E] 。"
   },
-  "${ModID}:AssassinsTraining": {
+  "theshadowreaper:AssassinsTraining": {
     "NAME": "刺客之道",
     "DESCRIPTION": "当回合结束时仍有 [E] 未使用，下一回合，获得 !M! 点 力量 。"
   },
-  "${ModID}:DemonArmor": {
+  "theshadowreaper:DemonArmor": {
     "NAME": "恶魔铠甲",
     "DESCRIPTION": "回合结束时仍有 [E] 未使用，每有一个未使用的 [E] 获得 !M! 点 格挡 。"
   },
-  "${ModID}:MasterZedsTraining": {
+  "theshadowreaper:MasterZedsTraining": {
     "NAME": "劫大师的教诲",
     "DESCRIPTION": "当你结束回合时仍有 [E] 未使用，每有一个未使用的 [E] 抽 !M! 张牌。"
   },
-  "${ModID}:SiphoningStrikes": {
+  "theshadowreaper:SiphoningStrikes": {
     "NAME": "虹吸收割",
-    "DESCRIPTION": "当你对敌人施加 ${ModID}:收割 时，获得 !M! 点 格挡 。"
+    "DESCRIPTION": "当你对敌人施加 theshadowreaper:收割 时，获得 !M! 点 格挡 。"
   },
-  "${ModID}:Gank": {
+  "theshadowreaper:Gank": {
     "NAME": "趁其不备",
     "DESCRIPTION": "造成 !D! 点伤害 。 NL 这回合降低该敌人 !M! 点 力量 。 NL 消耗 。"
   },
-  "${ModID}:Preparation": {
+  "theshadowreaper:Preparation": {
     "NAME": "准备工作",
     "DESCRIPTION": "抽一张牌。 NL 从抽牌堆选择一张牌并赋予其 保留 。 NL 消耗 。"
   },
-  "${ModID}:UmbralTrespass": {
+  "theshadowreaper:UmbralTrespass": {
     "NAME": "影袭",
     "DESCRIPTION": "获得 1 层 无实体 。 NL 下回合开始时， 造成 !D! 点伤害。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 1 层 无实体 。 NL 下回合开始时， 造成 !D! 点伤害。 NL 消耗性 2 。"
   },
-  "${ModID}:UmbralTrespassRhaast": {
+  "theshadowreaper:UmbralTrespassRhaast": {
     "NAME": "影袭",
     "DESCRIPTION": "获得 1 层 无实体 。 NL 下回合开始时，造成 !D! 点伤害。 NL  斩杀 时, 获得 4 点 最大生命 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 1 层 无实体 。 NL 下回合开始时，造成 !D! 点伤害。 NL  斩杀 时, 获得 4 点 最大生命 。 NL 消耗 。 NL 消耗性 2 。"
   },
-  "${ModID}:UmbralTrespassAssassin": {
+  "theshadowreaper:UmbralTrespassAssassin": {
     "NAME": "影袭",
     "DESCRIPTION": "获得 1 层 无实体 。 NL 下回合开始时，造成 !D! 点伤害。 NL  斩杀 时, 对其余全部敌人造成 50% 的伤害 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "获得 1 层 无实体 。 NL 下回合开始时，造成 !D! 点伤害。 NL  斩杀 时, 对其余全部敌人造成 50% 的伤害。 NL 消耗性 2 。"
   },
-  "${ModID}:StrategicManeuver": {
+  "theshadowreaper:StrategicManeuver": {
     "NAME": "战略性迂回",
     "DESCRIPTION": "从抽牌堆选择 !M! 张牌， 升级 （只影响本场战斗）并将它们置于抽牌堆顶部. NL 消耗 。"
   },
-  "${ModID}:GoldAdvantage": {
+  "theshadowreaper:GoldAdvantage": {
     "NAME": "金钱制胜",
     "DESCRIPTION": "根据当前金币数量获得 活力 。 消耗 。 NL 1-100: 8 点 活力 。 NL 101-200: 12 点 活力 。 NL 201-300: 16 点 活力 。 NL 301+: 20 点 活力 。"
   },
-  "${ModID}:MoltenBlood": {
+  "theshadowreaper:MoltenBlood": {
     "NAME": "融血",
-    "DESCRIPTION": "失去 !${ModID}:m2! 点生命。 造成 !D! 点伤害。 目标失去 !M! 点生命。 NL 消耗 。"
+    "DESCRIPTION": "失去 !theshadowreaper:m2! 点生命。 造成 !D! 点伤害。 目标失去 !M! 点生命。 NL 消耗 。"
   },
-  "${ModID}:ReapersToll": {
+  "theshadowreaper:ReapersToll": {
     "NAME": "收获时刻",
-    "DESCRIPTION": "对敌人造成等同于 ${ModID}:收割 层数两倍的伤害。 NL 移除所有 ${ModID}:收割 。 NL 消耗 。"
+    "DESCRIPTION": "对敌人造成等同于 theshadowreaper:收割 层数两倍的伤害。 NL 移除所有 theshadowreaper:收割 。 NL 消耗 。"
   },
-  "${ModID}:StackTheDeck": {
+  "theshadowreaper:StackTheDeck": {
     "NAME": "出千",
     "DESCRIPTION": "从抽牌堆选择2张牌，将它们置于抽牌堆顶部. NL 消耗 。"
   },
-  "${ModID}:FlurryOfBlades": {
+  "theshadowreaper:FlurryOfBlades": {
     "NAME": "利刃狂舞",
     "DESCRIPTION": "对随机敌人造成 !D! 伤害 X 次。"
   },
-  "${ModID}:FlurryOfBladesRhaast": {
+  "theshadowreaper:FlurryOfBladesRhaast": {
     "NAME": "利刃狂舞",
     "DESCRIPTION": "对随机敌人造成 !D! 伤害 X 次。 NL （此伤害提升等同于你 25% 的临时生命）"
   },
-  "${ModID}:FlurryOfBladesAssassin": {
+  "theshadowreaper:FlurryOfBladesAssassin": {
     "NAME": "利刃狂舞",
     "DESCRIPTION": "对随机敌人造成 !D! 伤害 X 次。 NL (每使用1点 [E] 提升1点伤害)"
   },
-  "${ModID}:Annihilate": {
+  "theshadowreaper:Annihilate": {
     "NAME": "泯灭",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。"
   },
-  "${ModID}:ShadowWaltz": {
+  "theshadowreaper:ShadowWaltz": {
     "NAME": "影舞",
-    "DESCRIPTION": "抽 !M! 张牌。 NL 如果这回合打出了3张或更多牌，额外抽 !${ModID}:m2! 张牌。",
-    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 如果这回合打出了3张或更多牌，额外抽 !${ModID}:m2! 张牌。"
+    "DESCRIPTION": "抽 !M! 张牌。 NL 如果这回合打出了3张或更多牌，额外抽 !theshadowreaper:m2! 张牌。",
+    "UPGRADE_DESCRIPTION": "抽 !M! 张牌。 NL 如果这回合打出了3张或更多牌，额外抽 !theshadowreaper:m2! 张牌。"
   },
-  "${ModID}:SoulHarvest": {
+  "theshadowreaper:SoulHarvest": {
     "NAME": "收割灵魂",
-    "DESCRIPTION": "给予所有敌人 !M! 层 ${ModID}:收割 。 NL 获得等同于此牌施加的 ${ModID}:收割 层数一半的 格挡 。 NL 消耗 。"
+    "DESCRIPTION": "给予所有敌人 !M! 层 theshadowreaper:收割 。 NL 获得等同于此牌施加的 theshadowreaper:收割 层数一半的 格挡 。 NL 消耗 。"
   },
-  "${ModID}:FinishingTouch": {
+  "theshadowreaper:FinishingTouch": {
     "NAME": "终结",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 活力 和 力量 对此牌发挥2倍效果。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 活力 和 力量 对此牌发挥3倍效果。"
   },
-  "${ModID}:AllOrNothing": {
+  "theshadowreaper:AllOrNothing": {
     "NAME": "孤注一掷",
     "DESCRIPTION": "获得 !M! 点 临时力量 。 NL 下一回合，失去 [E] [E] 。"
   },
-  "${ModID}:TemporalStrike": {
+  "theshadowreaper:TemporalStrike": {
     "NAME": "瞬击",
     "DESCRIPTION": "造成 !D! 点伤害并获得 1 点力量. NL 下一回合，抽 2 张牌。"
   },
-  "${ModID}:ComboMastery": {
+  "theshadowreaper:ComboMastery": {
     "NAME": "连击掌握",
     "DESCRIPTION": "抽 !M! 张牌。 NL 本回合将手牌中耗能为2或更高的牌，耗能降低1点。 NL 消耗 。"
   },
-  "${ModID}:HeavyHitter": {
+  "theshadowreaper:HeavyHitter": {
     "NAME": "沉重打击",
     "DESCRIPTION": "下一次打出耗能为 [E] [E] 或更多的牌时获得 [E] 。",
     "UPGRADE_DESCRIPTION": "下一次打出耗能为 [E] [E] 或更多的牌时获得 [E] [E] 。"
   },
-  "${ModID}:UmbralEnergy": {
+  "theshadowreaper:UmbralEnergy": {
     "NAME": "暗影能量",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 下一回合，获得 [E] [E] 。 消耗 。"
   },
-  "${ModID}:BladesReach": {
+  "theshadowreaper:BladesReach": {
     "NAME": "交锋",
     "DESCRIPTION": "对最前方的两个敌人造成 !D! 点伤害。",
     "EXTENDED_DESCRIPTION": [
-      " NL ${ModID}:形态加成:",
+      " NL theshadowreaper:形态加成:",
       " NL [#9b111e]给予 !M! 点 虚弱 。",
-      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 点 [] 易伤 。"
+      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 点 易伤 。"
     ]
   },
-  "${ModID}:BladesReachAssassin": {
+  "theshadowreaper:BladesReachAssassin": {
     "NAME": "交锋",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! 层易伤.",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 给予 !M! 层 易伤 。",
     "EXTENDED_DESCRIPTION": [
-      " NL ${ModID}:形态加成:",
+      " NL theshadowreaper:形态加成:",
       " NL [#9b111e]给予 !M! 层 虚弱 。",
-      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 层 [] 易伤 。"
+      " NL [#38d3f3]攻击 [#38d3f3]所有 [#38d3f3]敌人 [#38d3f3]并 [#38d3f3]给予 !M! 层 易伤 。"
     ]
   },
-  "${ModID}:BladesReachRhaast": {
+  "theshadowreaper:BladesReachRhaast": {
     "NAME": "交锋",
     "DESCRIPTION": "对最前方的两个敌人造成 !D! 点伤害。 NL 给予 !M! 层 虚弱 。"
   },
-  "${ModID}:UnendingSlaughter": {
+  "theshadowreaper:UnendingSlaughter": {
     "NAME": "无休杀戮",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 每次攻击获得 [E]  NL 每回合最多获得 [E] [E] [E] 。 NL 消耗 。 ",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每次攻击获得 [E]  NL 每回合最多获得 [E] [E] [E] 。 NL 消耗性 2 。  "
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 每次攻击获得 [E]  NL 每回合最多获得 [E] [E] [E] 。 NL 消耗性 2 。  ",
+    "EXTENDED_DESCRIPTION":[
+      " NL (",
+      " 张牌 已打出。)",
+      " 张牌 已打出。)"
+    ]
   },
-  "${ModID}:TendToWounds": {
+  "theshadowreaper:TendToWounds": {
     "NAME": "伤口处理",
     "DESCRIPTION": "回复 !M! 点生命 。 NL 获得 1 点 易伤 。 NL 消耗 。"
   },
-  "${ModID}:Outburst": {
+  "theshadowreaper:Outburst": {
     "NAME": "爆发",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 获得 [E] [E] 。 NL 将一张 虚空 洗入 弃牌堆 。"
   },
-  "${ModID}:SecondStrike": {
+  "theshadowreaper:SecondStrike": {
     "NAME": "二次击打",
     "DESCRIPTION": "造成 !D! 点伤害. NL 如果此回合打出过耗能为2或更高的牌，此牌耗能为0 。"
   },
-  "${ModID}:ReapersHarvest": {
+  "theshadowreaper:ReapersHarvest": {
     "NAME": "多重收割",
-    "DESCRIPTION": "使一名敌人的 ${ModID}:收割 层数翻2倍 。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "使一名敌人的 ${ModID}:收割 层数变为3倍 NL 消耗 。"
+    "DESCRIPTION": "使一名敌人的 theshadowreaper:收割 层数翻2倍 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "使一名敌人的 theshadowreaper:收割 层数变为3倍 NL 消耗 。"
   },
-  "${ModID}:SlaughterTheWeak": {
+  "theshadowreaper:SlaughterTheWeak": {
     "NAME": "欺杀弱者",
     "DESCRIPTION": "对所有敌人造成 !D! 点伤害 。 NL 如果敌人生命低于 40% ， 对其额外造成 !D! 点伤害"
   },
-  "${ModID}:BloodGambit": {
+  "theshadowreaper:BloodGambit": {
     "NAME": "流血之策",
     "DESCRIPTION": "失去 !M! 点生命。 NL 获得 [E] 并抽1张牌。 消耗 。",
     "UPGRADE_DESCRIPTION": "失去 !M! 点生命。 NL 获得 [E] 并抽1张牌。"
   },
-  "${ModID}:Cull": {
+  "theshadowreaper:Cull": {
     "NAME": "剔除",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 额外造成相当于目标 ${ModID}:收割 层数一半的伤害。"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 额外造成相当于目标当前 theshadowreaper:收割 层数50%的伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 额外造成相当于目标当前 theshadowreaper:收割 层数75%的伤害。"
   },
-  "${ModID}:EdgeOfDeath": {
+  "theshadowreaper:EdgeOfDeath": {
     "NAME": "死亡之锋",
-    "DESCRIPTION": "施加 !M! 层 ${ModID}:收割 。 NL 额外造成相当于目标 ${ModID}:收割 层数一半的伤害。"
+    "DESCRIPTION": "施加 !M! 层 theshadowreaper:收割 。 NL 额外造成相当于目标 theshadowreaper:收割 层数一半的伤害。"
   },
-  "${ModID}:ShadowClone": {
+  "theshadowreaper:ShadowClone": {
     "NAME": "暗影复制",
     "DESCRIPTION": "选择一张手牌。 将耗能-1的此牌 虚无 复制放入手牌。 NL 消耗 。"
   },
-  "${ModID}:Exploit": {
+  "theshadowreaper:Exploit": {
     "NAME": "剥削",
     "DESCRIPTION": "造成 !D! 点伤害. NL 如果至少造成了 !M! 点伤害，获得 !B! 点 格挡 。"
   },
-  "${ModID}:ShadowSight": {
+  "theshadowreaper:ShadowSight": {
     "NAME": "暗影之视",
     "DESCRIPTION": "保留 。 NL 获得 [E] 。 NL 消耗 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 NL 消耗 。"
   },
-  "${ModID}:ShadowSightRhaast": {
+  "theshadowreaper:ShadowSightRhaast": {
     "NAME": "暗影之视",
     "DESCRIPTION": "保留 。 NL 获得[E] 。 NL 消耗性 2 。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 NL 消耗性 2 。"
   },
-  "${ModID}:ShadowSightAssassin": {
+  "theshadowreaper:ShadowSightAssassin": {
     "NAME": "暗影之视",
     "DESCRIPTION": "保留 。 NL 获得 [E] 。 NL 此牌每回合只能使用两次。",
     "UPGRADE_DESCRIPTION": "保留 。 NL 获得 [E] [E] 。 此牌每回合只能使用两次。"
   },
-  "${ModID}:Overpower": {
+  "theshadowreaper:Overpower": {
     "NAME": "压制",
     "DESCRIPTION": "造成 !D! 点伤害. NL 如果这一回合你使用过耗能为2或更多的牌, 获得 !B! 点格挡。"
   },
-  "${ModID}:CalculatedSteps": {
+  "theshadowreaper:CalculatedSteps": {
     "NAME": "预影步",
     "DESCRIPTION": "保留 。 NL 获得 !B! 点 格挡 。 NL 当此牌被保留时，降低1点耗能。"
   },
-  "${ModID}:CalculatedStrikes": {
+  "theshadowreaper:CalculatedStrikes": {
     "NAME": "预谋攻击",
     "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害 。 NL 当此牌被保留时，降低1点耗能。"
   },
-  "${ModID}:Brutalize": {
+  "theshadowreaper:Brutalize": {
     "NAME": "残酷无情",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标没有 易伤 ， 则给予其 !M! 层 易伤 。"
   },
-  "${ModID}:ShadowAmbush": {
+  "theshadowreaper:ShadowAmbush": {
     "NAME": "影伏",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 如果目标有负面效果 ， 额外造成 !${ModID}:sd! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害. NL 如果目标有负面效果 ， 额外造成 !theshadowreaper:sd! 点伤害。"
   },
-  "${ModID}:DarkinRage": {
+  "theshadowreaper:DarkinRage": {
     "NAME": "暗裔之怒",
     "DESCRIPTION": "当你打出耗能 [E] [E] 或更多的牌时，获得 !M! 点 力量 。"
   },
-  "${ModID}:WhispersOfBlood": {
+  "theshadowreaper:WhispersOfBlood": {
     "NAME": "血语",
-    "DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 ${ModID}:收割 。"
+    "DESCRIPTION": "回合开始时，给予所有敌人 !M! 层 theshadowreaper:收割 。"
   },
-  "${ModID}:Stalk": {
+  "theshadowreaper:Stalk": {
     "NAME": "潜近",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 抽 !M! 张牌. NL 下一回合，抽 !M! 张牌。"
   },
-  "${ModID}:Transfusion": {
+  "theshadowreaper:Transfusion": {
     "NAME": "血液传输",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点格挡。"
   }

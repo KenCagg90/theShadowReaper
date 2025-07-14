@@ -2,22 +2,16 @@ package kayncode.cards;
 
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import kayncode.powers.ReapPower;
-import kayncode.relics.special.BaseForm;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.BaseForm;
+import kayncode.relics.Rhaast;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
-import kayncode.relics.special.TheDarkinScythe;
+import kayncode.relics.TheDarkinScythe;
 import kayncode.util.Wiz;
 
 import java.util.ArrayList;

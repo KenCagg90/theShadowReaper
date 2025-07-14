@@ -3,8 +3,8 @@ package kayncode.cards;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.SpawnModificationCard;
 import kayncode.powers.UTPower;
-import kayncode.relics.special.Rhaast;
-import kayncode.relics.special.ShadowAssassin;
+import kayncode.relics.Rhaast;
+import kayncode.relics.ShadowAssassin;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.ExhaustiveField;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
@@ -113,9 +113,9 @@ public class UmbralTrespass extends AbstractEasyCard implements SpawnModificatio
 //    @Override
 //    public AbstractCard makeCopy() {
 //        if (AbstractDungeon.player != null) {
-//            if (AbstractDungeon.player.hasRelic(Rhaast.ID)) {
+//            if (AbstractDungeon.player.hasRelic(Rhaast.POWER_ID)) {
 //                return new UmbralTrespassRhaast();
-//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.ID)) {
+//            } else if (AbstractDungeon.player.hasRelic(ShadowAssassin.POWER_ID)) {
 //                return new UmbralTrespassAssassin();
 //            }
 //        }
